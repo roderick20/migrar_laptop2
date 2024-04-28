@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+PRODID:-//Splash Event Planning System
+VERSION:2.0
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTAMP:20240305T144848Z
+UID:fd9e1269f12de5f62ae93477601c1feae00e49e9@cloudexperience
+ lima.splashthat.com
+URL:https://cloudexperiencelima.splashthat.com
+DTSTART:20240410T130000Z
+DTEND:20240410T230000Z
+SUMMARY:Cloud Experience Lima
+DESCRIPTION:Cloud Experience Lima\n\nFecha: 10 - 4 - 2024\n\
+ nHora: 8:00 -05\n\nUbicación: Centro de Convenciones Lima - 
+ CCL: Av. de la Arqueología 206, San Borja 15021\n\nPrepárese
+  para Cloud Experience Lima 2024!. Si tiene experiencia en n
+ ube o simplemente está iniciando en este emocionante mundo, 
+ le invitamos a conectar con todo lo que tenemos preparado pa
+ ra esta versión. Este es un evento con invitación personal y
+  exclusiva.
+LOCATION:Centro de Convenciones Lima - CCL Av. de la Arqueol
+ ogía 206 San Borja 15021
+END:VEVENT
+END:VCALENDAR

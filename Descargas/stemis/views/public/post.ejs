@@ -1,0 +1,109 @@
+<% bloglist.forEach(function(item){ %>
+
+<section data-speed=".8" class="py-12 py-md-15 jarallax"
+         style="background-image: url('<%= item.Background %>'); background-repeat: no-repeat; background-size:contain;">
+</section>
+
+<!-- HEADER -->
+
+<section class="pt-8 pt-md-11">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 ">
+                <!-- Heading -->
+                <h1 class="display-8 text-center">
+                    <%= item.Title %>
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION -->
+<section class="pt-6 pt-md-8 pb-12">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+                <figure class="figure">
+                    <img class="figure-img img-fluid rounded" src="<%= item.Imagen %>" alt="...">
+                    <figcaption class="figure-caption text-end">
+                        <%= item.PhotoAuthor%>
+                    </figcaption>
+                </figure>
+
+                <div class="col-12 col-md-10 col-lg-12 col-xl-12 py-6">
+                    <div class="row align-items-center py-5 border-top border-bottom">
+                        <div class="col-12 ms-n5">
+                            <div class="row">
+                                <div class="col-2 text-end">
+                                    <div class="avatar avatar-sm me-2">
+                                        <img src="<%= item.Photo %>" style="width: 180%; height: 180%" alt="..." class="avatar-img rounded-circle">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <h6 class="text-uppercase mb-0">
+                                        <%= item.PostAuthor %><br />
+                                        <span class="text-muted">Colaborador</span>
+                                    </h6>
+                                </div>
+                                <div class="col-4 text-end">
+                                    <time class="fs-sm text-muted" datetime="">
+                                        <text><%= item.PostDate %></text>
+                                    </time>
+                                </div>
+                            </div>
+                            <!-- Name -->
+                            
+                            <!-- Date -->
+                        </div>
+                        <!-- <div class="col text-end"> -->
+                        <!-- Share -->
+                        <!-- <span class="h6 text-uppercase text-muted d-none d-md-inline me-4">
+                          Compartir
+                        </span> -->
+                        <!-- Icons -->
+                        <!-- <ul class="d-inline list-unstyled list-inline list-social">
+                          <li class="list-inline-item list-social-item me-3">
+                            <a href="#!" class="text-decoration-none">
+                              <img src="assets/img/icons/social/instagram.svg" class="list-social-icon" alt="...">
+                            </a>
+                          </li>
+                          <li class="list-inline-item list-social-item me-3">
+                            <a href="#!" class="text-decoration-none">
+                              <img src="assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
+                            </a>
+                          </li>
+                          <li class="list-inline-item list-social-item me-3">
+                            <a href="#!" class="text-decoration-none">
+                              <img src="assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
+                            </a>
+                          </li>
+                        </ul> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+                <!-- Text -->
+                <p style="color: #259995; font-weight: bold;">
+                    <a class="btn btn-sm px-1 py-0" style="color:white; background-color:#259995">Materia: <%= item.Tags %></a> <br />
+                    <%= item.Judgement %> <br />
+                    <%= item.Pleno %> <br />
+                    <%= item.Expedient %>
+                </p>
+                <div class="mb-0" style="color: #464D5B; text-align: justify;">
+                    <div><%- item.Body %></div>
+                </div>
+            </div>
+
+            <div class="col-12 text-center pt-8">
+              <a style="background-color: #259995; color: white; font-weight: bold;" class="btn" target="_blank" href="<%= item.PDFile %>">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                </svg>    Documento completo
+              </a>
+            </div>
+        </div>
+    </div>
+</section>
+<% }) %>

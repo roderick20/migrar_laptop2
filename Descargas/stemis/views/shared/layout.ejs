@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="/assets/favicon/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/assets/css/libs.bundle.css" />
+  <link rel="stylesheet" href="/assets/css/theme.bundle.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/vendor/aos/aos.css">
+
+  <title>sTemis</title>
+</head>
+
+<body>
+  <%- include('navigation.ejs') %>
+  <%- body %>
+  <%- include('footer.ejs') %>
+
+  <script src='../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+  <script src="/assets/js/vendor.bundle.js"></script>
+  <script src="/assets/js/theme.bundle.js"></script>
+  <style>
+    @font-face {
+      font-family: "Inter";
+      src: url("/assets/fonts/static/Inter-Medium.ttf") format("truetype");
+    }
+
+    * {
+      font-family: "Inter";
+      src: url("/assets/fonts/static/Inter-Medium.ttf") format("truetype");
+    }
+  </style>
+  <!-- Vendors -->
+  <link rel="stylesheet" href="/assets/vendor/aos/aos.css">
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

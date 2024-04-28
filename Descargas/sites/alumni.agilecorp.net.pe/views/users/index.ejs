@@ -1,0 +1,85 @@
+<a href="/users/create" class="btn btn-primary float-end mt-n1"><i class="fas fa-plus"></i> Agregar</a>
+<h1 class="h3 mb-3">Usuarios</h1>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card border rounded-3">
+            <div class="card-body" style="min-height:500px">
+                <div class="table-responsive border-0" style="min-height:500px">
+                    <table id="listTable" class="table table-sm table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th> Nombre </th>
+                                <th> Apellidos </th>
+                                <th> Email </th>
+                                <th style="width: 1%;"> Habilitado </th>
+                                <th> Creado </th>
+                                <th>  </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="/assets/vendor/datatables/datatables-1.13.1/css/datatables.bootstrap5.min.css" rel="stylesheet" />
+<script src="/assets/vendor/datatables/datatables-1.13.1/js/jquery.datatables.min.js"></script>
+<script src="/assets/vendor/datatables/datatables-1.13.1/js/datatables.bootstrap5.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('#listTable').DataTable({
+            "language": {
+                "url": "/assets/vendor/datatables/es-es.json"
+            },
+            search: {
+                return: true
+            },
+            ordering: false,
+            serverSide: true,
+            processing: true,
+            ajax: {
+                url: '/users/findalldt',
+                type: 'POST'
+            },
+            columns: [{
+                data: 'Name',
+            },
+            {
+                data: 'LastName'
+            },
+            {
+                data: 'Email'
+            },
+            {
+                data: 'Enabled'
+            },
+            {
+                data: 'Created'
+            },
+            {
+                data: 'UniqueId',
+                render: function (data, type, row) {
+                    return `<div class="dropdown">
+                  <a class="btn btn-sm btn-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v fa-lg"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a href="/users/update/${data}" class="dropdown-item text-primary"><i class="fa-solid fa-pen-to-square"></i> Editar </a></li>
+                    <li><a href="/users/updatepassword/${data}" class="dropdown-item text-primary"><i class="fa-solid fa-key"></i> Cambiar Contraseña </a></li>                   
+                    <li><a href="/users/delete/${data}" class="dropdown-item text-danger"><i class="fa-solid fa-trash"></i> Eliminar</a></li >
+                  </ul >
+                </div >`;
+                },
+                createdCell: function (td, cellData, rowData, row, col) {
+                    $(td).css("width", "1%");
+                }
+            }
+            ]
+        });
+    });
+</script>

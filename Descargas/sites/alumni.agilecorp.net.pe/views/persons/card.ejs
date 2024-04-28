@@ -1,0 +1,130 @@
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-4 col-12">
+        <div class="card border rounded-3">
+          <div class="card-header border-bottom p-3">
+            <h5 class="mb-2 mb-sm-0">Tarjeta de Presentación</h5>
+          </div>
+          <div class="card-body text-center">
+            <!-- Input para cargar la imagen redonda centrada -->
+            <div class="mb-3">
+              <div class="background-image"></div>
+              <input type="file" name="inputFile" id="inputFile" style="display: none;">
+              <img id="previewImage" src="/uploads/<%= person.Photo ? person.Photo : 'photo_person.png' %>"
+              class="img-fluid img-thumbnail rounded-circle mt-5" style="height: 150px; width: 150px; object-fit: cover;  position: relative;
+              object-position: center center; z-index: 1;  border: 5px solid black;">
+            </div>
+            <!-- Nombre de la persona centrado -->
+            <h5><%= person.FirstName %><%= person.LastName %></h5>
+            <!-- Profesión de la persona centrada -->
+            <p><%= person.Title %></p>
+            <!-- Biografía de la persona centrada -->
+            <p><%= person.JobTitle %></p>
+            <!-- Botón para guardar contacto -->
+            <!-- <button class="btn btn-primary mb-3">Save Contact</button> -->
+            <!-- Iconos de redes sociales como botones -->
+            <div class="social-icons-container">
+              <div class="social-icons">
+                  <% if (person.WhatsappStatus) { %>
+                      <a href="<%= person.Whatsapp %>" class="btn btn-social social-icon" style="background-color: #000; color: #fff;;" target="_blank"><i class="fab fa-whatsapp fa-xl"></i></a>
+                  <% } %>
+          
+                  <% if (person.InstagramStatus) { %>
+                      <a href="<%= person.Instagram %>" class="btn btn-social  social-icon" style="background-color: #000; color: #fff;" target="_blank"><i class="fab fa-instagram fa-xl"></i></a>
+                  <% } %>
+          
+                  <% if (person.FacebookStatus) { %>
+                      <a href="<%= person.Facebook %>" class="btn btn-social  social-icon" style="background-color: #000; color: #fff;" target="_blank"><i class="fab fa-facebook fa-xl"></i></a>
+                  <% } %>
+          
+                  <% if (person.YoutubeStatus) { %>
+                      <a href="<%= person.Youtube %>" class="btn btn-social  social-icon" style="background-color: #000; color: #fff;" target="_blank"><i class="fab fa-youtube fa-xl"></i></a>
+                  <% } %>
+          
+                  <% if (person.TelegramStatus) { %>
+                      <a href="<%= person.Telegram %>" class="btn btn-social social-icon" style="background-color: #000; color: #fff;" target="_blank"><i class="fab fa-telegram fa-xl"></i></a>
+                  <% } %>
+          
+                  <% if (person.TikTokStatus) { %>
+                      <a href="<%= person.TikTok %>" class="btn btn-social social-icon" style="background-color: #000; color: #fff;" target="_blank"><i class="fab fa-tiktok fa-xl"></i></a>
+                  <% } %>
+          
+                  <% if (person.TwitterStatus) { %>
+                      <a href="<%= person.Twitter %>" class="btn btn-social btn-twitter social-icon" style="background-color: #000; color: #fff;" target="_blank"><i class="fab fa-twitter fa-xl"></i></a>
+                  <% } %>
+          
+                  <% if (person.SnapchatStatus) { %>
+                      <a href="<%= person.Snapchat %>" class="btn btn-social social-icon" style="background-color: #000; color: #fff;" target="_blank">
+                          <i class="fab fa-snapchat fa-xl" style="color: #fff; font-weight: bold;"></i>
+                      </a>
+                  <% } %>
+          
+                  <% if (person.SpotifyStatus) { %>
+                      <a href="<%= person.Spotify %>" class="btn btn-social social-icon" style="background-color: #000; color: #fff;" target="_blank"><i class="fab fa-spotify fa-xl"></i></a>
+                  <% } %>
+          
+                  <% if (person.WebsiteStatus) { %>
+                      <a href="<%= person.Website %>" class="btn btn-social social-icon" style="background-color: #000; color: #fff;" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                  <% } %>
+          
+                  <% if (person.LinkedinStatus) { %>
+                      <a href="<%= person.Linkedin %>" class="btn bbtn-social social-icon" style="background-color: #000; color: #fff;" target="_blank"><i class="fab fa-linkedin fa-xl"></i></a>
+                  <% } %>
+          
+                  <% if (person.PaypalStatus) { %>
+                      <a href="<%= person.Paypal %>" class="btn btn-social social-icon" style="background-color: #000; color: #fff;" target="_blank"><i class="fa-brands fa-cc-paypal fa-2xl"></i></a>
+                  <% } %>
+              </div>
+          </div>
+          
+
+            <div class="card text-center mt-3">
+              <div class="card-body">
+                <div class="mb-3">
+                  <button class="btn btn-primary">
+                    <a href="/downloadVCF/<%= person.UniqueId %>"  class="text-white"><i class="fa-solid fa-down load"></i> Guardar Contacto</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .social-icons-container {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .social-icon {
+      margin-right: 10px; /* Ajusta el margen entre iconos según sea necesario */
+      margin-bottom: 10px; /* Ajusta el margen inferior entre filas según sea necesario */
+    }
+  
+    .card {
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .card-body {
+      position: relative;
+      z-index: 1;
+    }
+  
+    .background-image {
+      position: absolute; 
+      top: 15%;
+      left: 50%;
+      width: 100%; /* Ajusta el tamaño según sea necesario */
+      height: 150px; /* Ajusta el tamaño según sea necesario */
+      transform: translate(-50%, -50%);
+      background-image: url("/uploads/<%= settings.Image ? settings.Image : 'fondo.jpg' %>"); /* Cambia la ruta de la imagen según tu necesidad */
+      background-size: cover;
+      object-position: center center;
+      z-index: 0;
+    }
+  
+  </style>

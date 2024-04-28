@@ -1,0 +1,163 @@
+<div class="main d-flex justify-content-center w-100" style="background-color: #000;">
+  <main class="content d-flex p-0">
+    <div class="container d-flex flex-column">
+      <div class="row h-100">
+        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
+          <div class="d-table-cell align-middle">
+            <div class="row justify-content-center mb-4">
+              <div class="col-12 text-center">
+                <img src="https://postgrado.ucsm.edu.pe/wp-content/uploads/2022/03/Grupo-1@2x.png" class="img-fluid"
+                  style="max-height: 70px;">
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="m-sm-4">
+                  <form id="formLogin" action="/register" method="post">
+                    <h4 class="mb-4">Registro docente</h3>
+                    <div class="mb-3 row">
+                      <div class="col-sm-5">
+                        <input type="text" class="form-control" name="nameContact" placeholder="Nombres *" required />
+                      </div>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control" name="lastnameContact" placeholder="Apellidos *" required />
+                      </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                      <div class="col-sm-12">
+                        <input type="email" class="form-control" name="email" placeholder="Correo electrónico *" required />
+                      </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                      <div class="col-sm-12">
+                        <div class="mb-1">
+                          <div class="input-group">
+                            <input class="form-control fakepassword" type="password" placeholder="Contraseña *" name="password"
+                              id="password1" required />
+                            <span class="input-group-text p-0" id="togglePassword1">
+                              <i class="fakepasswordicon fa-solid fa-eye-slash cursor-pointer p-2 w-40px"></i>
+                            </span>
+                          </div>
+                        </div>
+        
+                      </div>
+                    </div>
+        
+                    <div class="mb-3 row">
+                      <div class="col-sm-12">
+                        <div class="mb-1">
+                          <div class="input-group">
+                            <input class="form-control fakepassword" type="password" placeholder="Confirmación de contraseña *"
+                              name="password2" id="password2" required />
+                            <span class="input-group-text p-0" id="togglePassword2">
+                              <i class="fakepasswordicon fa-solid fa-eye-slash cursor-pointer p-2 w-40px"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                      <div class="col-sm-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="check1">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            Estoy de acuerdo con los&nbsp;<a href="https://postgrado.ucsm.edu.pe/wp-content/uploads/2023/02/Terminos-y-Condiciones-Postgrado.pdf" target="_blank">Términos y Condiciones</a>&nbsp;y la&nbsp;<a href="https://postgrado.ucsm.edu.pe/wp-content/uploads/2023/02/Politicas-de-Proteccion-de-Datos-Personales-Postgrado.pdf" target="_blank">Política de Protección de Datos Personales&nbsp;</a>y entiendo que mi información se usará, como se describe, en los documentos en mención.
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="d-grid gap-2 mt-3">
+                      <button type="submit" id="btnSubmit" class="btn btn-lg btn-primary"
+                        style="background-color: #02B967;border-color: #02B967;">REGISTRATE
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+</div>
+
+
+
+
+           
+
+            
+
+           
+
+
+
+
+
+<script>
+  const form = document.getElementById('formLogin');
+
+  const togglePassword1 = document.querySelector('#togglePassword1');
+  const password1 = document.querySelector('#password1');
+
+  togglePassword1.addEventListener('click', function (e) {
+    const type = password1.getAttribute('type') === 'password' ? 'text' : 'password';
+    password1.setAttribute('type', type);
+    if (type === 'password') {
+      togglePassword1.innerHTML = '<i class="fakepasswordicon fa-solid fa-eye-slash cursor-pointer p-2 w-40px"></i>';
+    } else {
+      togglePassword1.innerHTML = '<i class=" fakepasswordicon fa-solid fa-eye cursor-pointer p-2 w-40px"></i>';
+    }
+  });
+
+  const togglePassword2 = document.querySelector('#togglePassword2');
+  const password2 = document.querySelector('#password2');
+
+  togglePassword2.addEventListener('click', function (e) {
+    const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
+    password2.setAttribute('type', type);
+    if (type === 'password') {
+      togglePassword2.innerHTML = '<i class="fakepasswordicon fa-solid fa-eye-slash cursor-pointer p-2 w-40px"></i>';
+    } else {
+      togglePassword2.innerHTML = '<i class=" fakepasswordicon fa-solid fa-eye cursor-pointer p-2 w-40px"></i>';
+    }
+  });
+
+  form.addEventListener('submit', function (event) {
+
+
+
+    if (password1.value != password2.value) {
+      alert('Las contraseñas no son iguales');
+      event.preventDefault();
+      return false;
+    }
+
+    var check1 = document.getElementById('check1');
+    var check2 = document.getElementById('check2');
+
+    if (!check1.checked) {
+      alert('Acepte los términos particulare');
+      event.preventDefault();
+      return false;
+    }
+    if (!check2.checked) {
+      alert('Acepte la política de privacidad');
+      event.preventDefault();
+      return false;
+    }
+
+    const btn = document.getElementById('btnSubmit');
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin-pulse"></i> Procesando';
+    btn.disabled = true;
+
+    event.submit()
+
+
+  });
+</script>

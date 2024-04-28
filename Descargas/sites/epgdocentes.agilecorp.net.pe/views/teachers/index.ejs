@@ -1,0 +1,222 @@
+<div class="container-fluid p-0">
+
+
+
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card mb-3">
+                <div class="card-body text-center">
+                    <img src="/uploads/foto/<%= teacher.RutaFoto %>" alt="" class="img-fluid rounded-circle mb-2"
+                        width="190" height="190" onerror="this.src = '/profe.png';">
+                    <h5 class="card-title mb-1">
+                        <%= teacher.LastName %>, <%= teacher.Name %>
+                    </h5>
+                    <span class="btn btn-primary" onclick="seleccionarFoto()" id="btnUpload"><i class="fa-solid fa-cloud-arrow-up"></i>
+                        Actualizar foto 512x512px</span>
+                    <input type="file" id="fileInput" onchange="subirFoto()" accept="image/*" style="display: none;">
+
+                </div>
+                <!-- <hr class="my-0">
+                <div class="card-body">
+                    <h5 class="h6 card-title">Skills</h5>
+                    <a href="#" class="badge bg-primary me-1 my-1">HTML</a>
+                    <a href="#" class="badge bg-primary me-1 my-1">JavaScript</a>
+                    <a href="#" class="badge bg-primary me-1 my-1">Sass</a>
+                    <a href="#" class="badge bg-primary me-1 my-1">Angular</a>
+                    <a href="#" class="badge bg-primary me-1 my-1">Vue</a>
+                    <a href="#" class="badge bg-primary me-1 my-1">React</a>
+                    <a href="#" class="badge bg-primary me-1 my-1">Redux</a>
+                    <a href="#" class="badge bg-primary me-1 my-1">UI</a>
+                    <a href="#" class="badge bg-primary me-1 my-1">UX</a>
+                </div> -->
+                <hr class="my-0">
+                <div class="card-body">
+                    <!-- <h5 class="h6 card-title">About</h5> -->
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-1"><a href="<%= teacher.LinkRENACYT %>" target="_blank"><i
+                                    class="fa-solid fa-r"></i> Renacyt</a></li>
+
+                        <li class="mb-1"><i class="fa-solid fa-table-cells-large"></i> <b>Categoria:</b>
+                            <%= teacher.CategoriaDocente %>
+                        </li>
+
+                    </ul>
+                </div>
+                <hr class="my-0">
+                <div class="card-body">
+                    <!-- <h5 class="h6 card-title">Elsewhere</h5> -->
+                    <table class="table table-sm table-borderless">
+                        <tr>
+                            <td>DNI</td>
+                            <td><i class="fa-solid fa-id-card"></i>
+                                <%= teacher.NumDoc %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fecha nacimiento</td>
+                            <td><i class="fa-solid fa-cake-candles"></i>
+                                <%= moment(teacher.Birthdate).format('DD/MM/YYYY') %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pais de residencia</td>
+                            <td><i class="fa-solid fa-earth-americas"></i>
+                                <%= teacher.CountryResidence %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Correo electrónico</td>
+                            <td nowrap><i class="fa-solid fa-at fa-fw "></i>
+                                <%= teacher.Email %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Celular</td>
+                            <td><i class="fa-solid fa-mobile-screen-button fa-fw "></i>
+                                <%= teacher.Phone %>
+                            </td>
+                        </tr>
+                    </table>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-1"></li>
+                        <li class="mb-1"></li>
+                        <li class="mb-1"></li>
+                        <li class="mb-1"></li>
+                        <li class="mb-1"></li>
+
+                        <!-- <li class="mb-1"><span class="fab fa-twitter fa-fw me-1"></span> <a href="#">Twitter</a></li>
+                        <li class="mb-1"><span class="fab fa-facebook fa-fw me-1"></span> <a href="#">Facebook</a></li>
+                        <li class="mb-1"><span class="fab fa-instagram fa-fw me-1"></span> <a href="#">Instagram</a>
+                        </li>
+                        <li class="mb-1"><span class="fab fa-linkedin fa-fw me-1"></span> <a href="#">LinkedIn</a></li> -->
+                    </ul>
+                </div>
+                <hr class="my-0">
+                <div class="card-body">
+                    <!-- <h5 class="h6 card-title">Elsewhere</h5> -->
+                    <ul class="list-unstyled mb-0">
+
+                        <li class="mb-1"><span class="fab fa-linkedin fa-fw me-1"></span> <a
+                                href="<%= teacher.LinkedIn %>" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Perfil docente</h5>
+                </div>
+                <div class="card-body h-100">
+                    <% teacherplan.forEach(obj=>{ %>
+
+                        <a href="#" class="badge bg-primary me-1 my-1">
+                            <%= obj %>
+                        </a>
+
+                        <% }) %>
+
+
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Grados</h5>
+                </div>
+                <div class="card-body h-100">
+                    <table class="table table-sm table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Grados</th>
+                                <th>Programa</th>
+
+
+
+                                <th>
+                                    Universidad
+                                </th>
+
+                                <th>Pais</th>
+                                <th>Año</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% grados.forEach(obj=>{ %>
+                                <tr>
+                                    <td>
+                                        <%= obj.Grado %>
+                                    </td>
+                                    <td>
+                                        <%= obj.Titulo %>
+                                    </td>
+                                    <td>
+                                        <%= obj.Universidad %>
+                                    </td>
+                                    <td>
+                                        <%= obj.Pais %>
+                                    </td>
+                                    <td>
+                                        <%= obj.Anyo %>
+                                    </td>
+
+
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Evaluación Docente</h5>
+                </div>
+                <div class="card-body h-100">
+
+                </div>
+            </div>
+
+            Fecha última actualización: <%= moment(teacher.LastUpdate).format('DD/MM/YYYY') %>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Función para mostrar el cuadro de diálogo de carga de archivos
+    function seleccionarFoto() {
+        document.getElementById('fileInput').click();
+    }
+
+    // Función para manejar la carga de archivos y realizar el POST
+    function subirFoto() {
+
+        $("#btnUpload").html('<i class="fas fa-spinner fa-spin"></i> Grabando...');
+
+        var input = document.getElementById('fileInput');
+        if (input.files && input.files[0]) {
+            var formData = new FormData();
+            formData.append('imagen', input.files[0]);
+
+            // Puedes realizar el envío POST utilizando la API Fetch o AJAX
+            // Aquí se muestra un ejemplo usando Fetch
+            fetch('/teacher/subirFoto', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Aquí puedes manejar la respuesta del servidor si es necesario
+                    console.log('Respuesta del servidor:', data);
+                    location.reload()
+                })
+                .catch(error => {
+                    console.error('Error al realizar el POST:', error);
+                });
+        }
+    }
+</script>

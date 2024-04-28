@@ -1,0 +1,160 @@
+<div class="row">
+  <div class="col-md-6 text-left">
+    <h4>Tareas</h4>
+  </div>
+  <div class="col-md-6" style="text-align: right;">
+    <a href="/tasks/create" class="btn btn-sm btn-primary"><i class="fa-solid fa-plus"></i> Agregar</a>
+  </div>
+</div>
+
+<div class="card border rounded-3">
+  <div class="card-body">
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+          role="tab" aria-controls="home-tab-pane" aria-selected="true">Tareas</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
+          role="tab" aria-controls="profile-tab-pane" aria-selected="false">Historial</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active  p-1 border border-top-0" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <table id="tblTasks" class="table table-sm table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>N°</th>
+              <th>Proyecto</th>
+              <th>Descripción</th>
+              <th>Fecha Inicio</th>
+              <th>Fecha Fin</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- tasks.sort((a, b)=> a.status.localeCompare(b.status) ).forEach((item) => { -->
+            <% tasks.filter(a=> a.status != 'Cerrado' ).forEach((item, index) => { %>
+              <tr>
+                <td>
+                  <%= index+1 %>
+                </td>
+                <td class="<%= item.status == 'Cerrado' ? 'tdclose' : ''  %>">
+                  <%= item.project[0].name %>
+                </td>
+                <td class="<%= item.status == 'Cerrado' ? 'tdclose' : ''  %>">
+                  <%= item.description %>
+                </td>
+                <td class="<%= item.status == 'Cerrado' ? 'tdclose' : ''  %>">
+                  <%= moment(item.date_begin).format('YYYY-MM-DD') %>
+                </td>
+                <td class="<%= item.status == 'Cerrado' ? 'tdclose' : ''  %>">
+                  <%= moment(item.date_end).format('YYYY-MM-DD') %>
+                </td>
+                <td style="width: 1%;" nowrap>
+                  <a href="/tasks/update/<%= item._id.toString() %>"><i class="fa-solid fa-pen-to-square"></i></a>
+                  <a href="/tasks/delete/<%= item._id.toString() %>" class="text-danger"
+                    onclick="window.confirm('¿Deseas eliminar?') ? '' : event.preventDefault();"><i
+                      class="fa-solid fa-trash"></i></a>
+                </td>
+              </tr>
+              <% })%>
+          </tbody>
+        </table>
+      </div>
+      <div class="tab-pane fade  p-1 border border-top-0" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <table class="table table-sm table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>Proyecto</th>
+              <th>Descripción</th>
+              <th>Fecha Inicio</th>
+              <th>Fecha Fin</th>
+              <th>Estado</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% tasks.filter(a=> a.status == 'Cerrado' ).forEach((item) => { %>
+              <tr>
+                <td class="<%= item.status == 'Cerrado' ? 'tdclose' : ''  %>">
+                  <%= item.project[0].name %>
+                </td>
+                <td class="<%= item.status == 'Cerrado' ? 'tdclose' : ''  %>">
+                  <%= item.description %>
+                </td>
+                <td class="<%= item.status == 'Cerrado' ? 'tdclose' : ''  %>">
+                  <%= moment(item.date_begin).format('YYYY-MM-DD') %>
+                </td>
+                <td class="<%= item.status == 'Cerrado' ? 'tdclose' : ''  %>">
+                  <%= moment(item.date_end).format('YYYY-MM-DD') %>
+                </td>
+                <td class="<%= item.status == 'Cerrado' ? 'tdclose' : ''  %>">
+                  <%= item.status %>
+                </td>
+                <td style="width: 1%;" nowrap>
+                  <a href="/tasks/update/<%= item._id.toString() %>"><i class="fa-solid fa-pen-to-square"></i></a>
+                  <!-- <a href="/tasks/delete/<%= item._id.toString() %>" class="text-danger"
+                    onclick="window.confirm('¿Deseas eliminar?') ? '' : event.preventDefault();"><i
+                      class="fa-solid fa-trash"></i></a> -->
+                </td>
+              </tr>
+              <% })%>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link
+  href="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-1.13.8/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/b-print-2.4.2/datatables.min.css"
+  rel="stylesheet">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script
+  src="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-1.13.8/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/b-print-2.4.2/datatables.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="yadcf-0.9.3/jquery.dataTables.yadcf.css">
+<script type="text/javascript" src="yadcf-0.9.3/jquery.dataTables.yadcf.js"></script>
+<link rel="stylesheet" type="text/css" href="/yadcf-filter.css">
+
+<style>
+  .tdclose {
+    color: gray !important;
+    text-decoration: line-through;
+  }
+
+  #yadcf-filter--tblTasks-1 {
+    width: 200px !important;
+    max-width: 200px !important;
+}
+</style>
+
+<script>
+  var tblList = $('#tblTasks').DataTable({
+    "order": [
+      [3, 'asc']
+    ]
+  });
+
+  yadcf.init(tblList, [{
+    column_number: 1,
+    filter_type: 'select',
+    filter_default_label: "Seleccione proyecto"
+  },]);
+
+  $(".yadcf-filter-reset-button").html('')
+
+
+
+</script>

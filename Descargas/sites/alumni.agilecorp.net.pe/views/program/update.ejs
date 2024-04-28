@@ -1,0 +1,71 @@
+<div class="col-12">
+    <form id="formCreate" action="/programs/update" method="post">
+      <div class="card border rounded-3">
+        <div class="card-header  border-bottom p-3">
+          <div class="d-sm-flex justify-content-between align-items-center">
+            <h5 class="mb-2 mb-sm-0">Actualizar Programa</h5>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <% if (error !='' ) { %>
+            <div class="text-danger">
+              <%= error %>"
+            </div>
+            <% } else { %>
+            <div class="col-md-4">
+              <input name="UniqueId" id="UniqueId" class="form-control" type="hidden" value="<%= program.UniqueId %>" />
+              <div class="form-group">
+                <label for="Name" class="control-label">Nombre</label>
+                <input name="Name" id="Name" class="form-control" type="text" value="<%= program.Name %>" />
+                <span for="Name" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+                <label for="Year" class="control-label">Año</label>
+                <input name="Year" id="Year" class="form-control" type="text" value="<%= program.Year %>"/>
+                <span for="Year" class="text-danger"></span>
+              </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer  border-bottom p-3">
+          <div class="d-sm-flex justify-content-between align-items-center">
+            <button class="btn btn-sm btn-info" type="button" onclick="window.location.href='/programs'"><i class="fa-solid fa-arrow-left"></i>
+              Regresar</button>
+            <button class="btn btn-sm btn-primary" type="submit" id="btnSave"><i class="fa-solid fa-floppy-disk"></i>
+              Actualizar </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  <script>
+  
+    const form = document.getElementById('formCreate');
+    form.addEventListener('submit', function(event) {
+  
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      console.log(data);
+  
+      const errors = validate(data, constraints);
+      console.log(errors);
+      if (errors) {
+  
+        for (const field in errors) {
+          const errorMessage = errors[field][0];
+          const fieldElement = document.getElementById(field);
+          fieldElement.classList.add('error');
+          fieldElement.nextElementSibling.textContent = errorMessage;
+        }
+        event.preventDefault();
+      } else {
+        const btn = document.getElementById('btnSave');
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin-pulse"></i> Procesando';
+        btn.disabled = true;
+      }
+    });
+  </script>

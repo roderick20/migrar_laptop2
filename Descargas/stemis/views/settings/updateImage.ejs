@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="col-12">
+        <% settingslist.forEach(item => { %>
+        <form enctype="multipart/form-data" action="/admin/settings/updateImage/<%= item.UniqueId %>" method="post">
+            <div class="card border rounded-3">
+                <div class="card-header  border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <h5 class="mb-2 mb-sm-0">Configuración</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Imagen</label>
+                                    <input type="file" class="form-control" id="file" name="Value" accept="image/jpeg, image/png, image/jpg" required />
+                                </div>
+                                <div class="form-group mt-1">
+                                    <img id="preview" src="" class="img-fluid img-thumbnail" alt="Image preview...">
+                                </div>
+                            </div>
+    
+                        </div>                    
+                    </div>
+                </div>
+                <div class="card-footer  border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <a class="btn btn-sm btn-info" href="/Security/Settings"><i class="fa-solid fa-arrow-left"></i> Regresar</a>
+                        <button class="btn btn-sm btn-primary" type="submit"> <i class="fa-solid fa-plus"></i> Agregar </button>
+                    </div>
+                </div>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PPKqOEsVUVMsJ9zXdsFLpHFnnsMCjTEYu43j6jdjeiyrP2v71zel_5lgAHINBQpUIJ0pOicuF_mDTS2e5vIhDdi-6cEX5eiADattJSkxqCsSCrIrxCTgjKll8tKXUIuatMZspimhxksesrO5Xobkd8" />
+        </form>
+        <% }) %>
+    </div>
+</div>

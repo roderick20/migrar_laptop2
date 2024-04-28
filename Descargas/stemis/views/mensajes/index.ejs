@@ -1,0 +1,58 @@
+<div class="col-12">
+    <div class="card border rounded-3">
+        <div class="card-header  border-bottom p-3">
+            <div class="d-sm-flex justify-content-between align-items-center">
+                <h5 class="mb-2 mb-sm-0">Mensajes</h5>
+            </div>
+        </div>
+        <div class="card-body" style="min-height:500px">
+            <div class="table-responsive border-0">
+                <table id="listTable" class="table align-middle mb-0 table-hover table-shrink">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col" class="border-0 rounded-start">
+
+
+                                Name
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            <th>
+                                Subject
+                            </th>
+                            <th>
+                                Created
+                            </th>
+
+                            <th scope="col" class="border-0 rounded-end"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <% messlist.forEach(item => { %>
+                                <tr>
+                                    <td>
+                                        <%= item.Name %>
+                                    </td>
+                                    <td>
+                                        <%= item.Email %>
+                                    </td>
+                                    <td>
+                                        <%= item.Subject %>
+                                    </td>
+                                    <td>
+                                        <%= item.Created %>
+                                    </td>
+                                    <td>
+                                        <a href="/admin/messages/<%= item.UniqueId %>">Details</a>
+                                    </td>
+                                </tr>
+                            <% }) %> 
+                                
+                               
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

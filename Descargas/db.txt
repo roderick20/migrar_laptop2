@@ -1,0 +1,39 @@
+CREATE TABLE formato 
+(
+  id int GENERATED ALWAYS AS IDENTITY, 
+ GerneciaLinea  NVARCHAR2(2000),
+	Comprador NVARCHAR2(2000),
+	RubroFamilia NVARCHAR2(2000),
+	RubroSubFamilia NVARCHAR2(2000),
+	AdministradorRubro NVARCHAR2(2000),
+	AnalistaRiesgosResponsable NVARCHAR2(2000),
+	ProveedorRUC NVARCHAR2(2000),
+	ProveedorNombre NVARCHAR2(2000),
+	LugarServicio NVARCHAR2(2000),
+	Moneda NVARCHAR2(2000),
+	mporteContratacion NVARCHAR2(2000),
+	Orden NVARCHAR2(2000),
+	FechaRequerimiento NVARCHAR2(2000),
+	FechaValidacion NVARCHAR2(2000),
+	FechaValidaciónRating NVARCHAR2(2000),
+  solicitante NVARCHAR2(2000),
+  cuenta NVARCHAR2(2000),
+  CORRELATIVO int, 
+  CONSTRAINT formato_PK PRIMARY KEY (id) ENABLE 
+)
+
+CREATE TABLE GerenciaLinea 
+(
+  id int GENERATED ALWAYS AS IDENTITY, 
+  Nombre NVARCHAR2(2000),
+  Codigo NVARCHAR2(2000),
+  CORRELATIVO int, 
+  CONSTRAINT GerenciaLinea_PK PRIMARY KEY (id) ENABLE 
+)
+
+CREATE TABLE FechaComite 
+(
+  id int GENERATED ALWAYS AS IDENTITY, 
+  CORRELATIVO int, 
+  CONSTRAINT FechaComite_PK PRIMARY KEY (id) ENABLE 
+)

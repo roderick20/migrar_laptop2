@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="col-12">
+        <div class="card border rounded-3">
+            <div class="card-header  border-bottom p-3">
+                <div class="d-sm-flex justify-content-between align-items-center">
+                    <h5 class="mb-2 mb-sm-0">Posts</h5>
+                    <a class="btn btn-sm btn-primary" href="/admin/blogs/create"> <i class="fa-solid fa-plus"></i> Agregar </a>
+                </div>
+            </div>
+            <div class="card-body" style="min-height:500px">
+                <div class="table-responsive border-0">
+                    <table id="listTable" class="table align-middle mb-0 table-hover table-shrink">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col" class="border-0 rounded-start">
+                                </th>
+                                <th>
+                                    Title
+                                </th>
+                                <th>
+                                    Tags
+                                </th>                            
+                                <th>
+                                    Category
+                                </th>
+                                <th scope="col" class="border-0 rounded-end"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <% bloglist.forEach(item => { %>
+                                <tr>
+                                    <td width="10%">
+                                        <img id="preview" src="<%= item.Imagen %>" class="img-fluid img-thumbnail" alt="Image preview...">
+                                    </td>
+                                    <td>
+                                        <%= item.Title %>
+                                        <br />
+                                        <i><%= item.Slug %></i>
+                                    </td>
+                                    <td>
+                                        <%= item.Tags %>
+                                    </td>
+                                    
+                                    <td>
+                                        <%= item.TitleCat %>
+                                    </td>
+                                    <td style="width: 1%;white-space: nowrap;">
+                                        <a class="text-primary" href="/admin/blogs/edit/<%= item.UniqueId %>"><i class="fa-solid fa-pen-to-square"></i> Editar</a> |
+                                        <form id="deleteForm<%= item.UniqueId %>" style="display: inline;">
+                                            <input type="hidden" name="UniqueId" value="<%= item.UniqueId %>" />
+                                            <a type="button" class="text-danger btn-link delete-btn" onclick="confirmDelete('<%= item.UniqueId %>')"><i class="fa-solid fa-trash"></i> Eliminar</a>
+                                        </form>
+                                        <script>
+                                            async function confirmDelete(UniqueId) {
+                                                if (confirm('¿Estás seguro de que deseas eliminar este post?')) {
+                                                    try {
+                                                        const response = await fetch(`/admin/blogs/delete/${UniqueId}`, {
+                                                            method: 'DELETE'
+                                                        });
+                                                        if (response.ok) {
+                                                            // Realizar acciones adicionales después de la eliminación si es necesario
+                                                            // Por ejemplo, actualizar la interfaz o recargar la página
+                                                            location.reload();
+                                                        } else {
+                                                            console.error('Error al eliminar el blog');
+                                                        }
+                                                    } catch (error) {
+                                                        console.error('Error al eliminar el blog:', error);
+                                                    }
+                                                }
+                                            }
+                                        </script>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>

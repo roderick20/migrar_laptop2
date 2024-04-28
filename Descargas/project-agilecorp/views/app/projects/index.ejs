@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-6 text-left">
+    <h4>Proyectos</h4>
+  </div>
+  <div class="col-md-6" style="text-align: right;">
+    <a href="/projects/create" class="btn btn-sm btn-primary"><i class="fa-solid fa-plus"></i> Agregar</a>
+  </div>
+</div>
+
+<table class="table table-sm table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Tílulo</th>
+      <th>Fecha Inicio</th>
+      <th>Fecha Fin</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% projects.forEach((item) => { %>
+    <tr>
+      <td>
+        <%= item.name %>
+      </td>
+      <td>
+        <%= moment(item.date_begin).format('YYYY-MM-DD') %>
+      </td>
+      <td>
+        <%= moment(item.date_end).format('YYYY-MM-DD') %>
+      </td>
+      <td style="width: 1%;" nowrap>
+        <a href="/projects/update/<%= item._id.toString() %>"><i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="/projects/delete/<%= item._id.toString() %>" class="text-danger" onclick="window.confirm('¿Deseas eliminar?') ? '' : event.preventDefault();"><i class="fa-solid fa-trash"></i></a>
+      </td>
+    </tr>
+    <% })%>
+  </tbody>
+</table>

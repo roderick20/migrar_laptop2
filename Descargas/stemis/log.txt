@@ -1,0 +1,312 @@
+Fecha: 8/6/2023, 18:04:01, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:04:02, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:05:14, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:05:36, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:05:37, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:05:52, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:05:52, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:05:54, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:05:55, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:06:17, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:06:17, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:06:18, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:06:22, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:06:42, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:06:43, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:06:45, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:06:45, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:06:46, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:06:57, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:06:57, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:08:43, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:08:44, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:08:55, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:08:56, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:08:58, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:08:59, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:09:13, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:09:14, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:09:15, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:09:16, Archivo: user.js/list        , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:09:23, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:18:33, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:22:51, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:29:11, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:29:15, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:30:28, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:32:02, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:32:28, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:36:03, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:45:02, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:45:04, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:45:05, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:49:39, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 18:59:46, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 19:01:00, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 20:17:25, Archivo: dbo.Personeria/list , Error: ConnectionError: Login failed for user 'kuky'.  
+Fecha: 8/6/2023, 20:18:05, Archivo: dbo.Personeria/list , Error: RequestError: Invalid object name 'kukyfor.dbo.TablaGeneral'.  
+Fecha: 9/6/2023, 19:52:17, Archivo: dbo.Personeria/create, Error: RequestError: Validation failed for parameter 'FechaAniversario'. Invalid date.  
+Fecha: 9/6/2023, 20:04:54, Archivo: dbo.Personeria/create, Error: RequestError: Validation failed for parameter 'FamiliaID'. Invalid number.  
+Fecha: 9/6/2023, 20:11:39, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'GrupoPersoneria', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 9/6/2023, 20:13:53, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'Domiciliado', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 9/6/2023, 20:15:06, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoContribuyente', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 9/6/2023, 20:21:48, Archivo: user.js/list        , Error: RequestError: Invalid object name 'dbo.user'.  
+Fecha: 9/6/2023, 20:23:32, Archivo: dbo.Personeria/listdt, Error: RequestError: Invalid column name 'name'.  
+Fecha: 9/6/2023, 20:26:50, Archivo: dbo.Personeria/list , Error: ConnectionError: Failed to connect to 3.144.237.208:1433 in 15000ms  
+Fecha: 10/6/2023, 10:06:42, Archivo: dbo.Personeria/list , Error: ConnectionError: Failed to connect to 3.144.237.208:1433 in 15000ms  
+Fecha: 10/6/2023, 19:35:43, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 10/6/2023, 19:43:39, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 10/6/2023, 19:45:43, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 10/6/2023, 19:46:46, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 10/6/2023, 19:56:26, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 10/6/2023, 20:05:49, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 10/6/2023, 20:07:17, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 10/6/2023, 20:09:30, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 10/6/2023, 20:14:06, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 10/6/2023, 20:15:22, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 11/6/2023, 10:42:25, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 11/6/2023, 10:42:37, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 11/6/2023, 11:27:28, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 11/6/2023, 11:38:47, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 11/6/2023, 11:51:34, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 11/6/2023, 13:20:23, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 11/6/2023, 13:22:28, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 11/6/2023, 13:24:15, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'TipoIdentidadID', table 'kflor.dbo.Personeria'; column does not allow nulls. INSERT fails.  
+Fecha: 11/6/2023, 13:26:25, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert duplicate key row in object 'dbo.Personeria' with unique index 'IX_Personeria_NroIdentidad'. The duplicate key value is (101.00000, 20539570219).  
+Fecha: 11/6/2023, 15:08:34, Archivo: dbo.Personeria/create, Error: RequestError: The parameter name Estado has already been declared. Parameter names must be unique  
+Fecha: 11/6/2023, 15:10:35, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert duplicate key row in object 'dbo.Personeria' with unique index 'IX_Personeria_NroIdentidad'. The duplicate key value is (101.00000, 20539570219).  
+Fecha: 11/6/2023, 15:11:35, Archivo: dbo.Personeria/create, Error: RequestError: Validation failed for parameter 'ViaID'. Invalid string.  
+Fecha: 11/6/2023, 15:15:29, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert duplicate key row in object 'dbo.Personeria' with unique index 'IX_Personeria_NroIdentidad'. The duplicate key value is (101.00000, 20539570219).  
+Fecha: 11/6/2023, 15:24:17, Archivo: dbo.Personeria/create, Error: RequestError: Validation failed for parameter 'InteriorVia'. Invalid number.  
+Fecha: 11/6/2023, 15:25:55, Archivo: dbo.Personeria/create, Error: RequestError: Validation failed for parameter 'InteriorVia'. Invalid number.  
+Fecha: 11/6/2023, 15:26:26, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert duplicate key row in object 'dbo.Personeria' with unique index 'IX_Personeria_NroIdentidad'. The duplicate key value is (101.00000, 20539570219).  
+Fecha: 11/6/2023, 15:26:46, Archivo: dbo.Personeria/create, Error: RequestError: Validation failed for parameter 'Secuencia'. Invalid string.  
+Fecha: 11/6/2023, 15:27:40, Archivo: dbo.Personeria/create, Error: RequestError: Validation failed for parameter 'Secuencia'. Invalid string.  
+Fecha: 11/6/2023, 15:28:49, Archivo: dbo.Personeria/create, Error: ReferenceError: result2 is not defined  
+Fecha: 11/6/2023, 15:33:00, Archivo: user.js/read        , Error: RequestError: Validation failed for parameter 'uniqueId'. Invalid GUID.  
+Fecha: 11/6/2023, 15:33:05, Archivo: user.js/read        , Error: RequestError: Validation failed for parameter 'uniqueId'. Invalid GUID.  
+Fecha: 11/6/2023, 15:34:37, Archivo: dbo.Personeria/create, Error: ReferenceError: result2 is not defined  
+Fecha: 11/6/2023, 15:42:56, Archivo: dbo.Personeria/create, Error: ReferenceError: result2 is not defined  
+Fecha: 11/6/2023, 15:58:48, Archivo: user.js/read        , Error: RequestError: Validation failed for parameter 'uniqueId'. Invalid GUID.  
+Fecha: 11/6/2023, 15:58:55, Archivo: user.js/read        , Error: RequestError: Validation failed for parameter 'uniqueId'. Invalid GUID.  
+Fecha: 11/6/2023, 16:00:01, Archivo: user.js/read        , Error: RequestError: Validation failed for parameter 'uniqueId'. Invalid GUID.  
+Fecha: 11/6/2023, 16:00:35, Archivo: user.js/read        , Error: RequestError: Validation failed for parameter 'uniqueId'. Invalid GUID.  
+Fecha: 11/6/2023, 16:02:18, Archivo: user.js/read        , Error: RequestError: Validation failed for parameter 'uniqueId'. Invalid GUID.  
+Fecha: 11/6/2023, 16:02:56, Archivo: user.js/read        , Error: RequestError: Validation failed for parameter 'uniqueId'. Invalid GUID.  
+Fecha: 11/6/2023, 16:03:02, Archivo: user.js/read        , Error: RequestError: Validation failed for parameter 'uniqueId'. Invalid GUID.  
+Fecha: 11/6/2023, 16:06:24, Archivo: user.js/read        , Error: RequestError: Validation failed for parameter 'uniqueId'. Invalid GUID.  
+Fecha: 11/6/2023, 16:06:31, Archivo: user.js/read        , Error: RequestError: Validation failed for parameter 'uniqueId'. Invalid GUID.  
+Fecha: 11/6/2023, 16:07:12, Archivo: user.js/read        , Error: RequestError: Validation failed for parameter 'uniqueId'. Invalid GUID.  
+Fecha: 11/6/2023, 16:08:28, Archivo: user.js/read        , Error: RequestError: Validation failed for parameter 'PersoneriaID'. Invalid GUID.  
+Fecha: 11/6/2023, 16:08:55, Archivo: user.js/read        , Error: RequestError: Must declare the scalar variable "@uniqueId".  
+Fecha: 11/6/2023, 16:14:22, Archivo: dbo.Personeria/remove, Error: RequestError: Invalid column name 'uniqueId'.  
+Fecha: 13/6/2023, 15:31:22, Archivo: dbo.Personeria/create, Error: RequestError: Validation failed for parameter 'Telefonos'. Invalid string.  
+Fecha: 13/6/2023, 15:45:26, Archivo: dbo.Personeria/update, Error: ReferenceError: NombreComercial is not defined  
+Fecha: 13/6/2023, 15:46:45, Archivo: dbo.Personeria/create, Error: RequestError: Validation failed for parameter 'Telefonos'. Invalid string.  
+Fecha: 13/6/2023, 15:50:28, Archivo: dbo.Personeria/update, Error: ReferenceError: NombreComercial is not defined  
+Fecha: 13/6/2023, 15:51:15, Archivo: dbo.Personeria/create, Error: RequestError: Validation failed for parameter 'Telefonos'. Invalid string.  
+Fecha: 13/6/2023, 15:54:43, Archivo: dbo.Personeria/create, Error: RequestError: Invalid column name 'Fax'.  
+Fecha: 13/6/2023, 15:55:31, Archivo: dbo.Personeria/create, Error: RequestError: Invalid column name 'Fax'.  
+Fecha: 13/6/2023, 16:26:46, Archivo: dbo.Personeria/update, Error: ReferenceError: NombreComercial is not defined  
+Fecha: 13/6/2023, 16:31:41, Archivo: dbo.Personeria/create, Error: RequestError: String or binary data would be truncated.  
+Fecha: 13/6/2023, 16:53:56, Archivo: dbo.Personeria/update, Error: ReferenceError: NombreComercial is not defined  
+Fecha: 13/6/2023, 17:09:09, Archivo: dbo.Personeria/create, Error: ReferenceError: address is not defined  
+Fecha: 13/6/2023, 17:10:43, Archivo: dbo.Personeria/create, Error: TypeError: Cannot read properties of undefined (reading 'forEach')  
+Fecha: 13/6/2023, 17:34:28, Archivo: dbo.Personeria/create, Error: RequestError: Violation of PRIMARY KEY constraint 'PK_PersoneriaDireccion'. Cannot insert duplicate key in object 'dbo.PersoneriaDireccion'. The duplicate key value is (66, 2).  
+Fecha: 13/6/2023, 17:41:13, Archivo: dbo.Personeria/create, Error: RequestError: Violation of PRIMARY KEY constraint 'PK_PersoneriaDireccion'. Cannot insert duplicate key in object 'dbo.PersoneriaDireccion'. The duplicate key value is (68, 4).  
+Fecha: 13/6/2023, 17:49:18, Archivo: dbo.Personeria/create, Error: RequestError: Violation of PRIMARY KEY constraint 'PK_PersoneriaDireccion'. Cannot insert duplicate key in object 'dbo.PersoneriaDireccion'. The duplicate key value is (69, 4).  
+Fecha: 13/6/2023, 18:03:20, Archivo: dbo.Personeria/create, Error: RequestError: Must declare the scalar variable "@DireccionID".  
+Fecha: 13/6/2023, 18:06:29, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'DireccionID', table 'kflor.dbo.PersoneriaDireccion'; column does not allow nulls. INSERT fails.  
+Fecha: 13/6/2023, 18:10:21, Archivo: dbo.Personeria/create, Error: RequestError: Cannot insert the value NULL into column 'UbicacionID', table 'kflor.dbo.PersoneriaDireccion'; column does not allow nulls. INSERT fails.  
+Fecha: 25/6/2023, 17:37:59, Archivo: login.js/read       , Error: RequestError: Invalid object name 'dbo.User'.  
+Fecha: 25/6/2023, 18:03:33, Archivo: login.js/read       , Error: ConnectionError: Failed to connect to 3.144.237.208:1433 in 15000ms  
+Fecha: 25/6/2023, 18:08:00, Archivo: login.js/read       , Error: RequestError: Invalid object name 'dbo.User'.  
+Fecha: 25/6/2023, 19:12:38, Archivo: login.js/read       , Error: ReferenceError: passwordHex is not defined  
+Fecha: 25/6/2023, 19:15:31, Archivo: login.js/read       , Error: ReferenceError: passwordHex is not defined  
+Fecha: 25/6/2023, 19:18:05, Archivo: login.js/read       , Error: RequestError: Incorrect syntax near 'Clave'.  
+Fecha: 26/6/2023, 09:59:20, Archivo: dbo.PRODUCTOS/listdt, Error: RequestError: Invalid column name 'name'.  
+Fecha: 26/6/2023, 10:05:21, Archivo: dbo.PRODUCTOS/listdt, Error: ConnectionError: Failed to connect to 3.144.237.208:1433 in 15000ms  
+Fecha: 26/6/2023, 10:05:53, Archivo: dbo.PRODUCTOS/listdt, Error: ConnectionError: Failed to connect to 3.144.237.208:1433 in 15000ms  
+Fecha: 29/6/2023, 06:45:32, Archivo: dbo.PRODUCTOS/create, Error: RequestError: Validation failed for parameter 'descripcion'. Invalid number.  
+Fecha: 29/6/2023, 06:58:27, Archivo: dbo.GRUPOS_PRODUCTOS/create, Error: RequestError: Cannot insert the value NULL into column 'Descripcion', table 'kflor.dbo.ProductoGrupo'; column does not allow nulls. INSERT fails.  
+Fecha: 29/6/2023, 07:20:21, Archivo: dbo.PRODUCTOS/create, Error: RequestError: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_PRODUCTOS_GRUPOS_PRODUCTOS". The conflict occurred in database "kflor", table "dbo.GRUPOS_PRODUCTOS".  
+Fecha: 29/6/2023, 07:25:53, Archivo: dbo.PRODUCTOS/create, Error: RequestError: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_PRODUCTOS_GRUPOS_PRODUCTOS". The conflict occurred in database "kflor", table "dbo.GRUPOS_PRODUCTOS".  
+Fecha: 29/6/2023, 07:27:35, Archivo: dbo.PRODUCTOS/create, Error: RequestError: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_PRODUCTOS_GRUPOS_PRODUCTOS". The conflict occurred in database "kflor", table "dbo.GRUPOS_PRODUCTOS".  
+Fecha: 29/6/2023, 07:28:41, Archivo: dbo.PRODUCTOS/create, Error: RequestError: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_PRODUCTOS_GRUPOS_PRODUCTOS". The conflict occurred in database "kflor", table "dbo.GRUPOS_PRODUCTOS".  
+Fecha: 29/6/2023, 07:38:53, Archivo: dbo.PRODUCTOS/create, Error: RequestError: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_PRODUCTOS_GRUPOS_PRODUCTOS". The conflict occurred in database "kflor", table "dbo.GRUPOS_PRODUCTOS".  
+Fecha: 29/6/2023, 07:43:27, Archivo: dbo.PRODUCTOS/create, Error: RequestError: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_PRODUCTOS_GRUPOS_PRODUCTOS". The conflict occurred in database "kflor", table "dbo.GRUPOS_PRODUCTOS".  
+Fecha: 29/6/2023, 16:23:39, Archivo: dbo.PRODUCTOS/create, Error: RequestError: Violation of PRIMARY KEY constraint 'PK_ProductoFoto'. Cannot insert duplicate key in object 'dbo.ProductoFoto'. The duplicate key value is (1, 17, 1).  
+Fecha: 29/6/2023, 16:26:41, Archivo: dbo.PRODUCTOS/create, Error: RequestError: Violation of PRIMARY KEY constraint 'PK_ProductoFoto'. Cannot insert duplicate key in object 'dbo.ProductoFoto'. The duplicate key value is (1, 17, 1).  
+Fecha: 29/6/2023, 16:28:16, Archivo: dbo.PRODUCTOS/create, Error: RequestError: Violation of PRIMARY KEY constraint 'PK_ProductoFoto'. Cannot insert duplicate key in object 'dbo.ProductoFoto'. The duplicate key value is (1, 17, 1).  
+Fecha: 29/6/2023, 16:33:49, Archivo: dbo.PRODUCTOS/create, Error: RequestError: Violation of PRIMARY KEY constraint 'PK_ProductoFoto'. Cannot insert duplicate key in object 'dbo.ProductoFoto'. The duplicate key value is (1, 17, 1).  
+Fecha: 29/6/2023, 19:11:16, Archivo: user.js/read        , Error: ReferenceError: uniqueId is not defined  
+Fecha: 29/6/2023, 19:13:00, Archivo: user.js/read        , Error: ReferenceError: uniqueId is not defined  
+Fecha: 29/6/2023, 19:13:11, Archivo: user.js/read        , Error: ReferenceError: uniqueId is not defined  
+Fecha: 15/7/2023, 10:18:09, Archivo: dbo.PRODUCTOS/list  , Error: ConnectionError: Failed to connect to 3.144.237.208:1433 - Could not connect (sequence)  
+Fecha: 22/7/2023, 12:27:04, Archivo: dbo.PEDIDO_VENTA_CABECERA/listdt, Error: RequestError: Invalid column name 'name'.  
+Fecha: 22/7/2023, 12:29:21, Archivo: dbo.PEDIDO_VENTA_CABECERA/listdt, Error: RequestError: Invalid column name 'name'.  
+Fecha: 22/7/2023, 12:29:51, Archivo: dbo.PEDIDO_VENTA_CABECERA/listdt, Error: RequestError: Invalid column name 'name'.  
+Fecha: 25/7/2023 11:58:38, Archivo: dbo.PRODUCTOS/list  , Error: RequestError: Invalid object name 'dbo.ProductoGrupo'.  
+Fecha: 25/7/2023 12:00:11, Archivo: dbo.PRODUCTOS/list  , Error: RequestError: Invalid object name 'dbo.ProductoGrupo'.  
+Fecha: 25/7/2023 12:02:22, Archivo: dbo.PRODUCTOS/list  , Error: RequestError: Invalid object name 'dbo.ProductoGrupo'.  
+Fecha: 25/7/2023 12:02:38, Archivo: dbo.PRODUCTOS/list  , Error: RequestError: Invalid object name 'dbo.ProductoGrupo'.  
+Fecha: 25/7/2023 12:04:19, Archivo: dbo.PRODUCTOS/list  , Error: RequestError: Invalid object name 'dbo.ProductoGrupo'.  
+Fecha: 25/7/2023 12:05:57, Archivo: dbo.PRODUCTOS/list  , Error: RequestError: Invalid object name 'dbo.ProductoGrupo'.  
+Fecha: 25/7/2023 12:06:21, Archivo: dbo.PRODUCTOS/list  , Error: RequestError: Invalid object name 'dbo.ProductoGrupo'.  
+Fecha: 25/7/2023 12:06:48, Archivo: dbo.PRODUCTOS/list  , Error: RequestError: Invalid object name 'dbo.ProductoGrupo'.  
+Fecha: 25/7/2023 12:07:18, Archivo: dbo.PRODUCTOS/list  , Error: RequestError: Invalid object name 'dbo.ProductoGrupo'.  
+Fecha: 25/7/2023 12:07:56, Archivo: dbo.PRODUCTOS/list  , Error: RequestError: Invalid object name 'dbo.ProductoGrupo'.  
+Fecha: 25/7/2023 12:10:14, Archivo: dbo.PRODUCTOS/list  , Error: RequestError: Invalid object name 'dbo.ProductoGrupo'.  
+Fecha: 25/7/2023 12:10:22, Archivo: dbo.PRODUCTOS/list  , Error: RequestError: Invalid object name 'dbo.ProductoGrupo'.  
+Fecha: 25/7/2023 12:58:33, Archivo: dbo.Setting/create  , Error: TypeError: sql.request is not a constructor  
+Fecha: 25/7/2023 14:48:01, Archivo: dbo.Setting/select  , Error: RequestError: Conversion failed when converting from a character string to uniqueidentifier.  
+Fecha: 25/7/2023 14:48:14, Archivo: dbo.Setting/select  , Error: RequestError: Conversion failed when converting from a character string to uniqueidentifier.  
+Fecha: 25/7/2023 14:49:06, Archivo: dbo.Setting/select  , Error: RequestError: Conversion failed when converting from a character string to uniqueidentifier.  
+Fecha: 25/7/2023 14:52:32, Archivo: dbo.Setting/remove  , Error: RequestError: Incorrect syntax near 'EF'.  
+Fecha: 25/7/2023 15:40:54, Archivo: dbo.setting/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 25/7/2023 15:42:57, Archivo: dbo.setting/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 25/7/2023 15:42:57, Archivo: dbo.setting/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 25/7/2023, 16:30:21, Archivo: dbo.PRODUCTOS/update, Error: RequestError: Cannot insert the value NULL into column 'Author', table 'StemisCursos.dbo.Setting'; column does not allow nulls. UPDATE fails.  
+Fecha: 25/7/2023 19:02:36, Archivo: dbo.teacher/create  , Error: RequestError: Cannot insert the value NULL into column 'Type', table 'StemisCursos.dbo.Person'; column does not allow nulls. INSERT fails.  
+Fecha: 25/7/2023 19:03:57, Archivo: dbo.teacher/create  , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 25/7/2023 19:04:32, Archivo: dbo.teacher/create  , Error: RequestError: There are more columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.  
+Fecha: 25/7/2023 19:07:38, Archivo: dbo.teacher/create  , Error: RequestError: Cannot insert the value NULL into column 'Enabled', table 'StemisCursos.dbo.Person'; column does not allow nulls. INSERT fails.  
+Fecha: 25/7/2023 19:13:13, Archivo: dbo.teacher/list    , Error: ConnectionError: Connection lost - read ECONNRESET  
+Fecha: 25/7/2023 19:13:36, Archivo: dbo.teacher/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 25/7/2023 19:13:54, Archivo: dbo.teacher/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 25/7/2023 19:13:54, Archivo: dbo.setting/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 25/7/2023 19:14:17, Archivo: dbo.setting/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 25/7/2023 19:14:17, Archivo: dbo.setting/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 25/7/2023 19:14:33, Archivo: dbo.setting/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 09:18:42, Archivo: teacher.js/read     , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 26/7/2023 09:19:04, Archivo: teacher.js/read     , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 26/7/2023 09:20:25, Archivo: teacher.js/read     , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 26/7/2023 09:29:36, Archivo: dbo.Person/update   , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 26/7/2023 09:30:35, Archivo: dbo.Person/update   , Error: RequestError: Incorrect syntax near '='.  
+Fecha: 26/7/2023 14:23:44, Archivo: teacher.js/read     , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:25:02, Archivo: dbo.teacher/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 - Could not connect (sequence)  
+Fecha: 26/7/2023 14:25:28, Archivo: dbo.teacher/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:26:00, Archivo: dbo.setting/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:26:35, Archivo: dbo.setting/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:26:53, Archivo: dbo.setting/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:27:38, Archivo: dbo.teacher/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:27:38, Archivo: dbo.teacher/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:27:38, Archivo: dbo.teacher/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:28:18, Archivo: dbo.teacher/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:28:18, Archivo: dbo.teacher/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:28:18, Archivo: dbo.teacher/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:28:18, Archivo: dbo.setting/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:28:50, Archivo: dbo.teacher/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:29:07, Archivo: dbo.setting/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:29:52, Archivo: dbo.setting/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:30:44, Archivo: dbo.setting/list    , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 26/7/2023 14:42:52, Archivo: dbo.setting/list    , Error: ConnectionError: Login failed for user 'StemisCursos'.  
+Fecha: 26/7/2023 14:42:55, Archivo: dbo.setting/list    , Error: ConnectionError: Login failed for user 'StemisCursos'.  
+Fecha: 26/7/2023 14:42:56, Archivo: dbo.setting/list    , Error: ConnectionError: Login failed for user 'StemisCursos'.  
+Fecha: 26/7/2023 14:51:37, Archivo: dbo.teacher/create  , Error: RequestError: Cannot insert the value NULL into column 'Enabled', table 'StemisCursos.dbo.Person'; column does not allow nulls. INSERT fails.  
+Fecha: 26/7/2023 14:52:38, Archivo: dbo.teacher/create  , Error: RequestError: Cannot insert the value NULL into column 'Enabled', table 'StemisCursos.dbo.Person'; column does not allow nulls. INSERT fails.  
+Fecha: 26/7/2023 16:25:21, Archivo: dbo.teacher/create  , Error: RequestError: Validation failed for parameter 'Price'. Invalid number.  
+Fecha: 26/7/2023 16:26:17, Archivo: dbo.teacher/create  , Error: RequestError: There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.  
+Fecha: 26/7/2023 16:28:23, Archivo: dbo.teacher/create  , Error: RequestError: Validation failed for parameter 'StartDate'. Invalid date.  
+Fecha: 26/7/2023 16:28:44, Archivo: dbo.teacher/create  , Error: RequestError: There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.  
+Fecha: 26/7/2023 16:30:09, Archivo: dbo.Course/create   , Error: RequestError: There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.  
+Fecha: 26/7/2023 16:32:07, Archivo: dbo.Course/create   , Error: RequestError: Cannot insert the value NULL into column 'Category', table 'StemisCursos.dbo.Course'; column does not allow nulls. INSERT fails.  
+Fecha: 27/7/2023 10:43:35, Archivo: dbo.program/list    , Error: RequestError: Invalid column name 'EnabledCertificate'.  
+Fecha: 27/7/2023 10:43:36, Archivo: dbo.program/list    , Error: RequestError: Invalid column name 'EnabledCertificate'.  
+Fecha: 27/7/2023 10:43:56, Archivo: dbo.program/list    , Error: RequestError: Invalid column name 'EnabledCertificate'.  
+Fecha: 27/7/2023 10:44:26, Archivo: dbo.program/list    , Error: RequestError: Invalid column name 'EnabledCertificate'.  
+Fecha: 27/7/2023 10:45:02, Archivo: dbo.program/list    , Error: RequestError: Invalid column name 'EnabledCertificate'.  
+Fecha: 27/7/2023 10:45:51, Archivo: dbo.program/list    , Error: RequestError: Invalid column name 'Enabled'.  
+Fecha: 27/7/2023 11:11:31, Archivo: dbo.program/list    , Error: RequestError: Invalid column name 'EnabledCertificate'.  
+Fecha: 27/7/2023 14:43:02, Archivo: dbo.Person/remove   , Error: RequestError: Incorrect syntax near the keyword 'AND'.  
+Fecha: 27/7/2023 14:43:07, Archivo: dbo.Person/remove   , Error: RequestError: Incorrect syntax near the keyword 'AND'.  
+Fecha: 27/7/2023 14:48:28, Archivo: dbo.Course/create   , Error: RequestError: Validation failed for parameter 'StartDate'. Invalid date.  
+Fecha: 27/7/2023 18:15:50, Archivo: dbo.program/create  , Error: RequestError: Validation failed for parameter 'CourseId'. Invalid number.  
+Fecha: 31/7/2023 09:23:15, Archivo: dbo.program/remove  , Error: RequestError: The DELETE statement conflicted with the REFERENCE constraint "FK_CourseProgram_Program". The conflict occurred in database "StemisCursos", table "dbo.CourseProgram", column 'ProgramId'.  
+Fecha: 31/7/2023 09:35:43, Archivo: dbo.program/remove  , Error: RequestError: The DELETE statement conflicted with the REFERENCE constraint "FK_CourseProgram_Program". The conflict occurred in database "StemisCursos", table "dbo.CourseProgram", column 'ProgramId'.  
+Fecha: 31/7/2023 10:43:50, Archivo: dbo.Curso/list      , Error: RequestError: Invalid object name 'dbo.Cursos'.  
+Fecha: 31/7/2023 10:44:53, Archivo: dbo.Curso/list      , Error: RequestError: Invalid object name 'dbo.Cursos'.  
+Fecha: 31/7/2023 11:37:48, Archivo: dbo.Person(listStudents)/list, Error: RequestError: Must declare the scalar variable "@UniqueId".  
+Fecha: 31/7/2023 11:37:51, Archivo: dbo.Person(listStudents)/list, Error: RequestError: Must declare the scalar variable "@UniqueId".  
+Fecha: 31/7/2023 11:37:59, Archivo: dbo.Person(listStudents)/list, Error: RequestError: Must declare the scalar variable "@UniqueId".  
+Fecha: 31/7/2023 11:38:50, Archivo: dbo.Person(listStudents)/list, Error: RequestError: Must declare the scalar variable "@UniqueId".  
+Fecha: 31/7/2023 12:56:55, Archivo: dbo.Curso/list      , Error: RequestError: Must declare the scalar variable "@UniqueId".  
+Fecha: 31/7/2023 12:57:14, Archivo: dbo.Curso/list      , Error: RequestError: Must declare the scalar variable "@UniqueId".  
+Fecha: 31/7/2023 12:58:43, Archivo: dbo.Person(listUnenrolledStudents)/list, Error: RequestError: Must declare the scalar variable "@UniqueId".  
+Fecha: 31/7/2023 16:56:25, Archivo: dbo.program/remove  , Error: ReferenceError: Cannot access 'request' before initialization  
+Fecha: 4/8/2023, 09:35:46, Archivo: dbo.Blogpost/list   , Error: RequestError: Incorrect syntax near the keyword 'WHERE'.  
+Fecha: 4/8/2023, 10:16:20, Archivo: dbo.Normativity/list, Error: RequestError: Invalid column name 'Imagen'.  
+Fecha: 7/8/2023, 14:32:54, Archivo: dbo.AuthUser/list   , Error: RequestError: Cannot insert the value NULL into column 'Name', table 'StemisPage.dbo.AuthUser'; column does not allow nulls. INSERT fails.  
+Fecha: 7/8/2023, 14:35:22, Archivo: dbo.AuthUser/list   , Error: RequestError: Cannot insert the value NULL into column 'Name', table 'StemisPage.dbo.AuthUser'; column does not allow nulls. INSERT fails.  
+Fecha: 7/8/2023, 14:38:24, Archivo: dbo.AuthUser/list   , Error: RequestError: Validation failed for parameter 'Name'. Invalid string.  
+Fecha: 7/8/2023, 14:39:53, Archivo: dbo.AuthUser/list   , Error: RequestError: Validation failed for parameter 'Name'. Invalid string.  
+Fecha: 7/8/2023, 14:42:55, Archivo: dbo.AuthUser/list   , Error: ReferenceError: Enabled is not defined  
+Fecha: 7/8/2023, 14:45:23, Archivo: dbo.AuthUser/list   , Error: ReferenceError: LastAccess is not defined  
+Fecha: 7/8/2023, 14:48:54, Archivo: dbo.AuthUser/list   , Error: ReferenceError: LastAccess is not defined  
+Fecha: 7/8/2023, 14:49:52, Archivo: dbo.AuthUser/list   , Error: RequestError: Validation failed for parameter 'Name'. Invalid string.  
+Fecha: 7/8/2023, 14:54:44, Archivo: dbo.AuthUser/list   , Error: ReferenceError: LastAccess is not defined  
+Fecha: 7/8/2023, 14:58:25, Archivo: dbo.AuthUser/list   , Error: ReferenceError: LastAccess is not defined  
+Fecha: 7/8/2023, 15:03:10, Archivo: dbo.AuthUser/list   , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 7/8/2023, 15:07:27, Archivo: dbo.AuthUser/list   , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 7/8/2023, 15:10:01, Archivo: dbo.AuthUser/list   , Error: ReferenceError: LastAccess is not defined  
+Fecha: 7/8/2023, 15:11:47, Archivo: dbo.AuthUser/list   , Error: ReferenceError: LastAccess is not defined  
+Fecha: 7/8/2023, 15:14:11, Archivo: dbo.AuthUser/list   , Error: ReferenceError: LastAccess is not defined  
+Fecha: 7/8/2023, 15:19:37, Archivo: dbo.AuthUser/list   , Error: ReferenceError: LastAccess is not defined  
+Fecha: 7/8/2023, 15:22:36, Archivo: dbo.AuthUser/list   , Error: ReferenceError: LastAccess is not defined  
+Fecha: 7/8/2023, 15:36:20, Archivo: dbo.AuthUser/list   , Error: RequestError: Cannot insert the value NULL into column 'Enabled', table 'StemisPage.dbo.AuthUser'; column does not allow nulls. INSERT fails.  
+Fecha: 7/8/2023, 18:01:47, Archivo: dbo.AuthUser/list   , Error: RequestError: Validation failed for parameter 'Body'. Invalid date.  
+Fecha: 7/8/2023, 18:04:47, Archivo: dbo.AuthUser/list   , Error: RequestError: Incorrect syntax near the keyword 'VALUES'.  
+Fecha: 7/8/2023, 18:05:45, Archivo: dbo.AuthUser/list   , Error: RequestError: Incorrect syntax near the keyword 'VALUES'.  
+Fecha: 7/8/2023, 18:07:32, Archivo: dbo.AuthUser/list   , Error: RequestError: Cannot insert the value NULL into column 'IsRead', table 'StemisPage.dbo.Message'; column does not allow nulls. INSERT fails.  
+Fecha: 8/8/2023, 16:11:09, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 8/8/2023, 16:16:10, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 8/8/2023, 16:23:52, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 8/8/2023, 16:24:35, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 8/8/2023, 16:25:46, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 8/8/2023, 16:27:04, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 8/8/2023, 16:28:34, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 8/8/2023, 16:29:28, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 8/8/2023, 16:32:08, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 8/8/2023, 16:33:06, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 8/8/2023, 17:26:57, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 8/8/2023, 17:29:02, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 8/8/2023, 17:32:36, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 8/8/2023, 17:34:41, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 8/8/2023, 17:37:09, Archivo: dbo.BlogPost/list   , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 9/8/2023, 09:45:16, Archivo: dbo.BlogPost/list   , Error: RequestError: The multi-part identifier "dbo.Colab.Photo" could not be bound.  
+Fecha: 9/8/2023, 09:45:33, Archivo: dbo.BlogPost/list   , Error: RequestError: The multi-part identifier "dbo.Colab.Photo" could not be bound.  
+Fecha: 9/8/2023, 09:47:27, Archivo: dbo.BlogPost/list   , Error: RequestError: Ambiguous column name 'UniqueId'.  
+Fecha: 9/8/2023, 09:49:26, Archivo: dbo.BlogPost/list   , Error: RequestError: Invalid column name 'IdPost'.  
+Fecha: 9/8/2023, 15:24:48, Archivo: dbo.BlogPost/update , Error: RequestError: Validation failed for parameter 'PostDate'. Invalid date.  
+Fecha: 9/8/2023, 15:40:03, Archivo: dbo.BlogPost/update , Error: RequestError: Incorrect syntax near 'Imagen'.  
+Fecha: 10/8/2023, 11:35:20, Archivo: dbo.Normativity/update, Error: RequestError: Validation failed for parameter 'UniqueId'. Invalid GUID.  
+Fecha: 11/8/2023, 09:03:08, Archivo: dbo.Colab/post      , Error: ReferenceError: Name is not defined  
+Fecha: 11/8/2023, 15:33:23, Archivo: dbo.Settings/update , Error: RequestError: Cannot insert the value NULL into column 'Title', table 'StemisPage.dbo.Settings'; column does not allow nulls. UPDATE fails.  
+Fecha: 11/8/2023, 15:40:53, Archivo: dbo.Settings/update , Error: RequestError: Cannot insert the value NULL into column 'Title', table 'StemisPage.dbo.Settings'; column does not allow nulls. UPDATE fails.  
+Fecha: 11/8/2023, 16:29:32, Archivo: dbo.Normativity/update, Error: RequestError: Invalid column name '/uploads/'.  
+Fecha: 11/8/2023, 16:41:10, Archivo: dbo.Normativity/update, Error: RequestError: Invalid column name '/uploads/'.  
+Fecha: 11/8/2023, 16:44:46, Archivo: dbo.Normativity/update, Error: RequestError: Invalid column name '/uploads/'.  
+Fecha: 11/8/2023, 17:33:23, Archivo: dbo.Normativity/update, Error: ReferenceError: Title is not defined  
+Fecha: 11/8/2023, 17:37:59, Archivo: dbo.Normativity/update, Error: RequestError: Cannot insert the value NULL into column 'PDFile', table 'StemisPage.dbo.Normativity'; column does not allow nulls. UPDATE fails.  
+Fecha: 13/8/2023, 20:43:20, Archivo: dbo.BlogPost/update , Error: ReferenceError: UniqueId is not defined  
+Fecha: 13/8/2023, 20:47:56, Archivo: dbo.BlogPost/update , Error: ReferenceError: UniqueId is not defined  
+Fecha: 13/8/2023, 20:55:23, Archivo: dbo.BlogPost/update , Error: ReferenceError: UniqueId is not defined  
+Fecha: 13/8/2023, 20:59:43, Archivo: dbo.BlogPost/update , Error: ReferenceError: Body is not defined  
+Fecha: 14/8/2023, 09:50:39, Archivo: dbo.Colab/update    , Error: RequestError: Incorrect syntax near the keyword 'WHERE'.  
+Fecha: 14/8/2023, 09:53:02, Archivo: dbo.Colab/update    , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 14/8/2023, 09:56:59, Archivo: dbo.Colab/update    , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 14/8/2023, 10:03:00, Archivo: dbo.Colab/update    , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 14/8/2023, 10:04:31, Archivo: dbo.Colab/update    , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 14/8/2023, 10:07:05, Archivo: dbo.Colab/update    , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 14/8/2023, 10:08:09, Archivo: dbo.Colab/update    , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 14/8/2023, 10:10:16, Archivo: dbo.Colab/update    , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 14/8/2023, 10:13:57, Archivo: dbo.Colab/update    , Error: TypeError: Assignment to constant variable.  
+Fecha: 14/8/2023, 10:18:08, Archivo: dbo.Colab/update    , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 14/8/2023, 10:21:21, Archivo: dbo.BlogPost/update , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 14/8/2023, 10:49:29, Archivo: dbo.BlogPost/update , Error: RequestError: Must declare the scalar variable "@FormPostDate".  
+Fecha: 14/8/2023, 11:49:13, Archivo: dbo.BlogPost/update , Error: RequestError: Cannot insert the value NULL into column 'IsPublish', table 'StemisPage.dbo.BlogPost'; column does not allow nulls. UPDATE fails.  
+Fecha: 14/8/2023, 11:49:41, Archivo: dbo.BlogPost/update , Error: RequestError: Cannot insert the value NULL into column 'IsPublish', table 'StemisPage.dbo.BlogPost'; column does not allow nulls. UPDATE fails.  
+Fecha: 14/8/2023, 12:14:15, Archivo: dbo.BlogPost/update , Error: RequestError: Cannot insert the value NULL into column 'IsPublish', table 'StemisPage.dbo.BlogPost'; column does not allow nulls. UPDATE fails.  
+Fecha: 14/8/2023, 12:15:26, Archivo: dbo.BlogPost/update , Error: RequestError: Cannot insert the value NULL into column 'IsPublish', table 'StemisPage.dbo.BlogPost'; column does not allow nulls. UPDATE fails.  
+Fecha: 14/8/2023, 12:16:39, Archivo: dbo.BlogPost/update , Error: RequestError: Cannot insert the value NULL into column 'IsPublish', table 'StemisPage.dbo.BlogPost'; column does not allow nulls. UPDATE fails.  
+Fecha: 1/11/2024, 8:35:48 AM, Archivo: dbo.AuthUser/list   , Error: RequestError: String or binary data would be truncated.  

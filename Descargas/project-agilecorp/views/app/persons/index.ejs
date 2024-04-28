@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-6 text-left">
+    <h4>Blog</h4>
+  </div>
+  <div class="col-md-6" style="text-align: right;">
+    <a href="/persons/create" class="btn btn-sm btn-primary"><i class="fa-solid fa-plus"></i> Agregar</a>
+  </div>
+</div>
+
+<table class="table table-sm table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Fecha de Ingreso</td>     
+      <th>CCI</th>
+      <th>GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% persons.forEach((item) => { %>
+    <tr>
+      <td>
+        <%= item.name %>
+      </td>
+      <td>
+        <%= item.dateinput %>
+      </td>
+      <td>
+        <%= item.cci %>
+      </td>
+      <td>
+        <%= item.emailgithub %>
+      </td>
+      <td style="width: 1%;" nowrap>
+        <a href="/persons/update/<%= item._id.toString() %>"><i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="/persons/delete/<%= item._id.toString() %>" class="text-danger" onclick="window.confirm('¿Deseas eliminar?') ? '' : event.preventDefault();"><i class="fa-solid fa-trash"></i></a>
+      </td>
+    </tr>
+    <% })%>
+  </tbody>
+</table>

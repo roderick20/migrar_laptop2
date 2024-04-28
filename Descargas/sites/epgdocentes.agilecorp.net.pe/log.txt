@@ -1,0 +1,33 @@
+
+Fecha: 3/1/2024, 10:14:37, Archivo: dbo.Teacher/update  , Error: TypeError: Cannot read properties of undefined (reading 'type')  
+Fecha: 3/1/2024, 10:42:36, Archivo: dbo.Teacher/update  , Error: TypeError: Cannot read properties of undefined (reading 'type')  
+Fecha: 3/1/2024, 10:42:57, Archivo: dbo.Teacher/update  , Error: TypeError: Cannot read properties of undefined (reading 'type')  
+Fecha: 3/1/2024, 10:44:07, Archivo: dbo.Teacher/update  , Error: TypeError: Cannot read properties of undefined (reading 'type')  
+Fecha: 3/1/2024, 10:44:07, Archivo: dbo.Teacher/update  , Error: TypeError: Cannot read properties of undefined (reading 'type')  
+Fecha: 3/1/2024, 10:51:46, Archivo: dbo.Teacher/update  , Error: TypeError: Cannot read properties of undefined (reading 'type')  
+Fecha: 3/1/2024, 10:53:19, Archivo: dbo.Teacher/update  , Error: TypeError: Cannot read properties of undefined (reading 'type')  
+Fecha: 3/1/2024, 10:57:13, Archivo: dbo.Teacher/update  , Error: TypeError: Cannot read properties of undefined (reading 'type')  
+Fecha: 3/1/2024, 10:59:28, Archivo: dbo.Teacher/update  , Error: TypeError: Cannot read properties of undefined (reading 'type')  
+Fecha: 3/1/2024, 11:00:34, Archivo: dbo.Teacher/update  , Error: TypeError: Cannot read properties of undefined (reading 'type')  
+Fecha: 3/1/2024, 11:02:35, Archivo: dbo.Teacher/update  , Error: TypeError: Cannot read properties of undefined (reading 'type')  
+Fecha: 4/1/2024, 20:13:53, Archivo: teacher/findAll     , Error: RequestError: Timeout: Request failed to complete in 15000ms  
+Fecha: 4/1/2024, 20:22:08, Archivo: teacher/findAll     , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 4/1/2024, 20:22:24, Archivo: teacher/findAll     , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 4/1/2024, 20:24:00, Archivo: teacher/findAll     , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 4/1/2024, 20:41:03, Archivo: teacher/findAll     , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 4/1/2024, 20:46:41, Archivo: teacher/findAll     , Error: RequestError: Failed to cancel request in 5000ms  
+Fecha: 4/1/2024, 20:46:59, Archivo: teacher/findAll     , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 4/1/2024, 20:50:18, Archivo: teacher/findAll     , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 8/1/2024, 19:08:17, Archivo: dbo.Teacher/update  , Error: RequestError: Incorrect syntax near 'FechaIngreso'.  
+Fecha: 8/1/2024, 19:11:06, Archivo: dbo.Teacher/update  , Error: RequestError: Incorrect syntax near 'FechaIngreso'.  
+Fecha: 8/1/2024, 19:15:21, Archivo: dbo.Teacher/update  , Error: RequestError: Incorrect syntax near 'FechaIngreso'.  
+Fecha: 8/1/2024, 19:17:01, Archivo: dbo.Teacher/update  , Error: RequestError: Incorrect syntax near the keyword 'WHERE'.  
+Fecha: 9/1/2024, 18:29:02, Archivo: dbo.Teacher/update  , Error: RequestError: Incorrect syntax near 'NivelMaestria'.  
+Fecha: 9/1/2024, 18:42:44, Archivo: dbo.Teacher/update  , Error: RequestError: Validation failed for parameter 'FechaRegistroRENACYT'. Invalid string.  
+Fecha: 9/1/2024, 18:44:08, Archivo: dbo.Teacher/update  , Error: RequestError: Validation failed for parameter 'FechaRegistroRENACYT'. Invalid string.  
+Fecha: 9/1/2024, 19:22:13, Archivo: dbo.Teacher/update  , Error: RequestError: Invalid column name 'LinkDINA'.  
+Fecha: 1/10/2024, 8:48:43 AM, Archivo: dbo.Teacher/update  , Error: RequestError: Validation failed for parameter 'Birthdate'. Invalid date.  
+Fecha: 1/10/2024, 9:36:12 AM, Archivo: dbo.Teacher/update  , Error: RequestError: Validation failed for parameter 'Birthdate'. Invalid date.  
+Fecha: 1/10/2024, 10:18:25 AM, Archivo: dbo.Teacher/update  , Error: RequestError: Validation failed for parameter 'Birthdate'. Invalid date.  
+Fecha: 1/10/2024, 12:26:39 PM, Archivo: dbo.Teacher/update  , Error: RequestError: Validation failed for parameter 'Birthdate'. Invalid date.  
+Fecha: 1/10/2024, 12:30:46 PM, Archivo: dbo.Teacher/update  , Error: RequestError: Validation failed for parameter 'Birthdate'. Invalid date.  

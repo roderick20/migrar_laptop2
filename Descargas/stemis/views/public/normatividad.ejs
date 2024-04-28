@@ -1,0 +1,108 @@
+<section data-jarallax data-speed=".8" class="py-10 py-md-14 overlay overlay-black overlay-30 bg-cover jarallax"
+         style="background-image: url(/assets/img/BLOGBUSCADOR/normatividadbg.jpg);">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-7 text-center">
+                <!-- Heading -->
+                <h1 class="display-2 fw-bold text-white" style="font-size: 44px;">
+                    NORMATIVIDAD BÁSICA
+                </h1>
+                <!-- Text -->
+                <p class="lead mb-0 text-white-75" style="font-size: 19px;">
+                    Consigue las normas más importantes para el ejercicio profesional
+                </p>
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+<!-- SHAPE -->
+<div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x text-light">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor" />
+        </svg>
+    </div>
+</div>
+<!-- SEARCH -->
+<section class="mt-n6 mb-7 mb-md-10">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- Form -->
+                <form class="rounded shadow mb-4" action="/Norms" method="get">
+                    <div class="input-group input-group-lg">
+                        <!-- Text -->
+                        <span class="input-group-text border-0 pe-1">
+                            <i class="fe fe-search"></i>
+                        </span>
+                        <!-- Input -->
+                        <input class="form-control border-0 px-1" type="text" name="palabraClave" aria-label="Search our blog..."
+                               placeholder="Buscar">
+                        <!-- Text -->
+                        <span class="input-group-text border-0 py-0 ps-1 pe-3">
+                            <button tupe="submit" class="btn btn-sm" style="background-color: #259995; color: white;" >
+                                Buscar
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- ARTICLES -->
+        <% normlist.forEach(function(item){ %>
+        <section class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Card -->
+                    <div class="card card-row shadow-light-lg mb-6 lift lift-lg" style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;max-height:300px">
+                            <div class="row gx-0">
+                                <div class="col-12">
+                                    <!-- Badge -->
+                                </div>
+                                <a class="col-12 col-md-6 order-md-2 bg-cover card-img-end"
+                                   style="background-image: url('<%= item.CardPhoto %>');" href="/Norma/<%= item.Slug %>">
+                                    <!-- Image (placeholder) -->
+                                    <img src="/uploads/8ba8427d-38fa-4eef-8033-402cda8d3bf7_codigo-civil.png" alt="..." style="background-repeat: no-repeat;" class="img-fluid d-md-none invisible">
+                                    <!-- Shape -->
+                                    <div class="shape shape-start shape-fluid-y text-white d-none d-md-block">
+                                        <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h62.759v172C38.62 384 112 517 112 517v173H0V0z" fill="currentColor" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="col-12 col-md-6 order-md-1">
+                                    <!-- Body -->
+                                    <a class="card-body" href="/Norma/<%= item.Slug %>">
+                                        <!-- Heading -->
+                                        <h3 style="color: #259995; font-weight: bold;">
+                                            <%= item.Title %>
+                                        </h3>
+                                        <!-- Text -->
+                                        <p class="mb-0 text-muted">
+                                            <%= item.Summary %>
+                                        </p>
+                                    </a>
+                                    <!-- Meta -->
+                                    <a class="card-meta" href="/Norma/<%= item.Slug %>">
+                                        <!-- Divider -->
+                                        <hr class="card-meta-divider">
+                                        <!-- Avatar -->
+                                        <!-- <div class="avatar avatar-sm me-2">
+                                        <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                                        </div> -->
+                                        <!-- Author -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <% }) %>
+        

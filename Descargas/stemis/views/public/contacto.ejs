@@ -1,0 +1,82 @@
+<section class="">
+
+
+    <div class="px-8">
+        <div class="row gx-0 min-vh-100">
+            <div class="col-7 col-lg-7 col-sm-12 col-xs-12">
+                <img style="max-width: 90%;" src="/assets/img/CONTACTO/illustracion stemis 1 (1).png" alt="">
+            </div>
+
+
+
+            <div class="col-5 mb-8">
+                <div class="card container col-12 col-md-12 col-lg-12 mb-auto mb-md-0 pb-8 py-md-8 px-lg-8"
+                     style="background-color: #F4F4F4; border-radius: 35px; box-shadow: 8px 8px 5px #cdcdc6;">
+
+                    <h1 class=" mb-0 fw-bolder text-center" style="color:#259995">
+                        Estamos para ayudarte
+                    </h1>
+
+                    <p class="mb-6 text-center text-muted">
+                        Responderemos tus preguntas sin problema
+                    </p>
+                    <form class="contact-form mb-6" method="POST" action="/admin/messages/save">
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label class="form-label" for="name">
+                                        Nombres
+                                    </label>
+                                    <input type="text" class="form-control" id="Name" name="Name" placeholder="Nombres" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-5">
+                            <label class="form-label" for="email">
+                                Correo electrónico
+                            </label>
+                            <input type="email" class="form-control" id="Email" name="Email" placeholder="correo@email.com" autocomplete="off" required>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6 col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" id="Phone" name="Phone">
+                                        Teléfono
+                                    </label>
+                                    <input type="text" class="form-control" id="Phone" name="Phone" placeholder="Teléfono" required>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" name="Subject" id="Subject">
+                                        Asunto
+                                    </label>
+                                    <input type="text" class="form-control" name="Subject" id="Subject" placeholder="Cursos sTemis">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="message">
+                                Mensaje
+                            </label>
+                            <textarea style="resize: none;" class="rounded w-100 form-control" name="Body" id="Body" rows="3" placeholder="Escribir mensaje..."></textarea>
+                        </div>
+
+                        <p class="mb-0 fs-sm text-muted py-5">
+                            <input type="checkbox" value="1" name="Notifications" id="Notifications"> Me gustaría recibir notificaciones sobre promociones, productos y eventos de sTemis.
+                        </p>
+
+                        <div class="text-center">
+                            <button class="btn" style="background-color: #259995; color: white;" type="submit">
+                                Enviar un mensaje
+                            </button>
+                        </div>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PPKqOEsVUVMsJ9zXdsFLpGNTRXBMnB5Rsh0Voc28Ms4Wr8RblaWVbhXVrHqGagfrfb1h2FTE13dQtZJ03Dj9YKAZh88OXTsOaiwLSTsvAKhTzsNykqhCPCcuCnyFLraHvG_5NYaIB3Wn8uPcNm7FVM" /></form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

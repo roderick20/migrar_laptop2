@@ -1,0 +1,627 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+      <form id="formCreate" action="/teachers/update/<%= list[0].UniqueId %>" method="post">
+                <!-- Sección 1: Personal -->  
+                <div class="card border rounded-3 form-section"  id="section1">
+                  <div class="card-header border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                      <h5 class="mb-2 mb-sm-0">DATOS PERSONALES</h5>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="name" class="control-label">Nombre</label>
+                          <input name="Name" id="name" class="form-control" type="text" value="<%= list[0].Name %>"/>
+                          <span for="name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                          <label for="lastName" class="control-label">Apellido</label>
+                          <input name="LastName" id="lastName" class="form-control" type="text" value="<%= list[0].LastName %>"/>
+                          <span for="lastName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                          <label for="country" class="control-label">País</label>
+                          <input name="Country" id="country" class="form-control" type="text" value="<%= list[0].Country %>"/>
+                          <span for="country" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                          <label for="typeDoc" class="control-label">Tipo de Documento</label>
+                          <select name="TypeDoc" id="typeDoc" class="form-control">
+                            <option value="DNI" <%= list[0].TypeDoc === 'DNI' ? 'selected' : '' %>>DNI</option>
+                            <option value="Carne de Extranjeria" <%= list[0].TypeDoc === 'Carne de Extranjeria' ? 'selected' : '' %>>Carne de Extranjeria</option>
+                            <option value="Cedula de Identidad" <%= list[0].TypeDoc === 'Cedula de Identidad' ? 'selected' : '' %>>Cedula de Identidad</option>
+                          </select>
+                          <span for="typeDoc" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="numDoc" class="control-label">Número de Documento</label>
+                          <input name="NumDoc" id="numDoc" class="form-control" type="text" value="<%= list[0].NumDoc %>"/>
+                          <span for="numDoc" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                          <label for="email" class="control-label">Email</label>
+                          <input name="Email" id="email" class="form-control" type="text" value="<%= list[0].Email %>"/>
+                          <span for="email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                          <label for="phone" class="control-label">Teléfono</label>
+                          <input name="Phone" id="phone" class="form-control" type="text" value="<%= list[0].Phone %>"/>
+                          <span for="phone" class="text-danger"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer border-bottom p-3">
+                    <div class="form-group mt-3">
+                      <button type="button" class="btn btn-primary" onclick="showSection('section2')">Siguiente</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Sección 2: Preguntas adicionales -->
+                <div class="card border rounded-3 form-section" id="section2" style="display: none;">
+                  <div class="card-header border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                      <h5 class="mb-2 mb-sm-0">DATOS DOCENTE</h5>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <!-- Pregunta 9 -->
+                        <div class="form-group mb-3">
+                          <label for="fechaIngreso" class="control-label">Fecha de ingreso como docente de la UCSM</label>
+                          <input name="FechaIngreso" id="fechaIngreso" class="form-control" type="text" value="<%= list[0].FechaIngreso %>"/>
+                          <span for="fechaIngreso" class="text-danger"></span>
+                        </div>
+                  
+                        <!-- Pregunta 10 -->
+                        <div class="form-group mb-3">
+                          <label class="control-label">¿Era docente universitario a la entrada en vigencia de la Ley 30220 Ley Universitaria?</label>
+                          <div>
+                            <label class="radio-inline">
+                              <input type="radio" name="DocenteUniversitario" value="Si" <%= list[0].DocenteUniversitario === 'Si' ? 'checked' : '' %>> Si
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="DocenteUniversitario" value="No" <%= list[0].DocenteUniversitario === 'No' ? 'checked' : '' %>> No
+                            </label>
+                          </div>
+                        </div>
+                  
+                        <!-- Pregunta 11 -->
+                        <div class="form-group mb-3">
+                          <label class="control-label">¿Fue incorporado después de la obtención de la licencia de funcionamiento institucional?</label>
+                          <div>
+                            <label class="radio-inline">
+                              <input type="radio" name="IncorpDespLicencia" value="Si" <%= list[0].IncorpDespLicencia === 'Si' ? 'checked' : '' %>> Si
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="IncorpDespLicencia" value="No" <%= list[0].IncorpDespLicencia === 'No' ? 'checked' : '' %>> No
+                            </label>
+                          </div>
+                        </div>
+                  
+                        <!-- Pregunta 12 -->
+                        <div class="form-group mb-3">
+                          <label class="control-label">Mayor grado académico</label>
+                          <div>
+                            <label class="radio-inline">
+                              <input type="radio" name="GradoAcademico" value="Doctor" <%= list[0].GradoAcademico === 'Doctor' ? 'checked' : '' %>> Doctor
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="GradoAcademico" value="Maestro" <%= list[0].GradoAcademico === 'Maestro' ? 'checked' : '' %>> Maestro
+                            </label>
+                          </div>
+                        </div>
+                  
+                        <!-- Pregunta 13 -->
+                        <div class="form-group mb-3">
+                          <label for="mencionGrado" class="control-label">Según su respuesta anterior, indicar la mención del mayor grado académico</label>
+                          <input name="MencionGrado" id="mencionGrado" class="form-control" type="text" value="<%= list[0].MencionGrado %>"/>
+                          <span for="mencionGrado" class="text-danger"></span>
+                        </div>
+                  
+                        <!-- Pregunta 14 -->
+                        <div class="form-group mb-3">
+                          <label for="uniGrado" class="control-label">Según su respuesta anterior, indicar la universidad que otorgó el mayor grado académico</label>
+                          <input name="UniGrado" id="uniGrado" class="form-control" type="text" value="<%= list[0].UniGrado %>"/>
+                          <span for="uniGrado" class="text-danger"></span>
+                        </div>
+                  
+                        <!-- Pregunta 15 -->
+                        <div class="form-group mb-3">
+                          <label for="paisUniGrado" class="control-label">Según su respuesta anterior, indicar el país de la universidad que otorgó el mayor grado académico</label>
+                          <input name="PaisUniGrado" id="paisUniGrado" class="form-control" type="text" value="<%= list[0].PaisUniGrado %>"/>
+                          <span for="paisUniGrado" class="text-danger"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Botones de navegación -->
+                  <div class="card-footer border-bottom p-3">
+                    <button type="button" class="btn btn-primary" onclick="showSection('section1')">Atrás</button>
+                    <button type="button" class="btn btn-primary" onclick="showSection('section3')">Siguiente</button>
+                  </div>
+                  
+                </div>
+                <!-- Sección 3: Otras preguntas -->
+                <div class="card border rounded-3 form-section" id="section3" style="display: none;">
+                  <div class="card-header border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <h5 class="mb-2 mb-sm-0">DATOS DOCENTE BACHILLER</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="mencionBachiller" class="control-label">Mención del bachiller</label>
+                                <input name="BachillerMencion" id="mencionBachiller" class="form-control" type="text" value="<%= list[0].BachillerMencion %>"/>
+                                <span for="mencionBachiller" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="universidadBachiller" class="control-label">Universidad que otorgó el bachiller</label>
+                                <input name="BachillerUniversidad" id="universidadBachiller" class="form-control" type="text" value="<%= list[0].BachillerUniversidad %>"/>
+                                <span for="universidadBachiller" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="paisBachiller" class="control-label">País de la universidad que otorgó el bachiller</label>
+                                <input name="BachillerPais" id="paisBachiller" class="form-control" type="text" value="<%= list[0].BachillerPais %>"/>
+                                <span for="paisBachiller" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="anioBachiller" class="control-label">Año de obtención del bachiller</label>
+                                <input name="BachillerAnio" id="anioBachiller" class="form-control" type="text" value="<%= list[0].BachillerAnio %>"/>
+                                <span for="anioBachiller" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <!-- Botones de navegación -->
+                  <div class="card-footer border-bottom p-3">
+                    <button type="button" class="btn btn-primary" onclick="showSection('section2')">Atrás</button>
+                    <button type="button" class="btn btn-primary" onclick="showSection('section4')">Siguiente</button>
+                  </div>
+                </div>
+                <!-- Sección 4: Más preguntas -->
+                <div class="card border rounded-3 form-section" id="section4" style="display: none;">
+                  <div class="card-header border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <h5 class="mb-2 mb-sm-0">DATOS DOCENTE PREGRADO</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="mencionPregrado" class="control-label">Mención del pregrado</label>
+                                <input name="PregradoMencion" id="mencionPregrado" class="form-control" type="text" value="<%= list[0].PregradoMencion %>"/>
+                                <span for="mencionPregrado" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="universidadPregrado" class="control-label">Universidad que otorgó el pregrado</label>
+                                <input name="PregradoUniversidad" id="universidadPregrado" class="form-control" type="text" value="<%= list[0].PregradoUniversidad %>"/>
+                                <span for="universidadPregrado" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="paisPregrado" class="control-label">País de la universidad que otorgó el pregrado</label>
+                                <input name="PregradoPais" id="paisPregrado" class="form-control" type="text" value="<%= list[0].PregradoPais %>"/>
+                                <span for="paisPregrado" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="anioPregrado" class="control-label">Año de obtención del pregrado</label>
+                                <input name="PregradoAnio" id="anioPregrado" class="form-control" type="text" value="<%= list[0].PregradoAnio %>"/>
+                                <span for="anioPregrado" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="resolucionSUNEDUPregrado" class="control-label">Resolución de SUNEDU que reconoce grado del exterior (de ser el caso)</label>
+                                <input name="ResolucionSUNEDUPregrado" id="resolucionSUNEDUPregrado" class="form-control" type="text" value="<%= list[0].ResolucionSUNEDUPregrado %>"/>
+                                <span for="resolucionSUNEDUPregrado" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <!-- Botones de navegación -->
+                  <div class="card-footer border-bottom p-3">
+                    <button type="button" class="btn btn-primary" onclick="showSection('section3')">Atrás</button>
+                    <button type="button" class="btn btn-primary" onclick="showSection('section5')">Siguiente</button>
+                  </div>
+                </div>
+                <!-- Sección 5: Continuación de preguntas -->
+                <div class="card border rounded-3 form-section" id="section5" style="display: none;">
+                  <div class="card-header border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <h5 class="mb-2 mb-sm-0">DATOS DOCENTE MAESTRÍA</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="mencionMaestria" class="control-label">Mención de la maestría</label>
+                                <input name="MaestriaMencion" id="mencionMaestria" class="form-control" type="text" value="<%= list[0].MaestriaMencion %>"/>
+                                <span for="mencionMaestria" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="institucionMaestria" class="control-label">Institución que otorgó la maestría</label>
+                                <input name="MaestriaInstitucion" id="institucionMaestria" class="form-control" type="text" value="<%= list[0].MaestriaInstitucion %>"/>
+                                <span for="institucionMaestria" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="paisMaestria" class="control-label">País de la institución que otorgó la maestría</label>
+                                <input name="MaestriaPais" id="paisMaestria" class="form-control" type="text" value="<%= list[0].MaestriaPais %>"/>
+                                <span for="paisMaestria" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="anioMaestria" class="control-label">Año de obtención de la maestría</label>
+                                <input name="MaestriaAnio" id="anioMaestria" class="form-control" type="text" value="<%= list[0].MaestriaAnio %>"/>
+                                <span for="anioMaestria" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="resolucionSUNEDUMaestria" class="control-label">Resolución de SUNEDU que reconoce grado de maestría del exterior (de ser el caso)</label>
+                                <input name="ResolucionSUNEDUMaestria" id="resolucionSUNEDUMaestria" class="form-control" type="text" value="<%= list[0].ResolucionSUNEDUMaestria %>"/>
+                                <span for="resolucionSUNEDUMaestria" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <!-- Botones de navegación -->
+                  <div class="card-footer border-bottom p-3">
+                    <button type="button" class="btn btn-primary" onclick="showSection('section4')">Atrás</button>
+                    <button type="button" class="btn btn-primary" onclick="showSection('section6')">Siguiente</button>
+                  </div>
+                </div>
+                <!-- Sección 6: Más preguntas -->
+                  <div class="card border rounded-3 form-section" id="section6" style="display: none;">
+                    <div class="card-header border-bottom p-3">
+                      <div class="d-sm-flex justify-content-between align-items-center">
+                          <h5 class="mb-2 mb-sm-0">DATOS DOCENTE DOCTORADO</h5>
+                      </div>
+                  </div>
+                  <div class="card-body">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <label for="mencionDoctorado" class="control-label">Mención del doctorado o postdoctorado</label>
+                                  <input name="DoctoradoMencion" id="mencionDoctorado" class="form-control" type="text" value="<%= list[0].DoctoradoMencion %>"/>
+                                  <span for="mencionDoctorado" class="text-danger"></span>
+                              </div>
+                              <div class="form-group">
+                                  <label for="institucionDoctorado" class="control-label">Institución que otorgó el doctorado o postdoctorado</label>
+                                  <input name="DoctoradoInstitucion" id="institucionDoctorado" class="form-control" type="text" value="<%= list[0].DoctoradoInstitucion %>"/>
+                                  <span for="institucionDoctorado" class="text-danger"></span>
+                              </div>
+                              <div class="form-group">
+                                  <label for="paisDoctorado" class="control-label">País de la institución que otorgó el doctorado o postdoctorado</label>
+                                  <input name="DoctoradoPais" id="paisDoctorado" class="form-control" type="text" value="<%= list[0].DoctoradoPais %>"/>
+                                  <span for="paisDoctorado" class="text-danger"></span>
+                              </div>
+                              <div class="form-group">
+                                  <label for="anioDoctorado" class="control-label">Año de la obtención del doctorado o postdoctorado</label>
+                                  <input name="DoctoradoAnio" id="anioDoctorado" class="form-control" type="text" value="<%= list[0].DoctoradoAnio %>"/>
+                                  <span for="anioDoctorado" class="text-danger"></span>
+                              </div>
+                              <div class="form-group">
+                                  <label for="resolucionSUNEDUDoctorado" class="control-label">Resolución de SUNEDU que reconoce grado de doctorado o postdoctorado del exterior (de ser el caso)</label>
+                                  <input name="ResolucionSUNEDUDoctorado" id="resolucionSUNEDUDoctorado" class="form-control" type="text" value="<%= list[0].ResolucionSUNEDUDoctorado %>"/>
+                                  <span for="resolucionSUNEDUDoctorado" class="text-danger"></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Botones de navegación -->
+                  <div class="card-footer border-bottom p-3">
+                    <button type="button" class="btn btn-primary" onclick="showSection('section5')">Atrás</button>
+                    <button type="button" class="btn btn-primary" onclick="showSection('section7')">Siguiente</button>
+                  </div>
+                </div>
+
+                <!-- Sección 7:  -->
+                <div class="card border rounded-3 form-section" id="section7" style="display: none;">
+                  <div class="card-header border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <h5 class="mb-2 mb-sm-0">DATOS DOCENTE SEGUNDA ESPECIALIDAD</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="mencionSegundaEspecialidad" class="control-label">Mención de la segunda especialidad</label>
+                                <input name="SegundaEspecialidadMencion" id="mencionSegundaEspecialidad" class="form-control" type="text" value="<%= list[0].SegundaEspecialidadMencion %>"/>
+                                <span for="mencionSegundaEspecialidad" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="universidadSegundaEspecialidad" class="control-label">Universidad que otorgó la segunda especialidad</label>
+                                <input name="SegundaEspecialidadUniversidad" id="universidadSegundaEspecialidad" class="form-control" type="text" value="<%= list[0].SegundaEspecialidadUniversidad %>"/>
+                                <span for="universidadSegundaEspecialidad" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="paisSegundaEspecialidad" class="control-label">País de la universidad que otorgó la segunda especialidad</label>
+                                <input name="SegundaEspecialidadPais" id="paisSegundaEspecialidad" class="form-control" type="text" value="<%= list[0].SegundaEspecialidadPais %>"/>
+                                <span for="paisSegundaEspecialidad" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="anioSegundaEspecialidad" class="control-label">Año de la obtención de la segunda especialidad</label>
+                                <input name="SegundaEspecialidadAnio" id="anioSegundaEspecialidad" class="form-control" type="text" value="<%= list[0].SegundaEspecialidadAnio %>"/>
+                                <span for="anioSegundaEspecialidad" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="resolucionSUNEDUSegundaEspecialidad" class="control-label">Resolución de SUNEDU que reconoce grado de la segunda especialidad (de ser el caso)</label>
+                                <input name="ResolucionSUNEDUSegundaEspecialidad" id="resolucionSUNEDUSegundaEspecialidad" class="form-control" type="text" value="<%= list[0].ResolucionSUNEDUSegundaEspecialidad %>"/>
+                                <span for="resolucionSUNEDUSegundaEspecialidad" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                  <!-- Botones de navegación -->
+                  <div class="card-footer border-bottom p-3">
+                    <button type="button" class="btn btn-primary" onclick="showSection('section6')">Atrás</button>
+                    <button type="button" class="btn btn-primary" onclick="showSection('section8')">Siguiente</button>
+                  </div>
+                </div>
+
+                <!-- Sección 8: -->
+                <div class="card border rounded-3 form-section" id="section8" style="display: none;">
+                  <div class="card-header border-bottom p-3">
+                      <div class="d-sm-flex justify-content-between align-items-center">
+                          <h5 class="mb-2 mb-sm-0">DATOS DE DEDICACIÓN DOCENTE</h5>
+                      </div>
+                  </div>
+                  <div class="card-body">
+                      <!-- Pregunta 40 -->
+                      <div class="mb-3">
+                          <label class="control-label">Niveles de programa de estudio en los que da clases</label>
+                          <div class="form-group">
+                              <div>
+                                  <label for="nivelPregrado">Pregrado</label>
+                                  <input type="radio" name="NivelPregrado" value="Si" <%= (list[0].NivelPregrado === 'Si') ? 'checked' : '' %>> Si
+                                  <input type="radio" name="NivelPregrado" value="No" <%= (list[0].NivelPregrado === 'No') ? 'checked' : '' %>> No
+                              </div>
+                              <div>
+                                  <label for="nivelMaestria">Maestría</label>
+                                  <input type="radio" name="NivelMaestria" value="Si" <%= (list[0].NivelMaestria === 'Si') ? 'checked' : '' %>> Si
+                                  <input type="radio" name="NivelMaestria" value="No" <%= (list[0].NivelMaestria === 'No') ? 'checked' : '' %>> No
+                              </div>
+                              <div>
+                                  <label for="nivelDoctorado">Doctorado</label>
+                                  <input type="radio" name="NivelDoctorado" value="Si" <%= (list[0].NivelDoctorado === 'Si') ? 'checked' : '' %>> Si
+                                  <input type="radio" name="NivelDoctorado" value="No" <%= (list[0].NivelDoctorado === 'No') ? 'checked' : '' %>> No
+                              </div>
+                          </div>
+                      </div>
+              
+                      <!-- Pregunta 41 -->
+                      <div class="mb-3">
+                          <label class="control-label">Indicar los cursos y programas en los que dicta clases (nombre de curso/semestre/programa)</label>
+                          <div class="form-group">
+                              <textarea name="CursosProgramas" class="form-control"><%= list[0].CursosProgramas %></textarea>
+                          </div>
+                      </div>
+              
+                      <!-- Pregunta 42 -->
+                      <div class="mb-3">
+                          <label class="control-label">Rol que desempeña el docente en los programas presenciales (según corresponda)</label>
+                          <div class="form-group">
+                              <div>
+                                  <label for="rolPresencial">Dictado</label>
+                                  <input type="radio" name="RolPresencial" value="Si" <%= (list[0].RolPresencial === 'Si') ? 'checked' : '' %>> Si
+                                  <input type="radio" name="RolPresencial" value="No" <%= (list[0].RolPresencial === 'No') ? 'checked' : '' %>> No
+                              </div>
+                          </div>
+                      </div>
+              
+                      <!-- Pregunta 43 -->
+                      <div class="mb-3">
+                          <label class="control-label">Rol que desempeña el docente en los programas semipresenciales y a distancia (según corresponda)</label>
+                          <div class="form-group">
+                              <div>
+                                  <label for="semiDeterminar">Determinar y/o crear contenido</label>
+                                  <input type="radio" name="SemiDeterminar" value="Si" <%= (list[0].SemiDeterminar === 'Si') ? 'checked' : '' %>> Si
+                                  <input type="radio" name="SemiDeterminar" value="No" <%= (list[0].SemiDeterminar === 'No') ? 'checked' : '' %>> No
+                              </div>
+                              <div>
+                                  <label for="semiAdaptar">Adaptar Contenidos</label>
+                                  <input type="radio" name="SemiAdaptar" value="Si" <%= (list[0].SemiAdaptar === 'Si') ? 'checked' : '' %>> Si
+                                  <input type="radio" name="SemiAdaptar" value="No" <%= (list[0].SemiAdaptar === 'No') ? 'checked' : '' %>> No
+                              </div>
+                              <div>
+                                  <label for="semiImpartir">Impartir Contenidos</label>
+                                  <input type="radio" name="SemiImpartir" value="Si" <%= (list[0].SemiImpartir === 'Si') ? 'checked' : '' %>> Si
+                                  <input type="radio" name="SemiImpartir" value="No" <%= (list[0].SemiImpartir === 'No') ? 'checked' : '' %>> No
+                              </div>
+                              <div>
+                                  <label for="tutoria">Tutoría</label>
+                                  <input type="radio" name="Tutoria" value="Si" <%= (list[0].Tutoria === 'Si') ? 'checked' : '' %>> Si
+                                  <input type="radio" name="Tutoria" value="No" <%= (list[0].Tutoria === 'No') ? 'checked' : '' %>> No
+                              </div>
+                          </div>
+                      </div>
+              
+                      <!-- Pregunta 44 -->
+                      <div class="mb-3">
+                          <label class="control-label">Categoría docente</label>
+                          <div class="form-group">
+                              <select name="CategoriaDocente" class="form-control">
+                                  <option value="Principal" <%= (list[0].CategoriaDocente === 'Principal') ? 'selected' : '' %>>Principal</option>
+                                  <option value="Asociado" <%= (list[0].CategoriaDocente === 'Asociado') ? 'selected' : '' %>>Asociado</option>
+                                  <option value="Auxiliar" <%= (list[0].CategoriaDocente === 'Auxiliar') ? 'selected' : '' %>>Auxiliar</option>
+                                  <option value="Contratado" <%= (list[0].CategoriaDocente === 'Contratado') ? 'selected' : '' %>>Contratado</option>
+                              </select>
+                          </div>
+                      </div>
+              
+                      <!-- Pregunta 45 -->
+                      <div class="mb-3">
+                          <label class="control-label">Años en la categoría</label>
+                          <div class="form-group">
+                              <input type="text" name="AniosCategoria" class="form-control" value="<%= list[0].AniosCategoria %>">
+                          </div>
+                      </div>
+              
+                      <!-- Pregunta 46 -->
+                      <div class="mb-3">
+                          <label class="control-label">Régimen de dedicación</label>
+                          <div class="form-group">
+                              <select name="RegimenDedicacion" class="form-control">
+                                  <option value="Exclusiva" <%= (list[0].RegimenDedicacion === 'Exclusiva') ? 'selected' : '' %>>Exclusiva</option>
+                                  <option value="Tiempo completo" <%= (list[0].RegimenDedicacion === 'Tiempo completo') ? 'selected' : '' %>>Tiempo completo</option>
+                                  <option value="Tiempo Parcial" <%= (list[0].RegimenDedicacion === 'Tiempo Parcial') ? 'selected' : '' %>>Tiempo Parcial</option>
+                              </select>
+                          </div>
+                      </div>
+              
+                      <!-- Pregunta 47 -->
+                      <div class="mb-3">
+                          <label class="control-label">Número de horas semanales en la UCSM para clases</label>
+                          <div class="form-group">
+                              <input type="text" name="HorasSemanalesClases" class="form-control" value="<%= list[0].HorasSemanalesClases %>">
+                          </div>
+                      </div>
+              
+                      <!-- Pregunta 48 -->
+                      <div class="mb-3">
+                          <label class="control-label">Número de horas semanales en la UCSM para otras actividades</label>
+                          <div class="form-group">
+                              <input type="text" name="HorasSemanalesOtrasActividades" class="form-control" value="<%= list[0].HorasSemanalesOtrasActividades %>">
+                          </div>
+                      </div>
+              
+                      <!-- Pregunta 49 -->
+                      <div class="mb-3">
+                          <label class="control-label">Total de horas semanales en la UCSM</label>
+                          <div class="form-group">
+                              <input type="text" name="TotalHorasSemanales" class="form-control" value="<%= list[0].TotalHorasSemanales %>">
+                          </div>
+                      </div>
+              
+                      <!-- Pregunta 50 -->
+                      <div class="mb-3">
+                          <label class="control-label">Años de experiencia de enseñanza semipresencial y/o a distancia</label>
+                          <div class="form-group">
+                              <input type="text" name="AniosExperienciaSemipresencial" class="form-control" value="<%= list[0].AniosExperienciaSemipresencial %>">
+                          </div>
+                      </div>
+              
+                      <!-- Pregunta 51 -->
+                      <div class="mb-3">
+                          <label class="control-label">Horas de formación / capacitación en entornos virtuales para el aprendizaje</label>
+                          <div class="form-group">
+                              <input type="text" name="HorasFormacionVirtual" class="form-control" value="<%= list[0].HorasFormacionVirtual %>">
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Botones de navegación -->
+                  <div class="card-footer border-bottom p-3">
+                      <button type="button" class="btn btn-primary" onclick="showSection('section7')">Atrás</button>
+                      <button type="button" class="btn btn-primary" onclick="showSection('section9')">Siguiente</button>
+                  </div>
+              </div>
+                <!-- Sección 9: Última sección -->
+              <div class="card border rounded-3 form-section" id="section9" style="display: none;">
+                <div class="card-header border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <h5 class="mb-2 mb-sm-0">DATOS DE INVESTIGACIÓN</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- Pregunta 52 -->
+                    <div class="mb-3">
+                        <label class="control-label">Realiza investigación</label>
+                        <div class="form-group">
+                            <select name="RealizaInvestigacion" class="form-control">
+                                <option value="Si" <%= (list[0].RealizaInvestigacion === 'Si') ? 'selected' : '' %>>Si</option>
+                                <option value="No" <%= (list[0].RealizaInvestigacion === 'No') ? 'selected' : '' %>>No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 53 -->
+                    <div class="mb-3">
+                        <label class="control-label">Se encuentra registrado en DINA</label>
+                        <div class="form-group">
+                            <select name="RegistradoDINA" class="form-control">
+                                <option value="Si" <%= (list[0].RegistradoDINA === 'Si') ? 'selected' : '' %>>Si</option>
+                                <option value="No" <%= (list[0].RegistradoDINA === 'No') ? 'selected' : '' %>>No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 54 -->
+                    <div class="mb-3">
+                        <label class="control-label">Se encuentra registrado en RENACYT</label>
+                        <div class="form-group">
+                            <select name="RegistradoRENACYT" class="form-control">
+                                <option value="Si" <%= (list[0].RegistradoRENACYT === 'Si') ? 'selected' : '' %>>Si</option>
+                                <option value="No" <%= (list[0].RegistradoRENACYT === 'No') ? 'selected' : '' %>>No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 55 -->
+                    <div class="mb-3">
+                        <label class="control-label">Fecha de inicio de contrato (DD/MM/AAAA)</label>
+                        <div class="form-group">
+                            <input type="text" name="FechaInicioContrato" class="form-control" value="<%= list[0].FechaInicioContrato %>">
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 56 -->
+                    <div class="mb-3">
+                        <label class="control-label">Fecha de fin de contrato (DD/MM/AAAA)</label>
+                        <div class="form-group">
+                            <input type="text" name="FechaFinContrato" class="form-control" value="<%= list[0].FechaFinContrato %>">
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 57 -->
+                    <div class="mb-3">
+                        <label class="control-label">Información actualizada y correspondiente al ciclo académico</label>
+                        <div class="form-group">
+                            <select name="InformacionActualizada" class="form-control">
+                                <option value="2021-1" <%= (list[0].InformacionActualizada === '2021-1') ? 'selected' : '' %>>2021-1</option>
+                                <option value="2021-2" <%= (list[0].InformacionActualizada === '2021-2') ? 'selected' : '' %>>2021-2</option>
+                                <option value="2022-1" <%= (list[0].InformacionActualizada === '2022-1') ? 'selected' : '' %>>2022-1</option>
+                                <option value="2022-2" <%= (list[0].InformacionActualizada === '2022-2') ? 'selected' : '' %>>2022-2</option>
+                                <option value="2023-1" <%= (list[0].InformacionActualizada === '2023-1') ? 'selected' : '' %>>2023-1</option>
+                                <option value="2023-2" <%= (list[0].InformacionActualizada === '2023-2') ? 'selected' : '' %>>2023-2</option>
+                                <option value="2024-1" <%= (list[0].InformacionActualizada === '2024-1') ? 'selected' : '' %>>2024-1</option>
+                                <option value="2024-2" <%= (list[0].InformacionActualizada === '2024-2') ? 'selected' : '' %>>2024-2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botones de navegación -->
+                <div class="card-footer border-bottom p-3">
+                    <button type="button" class="btn btn-primary" onclick="showSection('section8')">Atrás</button>
+                    <button class="btn btn-sm btn-primary" type="submit" id="btnSave">Actualizar Datos</button>
+                </div>
+              </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+<script>
+  const form = document.getElementById('formCreate');
+  const sections = ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8', 'section9'];
+
+  function showSection(sectionToShow) {
+    sections.forEach(section => {
+      const sectionElement = document.getElementById(section);
+      sectionElement.style.display = section === sectionToShow ? 'block' : 'none';
+    });
+  }
+
+
+
+  // Mostrar la primera sección al cargar la página
+  showSection('section1');
+</script>

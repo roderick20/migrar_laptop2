@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <form id="formCreate" action="/settings/update/<%= settings.UniqueId %>/<%= UniqueId %>" enctype="multipart/form-data" method="POST">
+            <div class="card border rounded-3">
+                <div class="card-header  border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                      <h5 class="mb-2 mb-sm-0">Fondo de Portada</h5>
+                    </div>
+                  </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mt-2">
+                            <input type="hidden" name="PersonId" value="<%= PersonId %>" >
+                            <label for="inputFile" class="form-label">Seleccionar Fondo:</label>
+                            <input type="file" name="inputFile" id="inputFile" accept="image/jpeg, image/png, image/jpg"  style="display: none;">
+                            <img id="previewImage" src="/uploads/<%= settings.Image ? settings.Image : 'fondo.jpg' %>"
+                            class="img-fluid img-thumbnail " />
+                        </div>
+                    </div>
+                    <div class="card-footer  border-bottom p-3">
+                        <div class="d-sm-flex justify-content-between align-items-center">
+                          <button class="btn btn-sm btn-info" type="button" onclick="window.location.href='/persons/update/<%= UniqueId %>'"><i class="fa-solid fa-arrow-left"></i>
+                            Regresar</button>
+                          <button class="btn btn-sm btn-primary" type="submit" id="btnSave"><i
+                              class="fa-solid fa-floppy-disk"></i>
+                            Actualizar </button>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+</div>
+
+<script>
+    const inputFile = document.getElementById('inputFile');
+    const previewImage = document.getElementById('previewImage');
+  
+    previewImage.addEventListener('click', () => {
+      inputFile.click();
+    });
+  
+  
+    inputFile.addEventListener('change', () => {
+      if (inputFile.files && inputFile.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          previewImage.src = e.target.result;
+        };
+        reader.readAsDataURL(inputFile.files[0]);
+      }
+    });
+  
+    const form = document.getElementById('formCreate');
+    form.addEventListener('submit', function (event) {
+  
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      console.log('datos enviados'+ data);
+  
+      const errors = validate(data, constraints);
+      console.log(errors);
+      if (errors) {
+  
+        for (const field in errors) {
+          const errorMessage = errors[field][0];
+          const fieldElement = document.getElementById(field);
+          fieldElement.classList.add('error');
+          fieldElement.nextElementSibling.textContent = errorMessage;
+        }
+        event.preventDefault();
+      } else {
+        const btn = document.getElementById('btnSave');
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin-pulse"></i> Procesando';
+        btn.disabled = true;
+      }
+    });
+  
+  </script>

@@ -1,0 +1,56 @@
+Create
+<div class="row">
+  <div class="col-md-6">
+
+    <div class="card border rounded-3">
+      <div class="card-body">
+
+        <form action="/tasks/create" method="post">
+          <div class="form-group">
+            <label for="nombre">Proyecto</label>
+            <select class="form-select" id="project_id" name="project_id">
+              <% projects.forEach((item)=> { %>
+                <option value="<%= item._id %>">
+                  <%= item.name %>
+                </option>
+                <% })%>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="description">Descripción</label>
+            <textarea type="text" class="form-control" id="description" name="description"></textarea>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label for="date_begin">Fecha Inicio</label>
+                <input type="text" class="form-control" id="date_begin" name="date_begin">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label for="date_end">Fecha Fin</label>
+                <input type="text" class="form-control" id="date_end" name="date_end">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="obs">Estado</label>
+            <select class="form-select" id="status" name="status">
+              <option value="Abierto">Abierto</option>
+              <option value="Cerrado">Cerrado</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Grabar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function () {
+    $("#date_begin").datepicker({ dateFormat: "yy-mm-dd" });
+    $("#date_end").datepicker({ dateFormat: "yy-mm-dd" });
+  });
+</script>

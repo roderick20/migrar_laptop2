@@ -1,0 +1,38 @@
+<h1>Home</h1>
+
+<a href="/create" class="btn btn-primary">Agregar</a>
+<table class="table table-bordered">
+    <thead>
+
+    </thead>
+    <tbody>
+        <% documentos.forEach((item) => { %>
+            <tr>
+                
+                <td>
+                    <%= item.nombre %>
+                </td>
+                <td>
+                    <%= item.edad %>
+                </td>
+                <td>
+                    <%= item.ciudad %>
+                </td>
+                <td>
+                    <%= item.obs %>
+                </td>
+                <td>
+                    <%= item.username.map(m => m.name) %>
+                </td>
+                <td>
+                    <%=  moment(item.created).format('MMMM Do YYYY') %>
+                </td>
+                <td>
+                    <a href="/update/<%= item._id.toString() %>">Actualizar</a>
+                    <a href="/delete/<%= item._id.toString() %>">Eliminar</a>
+                    
+                </td>
+            </tr>
+          <% })%>
+    </tbody>
+</table>

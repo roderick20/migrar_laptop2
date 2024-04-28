@@ -1,0 +1,32 @@
+Create
+
+<form action="/accounts/update" method="post">
+  <input type="hidden" id="id" name="id" value="<%= account._id.toString() %>">
+  <div class="form-group">    
+    <label for="group">Grupo</label>
+    <input type="text" class="form-control" id="group" name="group" value="<%= account.group %>"/>
+  </div>
+  <div class="form-group">
+    <label for="name">Titúlo</label>
+    <input type="text" class="form-control" id="name" name="name" value="<%= account.name %>">
+  </div>
+  <div class="form-group">
+    <label for="date">Fecha</label>
+    <input type="text" class="form-control" id="date" name="date" value="<%= account.date %>"/>
+  </div>
+  <div class="form-group">
+    <label for="input_money">Ingreso</label>
+    <input type="text" class="form-control" id="input_money" name="input_money" value="<%= account.input_money %>"/>
+  </div>
+  <div class="form-group">
+    <label for="output_money">Salida</label>
+    <input type="text" class="form-control" id="output_money" name="output_money" value="<%= account.output_money %>"/>
+  </div>
+  <button type="submit" class="btn btn-primary">Grabar</button>
+</form>
+
+<script>
+  $(function() {
+    $("#date").datepicker({dateFormat : "yy-mm-dd"});    
+  });
+</script>

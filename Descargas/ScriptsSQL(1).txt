@@ -1,0 +1,356 @@
+﻿##################################################################################################
+CONSULTAS
+##################################################################################################
+
+##################################################################################################
+TABLA TCONFIG (CONFIGURACIONES):
+
+###+ METODO PARA OBTENER TODAS LAS CONFIGURACIONES:
+DECLARE @keyid int, @claveSyn nvarchar(256);
+SET @keyid= AsymKey_ID('IDIOMASUNSA');
+SET @claveSyn = N'D5B4951857A45008AF280D73D2';
+
+SELECT Id_Config AS Id,
+CONVERT(VARCHAR(256),DecryptByAsymKey(@keyid, clave_config, @claveSyn)) as clave_config
+FROM [dbo].[TConfig]
+
+###+ METODO PARA EJECUTAR POR SQL EL PROCEDIMIENTO DE OBTENER UNA CONFIG:
+USE [notas14]
+GO
+
+DECLARE @RC int
+DECLARE @Id int
+DECLARE @Syn nvarchar(256)
+DECLARE @Clave varchar(256)
+DECLARE @tipo_select int
+DECLARE @ret int
+
+SET @Id = 4;
+SET @Syn = N'D5B4951857A45008AF280D73D2';
+SET @tipo_select = 501;
+
+EXECUTE @RC = [dbo].[My_TConfig] 
+   @Id
+  ,@Syn
+  ,@Clave
+  ,@tipo_select
+  ,@ret OUTPUT
+GO
+
+###+ METODO PARA EJECUTAR POR SQL EL PROCEDIMIENTO DE ACTUALIZAR UNA CONFIG:
+--Actualizar el periodo
+USE [notas14]
+GO
+
+DECLARE @RC int
+DECLARE @Id int
+DECLARE @Syn nvarchar(256)
+DECLARE @Clave varchar(256)
+DECLARE @tipo_select int
+DECLARE @ret int
+
+SET @Id = 4;
+SET @Syn = N'D5B4951857A45008AF280D73D2';
+SET @Clave = '202203';
+SET @tipo_select = 100;
+
+EXECUTE @RC = [dbo].[My_TConfig] 
+   @Id
+  ,@Syn
+  ,@Clave
+  ,@tipo_select
+  ,@ret OUTPUT
+GO
+
+##################################################################################################
+METODO PARA OBTENER LOS USUARIOS Y CONTRASEÑAS (TSECURITYLOGIN):
+
+DECLARE @keyid int, @claveSyn nvarchar(256);
+SET @keyid= AsymKey_ID('IDIOMASUNSA');
+SET @claveSyn = N'D5B4951857A45008AF280D73D2';
+
+SELECT id_login AS Id, 
+IdPersona_Login AS IdPersona,
+isnull(avatar_Login,'') as avatar, 
+esSuperUser_Login AS esSuperUser, estado_Login AS estado,
+isnull(IdRolLogin_Login,0) as IdRolLogin, 
+CONVERT(VARCHAR(256),DecryptByAsymKey(@keyid, pwd_Login, @claveSyn)) as pwd,
+CONVERT(VARCHAR(256),DecryptByAsymKey(@keyid, preg01_Login, @claveSyn)) as preg01,
+CONVERT(VARCHAR(256),DecryptByAsymKey(@keyid, preg02_Login, @claveSyn)) as preg02,
+CONVERT(VARCHAR(256),DecryptByAsymKey(@keyid, rpta01_Login, @claveSyn)) as rpta01,
+CONVERT(VARCHAR(256),DecryptByAsymKey(@keyid, rpta02_Login, @claveSyn)) as rpta02,
+ISNULL(fecha_Login,CAST('01/01/1900' AS SMALLDATETIME)) AS Fecha, 
+ISNULL(UltimoAcceso_Login,CAST('01/01/1900' AS SMALLDATETIME)) AS UltimoAcceso
+FROM [dbo].[TSecurityLogin]
+--WHERE IdRolLogin_Login='1' --COORDINADOR
+--WHERE IdRolLogin_Login='6' --ADMINISTRADOR
+--WHERE IdRolLogin_Login='5' --DOCENTE
+
+##################################################################################################
+MODIFICACIONES
+##################################################################################################
+
+##################################################################################################
+METODO PARA EJECUTAR POR SQL EL PROCEDIMIENTO DE ACTUALIZAR UNA CONFIG:
+--Actualizar el periodo
+USE [notas14]
+GO
+
+DECLARE @RC int
+DECLARE @Id int
+DECLARE @Syn nvarchar(256)
+DECLARE @Clave varchar(256)
+DECLARE @tipo_select int
+DECLARE @ret int
+
+SET @Id = 4;
+SET @Syn = N'D5B4951857A45008AF280D73D2';
+SET @Clave = '202203';
+SET @tipo_select = 100;
+
+EXECUTE @RC = [dbo].[My_TConfig] 
+   @Id
+  ,@Syn
+  ,@Clave
+  ,@tipo_select
+  ,@ret OUTPUT
+GO
+
+##################################################################################################
+INSERTAR DATOS EN TSecurityEntidad
+
+SET IDENTITY_INSERT [dbo].[TSecurityEntidad] ON
+GO
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (23, N'FmDashBoard')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (24, N'FmMantenimiento')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (25, N'FmAutenticacion')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (26, N'FmIdioma')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (27, N'FmPrograma')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (28, N'FmCurso')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (29, N'FmAula')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (30, N'FmSede')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (31, N'FmHorario')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (32, N'FmFrecuencia')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (33, N'FmServicio')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (34, N'FmGestionAcademica')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (35, N'FmGrupoCursoCoordinador')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (37, N'FmDocente')
+GO
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (38, N'FmRecordAlumno')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (39, N'FmExamenClasificacion')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (40, N'FmMatricula')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (41, N'FmGrupoMatricula')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (42, N'FmGrupoMatriculaCoordinador')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (43, N'FmAlumno')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (44, N'FmAlumnoUnsa')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (45, N'FmTesoreria')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (46, N'FmFacturacion')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (47, N'FmOrdenDePago')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (48, N'FmGenerarTeletransfer')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (49, N'FmSubirTeletransfer')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (50, N'FmListaCDPG')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (52, N'FmRol')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (53, N'FmPermiso')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (54, N'FmEntidad')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (55, N'FmBitacoraLogin')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (56, N'FmConfiguracion')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (57, N'FmGrupoCursoCoordinadorPdf')
+INSERT [dbo].[TSecurityEntidad] ([Id_Entidad], [nombre]) VALUES (58, N'FmGrupoCursoPdf')
+GO
+SET IDENTITY_INSERT [dbo].[TSecurityEntidad] OFF
+GO
+
+##################################################################################################
+INSERTAR USUARIO DE PRUEBA EN TSecurityLogin
+
+USE [notas14]
+GO
+
+DECLARE @RC int
+DECLARE @id varchar(15)
+DECLARE @idPersona varchar(15)
+DECLARE @Id_BitacoraLogin bigint
+DECLARE @IdRolLogin int
+DECLARE @avatar varchar(256)
+DECLARE @EsSuperUser bit
+DECLARE @estado char(1)
+DECLARE @Ip varchar(50)
+DECLARE @Pc varchar(50)
+DECLARE @pwd varchar(256)
+DECLARE @preg01 varchar(256)
+DECLARE @preg02 varchar(256)
+DECLARE @rpta01 varchar(256)
+DECLARE @rpta02 varchar(256)
+DECLARE @IdLogin varchar(15)
+DECLARE @claveSyn nvarchar(256)
+DECLARE @tipo_select int
+DECLARE @ret int
+
+SET @id = 'GCASTRO'
+SET @idPersona = '71461582'
+SET @avatar = ''
+SET @EsSuperUser = '1'
+SET @estado = '1'
+SET @IdRolLogin = '6'
+SET @pwd = 'contra123'
+SET @preg01 = 'ADMIN'
+SET @preg02 = 'ADMIN'
+SET @rpta01 = 'ADM IDIOMAS'
+SET @rpta02 = 'ADM IDIOMAS'
+SET @claveSyn = N'D5B4951857A45008AF280D73D2'
+SET @tipo_select = 100
+
+EXECUTE @RC = [dbo].[My_TSecurityLogin] 
+   @id
+  ,@idPersona
+  ,@Id_BitacoraLogin
+  ,@IdRolLogin
+  ,@avatar
+  ,@EsSuperUser
+  ,@estado
+  ,@Ip
+  ,@Pc
+  ,@pwd
+  ,@preg01
+  ,@preg02
+  ,@rpta01
+  ,@rpta02
+  ,@IdLogin
+  ,@claveSyn
+  ,@tipo_select
+  ,@ret OUTPUT
+GO
+
+##################################################################################################
+AGREGAR COLUMNA A LA TABLA TSecurityRolLoginPermiso
+
+USE [notas14]
+GO
+
+ALTER TABLE [dbo].[TSecurityRolLoginPermiso]
+ADD ControllerAction VARCHAR(MAX) NULL;
+
+##################################################################################################
+ACTUALIZAR DATOS DE LA COLUMNA ControllerAction DE LA TABLA TSecurityRolLoginPermiso
+
+USE [notas14]
+GO
+
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 1
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = 'UsersController.Index,UsersController.Create,UsersController.Create' WHERE Id_RolLoginPermiso = 2
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 3
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 4
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 5
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 6
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 7
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 8
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 9
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 10
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 11
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 12
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 13
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 14
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 15
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 16
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 17
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 18
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 19
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 20
+GO
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = 'UsersController.Index' WHERE Id_RolLoginPermiso = 21
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = 'ProgramsController.Index' WHERE Id_RolLoginPermiso = 22
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 23
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 24
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = 'AdminGroupsController.Index' WHERE Id_RolLoginPermiso = 25
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 26
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 27
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 28
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 29
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 30
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = 'UsersController.Index,UsersController.Details,UsersController.Create,UsersController.Create,UsersController.Edit,UsersController.Edit,UsersController.Delete,UsersController.DeleteConfirmed' WHERE Id_RolLoginPermiso = 31
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = 'ProgramsController.Index,ProgramsController.Details,ProgramsController.Create,ProgramsController.Create,ProgramsController.Edit,ProgramsController.Edit,ProgramsController.Delete,ProgramsController.DeleteConfirmed' WHERE Id_RolLoginPermiso = 32
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 33
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 34
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = 'GroupsController.Index,GroupsController.Details,GroupsController.Create,GroupsController.Create,GroupsController.Edit,GroupsController.Edit,GroupsController.TodasActasPDF,GroupsController.Delete,GroupsController.DeleteConfirmed' WHERE Id_RolLoginPermiso = 35
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 36
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 37
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 38
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 39
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 40
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 41
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 42
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 43
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 44
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 45
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 46
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 47
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 48
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 49
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 50
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 51
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 52
+GO
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = 'GroupsController.Index' WHERE Id_RolLoginPermiso = 53
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 54
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 55
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 56
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 57
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 58
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 59
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 60
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 61
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 62
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 63
+UPDATE [dbo].[TSecurityRolLoginPermiso] SET [ControllerAction] = NULL WHERE Id_RolLoginPermiso = 64
+
+##################################################################################################
+AGREGAR DATOS A LA TABLA TSecurityRolLoginPermiso
+
+USE [notas14]
+GO
+
+SET IDENTITY_INSERT [dbo].[TSecurityRolLoginPermiso] ON 
+
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (67, 6, 23, 9, N'DashController.Index')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (68, 6, 24, 9, NULL)
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (69, 6, 25, 9, NULL)
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (70, 6, 26, 9, N'LanguagesController.Index,LanguagesController.Details,LanguagesController.Create,LanguagesController.Create,LanguagesController.Edit,LanguagesController.Edit,LanguagesController.Delete,LanguagesController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (71, 6, 28, 9, N'CoursesController.Index,CoursesController.Details,CoursesController.Create,CoursesController.Create,CoursesController.Edit,CoursesController.Edit,CoursesController.Delete,CoursesController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (72, 6, 29, 9, N'ClassroomsController.Index,ClassroomsController.Details,ClassroomsController.Create,ClassroomsController.Create,ClassroomsController.Edit,ClassroomsController.Edit,ClassroomsController.Delete,ClassroomsController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (73, 6, 30, 9, N'CampusController.Index,CampusController.Details,CampusController.Create,CampusController.Create,CampusController.Edit,CampusController.Edit,CampusController.Delete,CampusController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (74, 6, 31, 9, N'SchedulesController.Index,SchedulesController.Details,SchedulesController.Create,SchedulesController.Create,SchedulesController.Edit,SchedulesController.Edit,SchedulesController.Delete,SchedulesController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (75, 6, 32, 9, N'FrequenciesController.Index,FrequenciesController.Details,FrequenciesController.Create,FrequenciesController.Create,FrequenciesController.Edit,FrequenciesController.Edit,FrequenciesController.Delete,FrequenciesController.DeleteConfirmed')
+GO
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (76, 6, 33, 9, N'ServicesController.Index,ServicesController.Details,ServicesController.Create,ServicesController.Create,ServicesController.Edit,ServicesController.Edit,ServicesController.Delete,ServicesController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (77, 6, 34, 9, N'')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (78, 6, 35, 9, N'AdminGroupsController.Index,AdminGroupsController.Details,AdminGroupsController.ActaGrupo,AdminGroupsController.DescargarNotas,AdminGroupsController.Notas,AdminGroupsController.Create,AdminGroupsController.Create,AdminGroupsController.Edit,AdminGroupsController.Edit,AdminGroupsController.Delete,AdminGroupsController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (79, 6, 37, 9, N'TeacherController.Index,TeacherController.IndexData,TeacherController.Details,TeacherController.Create,TeacherController.Create,TeacherController.Edit,TeacherController.Edit,TeacherController.Delete,TeacherController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (80, 6, 38, 9, N'RecordStudentsController.nombreArchivo,RecordStudentsController.Index,RecordStudentsController.TodasActasPDF,RecordStudentsController.Details,RecordStudentsController.Create,RecordStudentsController.Create,RecordStudentsController.Edit,RecordStudentsController.Edit,RecordStudentsController.Delete,RecordStudentsController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (81, 6, 39, 9, N'ClassificationController.Index,ClassificationController.Details,ClassificationController.Create,ClassificationController.Create,ClassificationController.Edit,ClassificationController.Edit,ClassificationController.Delete,ClassificationController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (82, 6, 40, 9, N'EnrollsController.GenerarEnrollmentViews,EnrollsController.GenerarGroupViews,EnrollsController.Index,EnrollsController.IndexData,EnrollsController.Details,EnrollsController.Create,EnrollsController.AlumnoSearchName,EnrollsController.AlumnoUnsaSearchName,EnrollsController.Records,EnrollsController.CreateAjax,EnrollsController.Create,EnrollsController.Edit,EnrollsController.UpdateAjaxAsync,EnrollsController.Edit,EnrollsController.Delete,EnrollsController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (83, 6, 42, 9, N'AdminEnrollsController.GenerarEnrollmentViews,AdminEnrollsController.GenerarGroupViews,AdminEnrollsController.Index,AdminEnrollsController.IndexData,AdminEnrollsController.Details,AdminEnrollsController.Create,AdminEnrollsController.AlumnoSearchName,AdminEnrollsController.AlumnoUnsaSearchName,AdminEnrollsController.Records,AdminEnrollsController.CreateAjax,AdminEnrollsController.Create,AdminEnrollsController.Edit,AdminEnrollsController.UpdateAjaxAsync,AdminEnrollsController.Edit,AdminEnrollsController.Delete,AdminEnrollsController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (84, 6, 43, 9, N'StudentsController.Index,StudentsController.IndexData,StudentsController.Details,StudentsController.Create,StudentsController.Create,StudentsController.Edit,StudentsController.Edit,StudentsController.Delete,StudentsController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (85, 6, 44, 9, N'UnsaStudentsController.Index,UnsaStudentsController.IndexData,UnsaStudentsController.Details,UnsaStudentsController.Create,UnsaStudentsController.Create,UnsaStudentsController.Edit,UnsaStudentsController.Edit,UnsaStudentsController.Delete,UnsaStudentsController.DeleteConfirmed')
+GO
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (86, 6, 45, 9, N'')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (87, 6, 46, 9, N'InvoicesController.Index,InvoicesController.Details,InvoicesController.Create,InvoicesController.Create,InvoicesController.Edit,InvoicesController.Edit,InvoicesController.Delete,InvoicesController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (88, 6, 47, 9, N'PaymentOrdersController.GenerarOrderDetailsPaymentView,PaymentOrdersController.Index,PaymentOrdersController.IndexData,PaymentOrdersController.Details,PaymentOrdersController.Create,PaymentOrdersController.Create,PaymentOrdersController.Edit,PaymentOrdersController.Edit,PaymentOrdersController.Delete,PaymentOrdersController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (89, 6, 48, 9, N'TeleTransferController.Generar')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (90, 6, 49, 9, N'TeleTransferController.Subir,TeleTransferController.Subir')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (91, 6, 50, 9, N'TeleTransferController.GetDetail,TeleTransferController.ListaCDPG,TeleTransferController.DetalleCDPG')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (92, 6, 41, 9, N'EnrollsController.GenerarEnrollmentViews,EnrollsController.GenerarGroupViews,EnrollsController.Index,EnrollsController.IndexData,EnrollsController.Details,EnrollsController.Create,EnrollsController.AlumnoSearchName,EnrollsController.AlumnoUnsaSearchName,EnrollsController.Records,EnrollsController.CreateAjax,EnrollsController.Create,EnrollsController.Edit,EnrollsController.UpdateAjaxAsync,EnrollsController.Edit,EnrollsController.Delete,EnrollsController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (93, 6, 52, 9, N'RolController.Index,RolController.Details,RolController.Create,RolController.Create,RolController.Edit,RolController.Edit,RolController.Delete,RolController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (94, 6, 53, 9, N'PermissionController.Index,PermissionController.Details,PermissionController.Create,PermissionController.Create,PermissionController.Edit,PermissionController.Edit,PermissionController.Delete,PermissionController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (95, 6, 54, 9, N'EntityController.Index,EntityController.Details,EntityController.Create,EntityController.Create,EntityController.Edit,EntityController.Edit,EntityController.Delete,EntityController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (96, 6, 55, 9, N'BitacoraLoginController.Index,BitacoraLoginController.IndexData,BitacoraLoginController.Details,BitacoraLoginController.Create,BitacoraLoginController.Create,BitacoraLoginController.Edit,BitacoraLoginController.Edit,BitacoraLoginController.Delete,BitacoraLoginController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (97, 5, 34, 9, N'')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (98, 1, 23, 9, N'DashController.Index')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (99, 3, 23, 9, N'DashController.Index')
+GO
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (101, 4, 23, 9, N'DashController.Index')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (102, 5, 23, 9, N'DashController.Index')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (103, 6, 56, 9, N'ConfigurationsController.Index,ConfigurationsController.Details,ConfigurationsController.Create,ConfigurationsController.Create,ConfigurationsController.Edit,ConfigurationsController.Edit,ConfigurationsController.Delete,ConfigurationsController.DeleteConfirmed')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (104, 6, 57, 9, N'AdminGroupsPdfController.GeneratePDFGenericoA4')
+INSERT [dbo].[TSecurityRolLoginPermiso] ([Id_RolLoginPermiso], [IdRolLogin_RolLoginPermiso], [IdEntidad_RolLoginPermiso], [derecho_RolLoginPermiso], [ControllerAction]) VALUES (105, 6, 58, 9, N'GroupsPdfController.GeneratePDFGenericoA4')
+
+SET IDENTITY_INSERT [dbo].[TSecurityRolLoginPermiso] OFF

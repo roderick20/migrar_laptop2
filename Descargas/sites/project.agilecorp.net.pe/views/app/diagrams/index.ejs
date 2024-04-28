@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-6 text-left">
+    <h4>Proyectos</h4>
+  </div>
+  <div class="col-md-6" style="text-align: right;">
+    <a href="/diagrams/create" class="btn btn-sm btn-primary"><i class="fa-solid fa-plus"></i> Agregar</a>
+  </div>
+</div>
+
+<table class="table table-sm table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Tílulo</th>     
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% diagrams.forEach((item) => { %>
+    <tr>
+      <td>
+        <%= item.name %>
+      </td>
+      <td style="width: 1%;" nowrap>
+        <a href="/diagrams/read/<%= item._id.toString() %>"><i class="fa-solid fa-square-poll-vertical"></i></a>
+      </td>     
+      <td style="width: 1%;" nowrap>
+        <a href="/diagrams/update/<%= item._id.toString() %>"><i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="/diagrams/delete/<%= item._id.toString() %>" class="text-danger" onclick="window.confirm('¿Deseas eliminar?') ? '' : event.preventDefault();"><i class="fa-solid fa-trash"></i></a>
+      </td>
+    </tr>
+    <% })%>
+  </tbody>
+</table>

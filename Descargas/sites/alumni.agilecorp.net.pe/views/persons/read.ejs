@@ -1,0 +1,125 @@
+<div class="col-12">
+  <div class="card border rounded-3">
+    <div class="card-header  border-bottom p-3">
+      <div class="d-sm-flex justify-content-between align-items-center">
+        <h5 class="mb-2 mb-sm-0">Detalle Persona</h5>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <% if (error != '') { %>
+        <div class="text-danger"><%= error %>"</div>
+        <% } else { %>   
+          
+        <dl class="row">
+          <dt class="col-sm-2"> CompanyId </dt>
+          <dd class="col-sm-10"> <%= person.CompanyId %> </dd>
+        </dl>n                                                                                                                        
+        <dl class="row">
+          <dt class="col-sm-2"> FirstName </dt>
+          <dd class="col-sm-10"> <%= person.FirstName %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> LastName </dt>
+          <dd class="col-sm-10"> <%= person.LastName %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Email </dt>
+          <dd class="col-sm-10"> <%= person.Email %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Password </dt>
+          <dd class="col-sm-10"> <%= person.Password %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Role </dt>
+          <dd class="col-sm-10"> <%= person.Role %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> DateOfBirth </dt>
+          <dd class="col-sm-10"> <%= person.DateOfBirth %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Photo </dt>
+          <dd class="col-sm-10"> <%= person.Photo %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Address </dt>
+          <dd class="col-sm-10"> <%= person.Address %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> LastAccess </dt>
+          <dd class="col-sm-10"> <%= person.LastAccess %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Whatsapp </dt>
+          <dd class="col-sm-10"> <%= person.Whatsapp %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Instagram </dt>
+          <dd class="col-sm-10"> <%= person.Instagram %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Telegram </dt>
+          <dd class="col-sm-10"> <%= person.Telegram %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Facebook </dt>
+          <dd class="col-sm-10"> <%= person.Facebook %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Youtube </dt>
+          <dd class="col-sm-10"> <%= person.Youtube %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> TikTok </dt>
+          <dd class="col-sm-10"> <%= person.TikTok %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Twitter </dt>
+          <dd class="col-sm-10"> <%= person.Twitter %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Snapchat </dt>
+          <dd class="col-sm-10"> <%= person.Snapchat %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Spotify </dt>
+          <dd class="col-sm-10"> <%= person.Spotify %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Website </dt>
+          <dd class="col-sm-10"> <%= person.Website %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Linkedin </dt>
+          <dd class="col-sm-10"> <%= person.Linkedin %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Paypal </dt>
+          <dd class="col-sm-10"> <%= person.Paypal %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> PhoneNumber </dt>
+          <dd class="col-sm-10"> <%= person.PhoneNumber %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> FaceTime </dt>
+          <dd class="col-sm-10"> <%= person.FaceTime %> </dd>
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-2"> Status </dt>
+          <dd class="col-sm-10"> <%= person.Status %> </dd>
+        </dl>
+
+        <% } %>
+      </div>
+    </div>
+    <div class="card-footer  border-bottom p-3">
+      <div class="d-sm-flex justify-content-between align-items-center">
+        <button class="btn btn-sm btn-info" href="/users"><i class="fa-solid fa-arrow-left"></i> Regresar</button>
+        <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-UniqueId="@Model.UniqueId"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
+      </div>
+    </div>
+  </div>
+</div>

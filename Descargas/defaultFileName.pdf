@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Kukyflor - ERP">
+  <meta name="author" content="P & O">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+
+  <link rel="canonical" href="pages-blank.html" />
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+  <title>
+    Inicio
+  </title>
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&amp;display=swap" rel="stylesheet">
+
+  <link class="js-stylesheet" href="/assets/css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="/assets/js/app.js"></script>
+</head>
+
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-behavior="sticky">
+  <div class="container mt-4">
+  <div class="alert alert-danger" role="alert" id="errorMessage" style="display: none;">
+    
+  </div>
+</div>
+<div class="main d-flex justify-content-center w-100">
+  <main class="content d-flex p-0">
+    <div class="container d-flex flex-column">
+      <div class="row h-100">
+        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
+          <div class="d-table-cell align-middle">         
+            <div class="card">
+              <div class="card-body">
+                <div class="m-sm-4">
+                  <div class="text-center">
+                    <img src="/assets/img/logo_blanco.png" class="img-fluid" style="max-height: 37px;" />
+                  </div>
+                  <form id="formLogin" action="/" method="post">               
+                    <label class="text-danger"></label>
+                    <div class="mb-3">
+                      <label class="form-label">Email</label>
+                      <input class="form-control form-control" type="email" name="email" placeholder="Email" id="emailInput"
+                      required>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Password</label>
+                      <div class="input-group">
+                        <input class="form-control fakepassword" type="password" placeholder="Contraseña" name="password" id="password" 
+                         required/>
+                        <span class="input-group-text p-0" id="togglePassword">
+                          <i class="fakepasswordicon fa-solid fa-eye-slash cursor-pointer p-2 w-40px"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="d-grid gap-2 mt-3">
+                      <button type="submit" id="btnSubmit" class="btn btn-lg btn-primary">Ingresar
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<style>
+  #errorMessage {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    font-size: 16px;
+  }
+
+  #errorMessage strong {
+    font-weight: bold;
+  }
+
+  #errorMessage a {
+    color: #721c24;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+</style>
+<script>
+  // document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('formLogin');
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      if (type === 'password') {
+        togglePassword.innerHTML = '<i class="fakepasswordicon fa-solid fa-eye-slash cursor-pointer p-2 w-40px"></i>';
+      }
+      else {
+        togglePassword.innerHTML = '<i class=" fakepasswordicon fa-solid fa-eye cursor-pointer p-2 w-40px"></i>';
+      }
+    });
+
+    form.addEventListener('submit', function (event) {
+      const btn = document.getElementById('btnSubmit');
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin-pulse"></i> Procesando';
+      btn.disabled = true;
+    });
+
+    function mostrarAlerta(errorMensaje) {
+      if (errorMensaje && errorMensaje.trim() !== undefined) {
+        document.getElementById('errorMessage').style.display = 'block';
+      } else {
+        document.getElementById('errorMessage').style.display = 'none';
+      }
+    }
+    var errorMensaje = ; 
+    
+    mostrarAlerta(errorMensaje);
+
+    document.getElementById('emailInput').addEventListener('invalid', function(event) {
+      // verifica si el campo  Email está vacío
+      if (!event.target.value) {
+        event.target.setCustomValidity('Por favor, ingresa tu correo electrónico.');
+      } else {
+        event.target.setCustomValidity('');
+      }
+    });
+    document.getElementById('password').addEventListener('invalid', function(event) {
+      // verificar si el campo password está vacío
+      if (!event.target.value) {
+        event.target.setCustomValidity('Por favor, ingresa tu contraseña.');
+      } else {
+        event.target.setCustomValidity('');
+      }
+    });
+  // });
+</script>
+
+
+</body>
+
+</html>

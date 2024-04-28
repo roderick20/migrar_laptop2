@@ -1,0 +1,120 @@
+<section data-jarallax data-speed=".8" class="py-10 py-md-14 overlay overlay-black overlay-30 bg-cover jarallax" style="background-image: url(/assets/img/BLOGBUSCADOR/PORTADA\ 1.png);">
+    <div class="container">
+        <div class="row justify-content-center" >
+            <div class="col-12 col-md-10 col-lg-7 text-center">
+                <h1 class="display-2 fw-bold text-white" style="font-size: 44px;">
+                    INFORMÉMONOS JUNTOS
+                </h1>
+                <p class="lead mb-0 text-white-75" style="font-size: 19px;">
+                    Lee los artículos más relevantes realizados por nuestros colaboradores
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x text-light">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div>
+<!-- Search and filters -->
+<section class="mt-n3 mb-3 mb-md-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form class="rounded shadow mb-4" action="/Blogs" method="get">
+                    <div class="input-group input-group-lg">
+
+                        <span class="input-group-text border-0 pe-1">
+                            <i class="fe fe-search"></i>
+                        </span>
+
+                        <input class="form-control border-0 px-1" type="text" name="palabraClave" aria-label="Search our blog..." placeholder="Buscar">
+
+                        <span class="input-group-text border-0 py-0 ps-1 pe-3">
+                            <button type="submit" class="btn btn-sm" style="background-color: #259995; color: white;">
+                                Buscar
+                            </button>
+                        </span>
+                    </div>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PPKqOEsVUVMsJ9zXdsFLpE5TpGOMGv5EbMXz0EMWyzr64e_t7W0tYuWP2oTZ7DQr3kzj-YAtEUKqYpXtSvY88y5uNmz4wXv1wKX4atGqGr9h7OZymn1qjRoeyqNdsSgZuDN7HthdtANTYp2aJVvOsc">
+            </form>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <h6 class="fw-bold text-uppercase text-muted mb-0">
+                        Materias:
+                    </h6>
+                </div>
+                <div class="col ms-n5">
+                    <form action="/Blogt" class="badge ">
+                        <button type="submit" class="badge rounded-pill bg-secondary-soft" value="Civil" name="tag">
+                            <span class="h6 text-uppercase">Civil</span>
+                        </button>
+                        <button type="submit" class="badge rounded-pill bg-secondary-soft" value="Penal" name="tag">
+                            <span class="h6 text-uppercase">Penal</span>
+                        </button>
+                        <button type="submit" class="badge rounded-pill bg-secondary-soft" value="Constitucional" name="tag">
+                            <span class="h6 text-uppercase">Constitucional</span>
+                        </button>
+                        <button type="submit" class="badge rounded-pill bg-secondary-soft" value="Registral" name="tag">
+                            <span class="h6 text-uppercase">Registral</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Elements blog -->
+<section>
+    <div class="container">
+        <div class="row">
+            <% bloglist.forEach(function(item){ %>
+                <div class="col-12">
+                    <div class="card card-row shadow-light-lg mb-6 lift lift-lg">
+
+                        <div class="row gx-0">
+                            <div class="col-12">
+                                <span class="badge rounded-pill bg-light badge-float badge-float-inside">
+                                    <span class="h6 text-uppercase"><%= item.Tags %></span>
+                                </span>
+                            </div>
+                            <a class="col-12 col-md-6 order-md-2 bg-cover card-img-end" style="background-image: url('<%= item.Imagen %>');" href="/Post/<%= item.Slug %>">
+                                <div class="shape shape-start shape-fluid-y text-white d-none d-md-block">
+                                    <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0h62.759v172C38.62 384 112 517 112 517v173H0V0z" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                            <div class="col-12 col-md-6 order-md-1">
+                                <a class="card-body" href="/Post/<%= item.Slug %>">
+                                    <h3 style="color: #259995; font-weight: bold;">
+                                        <%= item.Title %>
+                                    </h3>
+                                    <p class="mb-0 text-muted">
+                                        <%= item.CardSummary %>
+                                    </p>
+                                </a>
+                                <a class="card-meta" href="/Post/<%= item.Slug %>">
+                                    <hr class="card-meta-divider">
+                                    <h6 class="text-uppercase text-muted me-2 mb-0">
+                                        <%= item.PostAuthor %>
+                                    </h6>
+                                    <p class="h6 text-uppercase text-muted mb-0 ms-auto">
+                                        <%= item.PostDate %>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            <% }) %>
+                
+                
+        </div>
+    </div>
+</section>

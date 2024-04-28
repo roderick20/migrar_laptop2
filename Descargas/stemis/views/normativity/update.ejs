@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="col-12">
+        <% normlist.forEach(item => { %>
+        <form enctype="multipart/form-data" action="/admin/normativity/update/<%= item.UniqueId %>" method="post" onsubmit="updateSlug()" >
+            <div class="card border rounded-3">
+                <div class="card-header  border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <h5 class="mb-2 mb-sm-0">Agregar norma</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group form-check p-2">
+                                <label class="form-check-label" for="IsPublish">
+                                    <input class="form-check-input" type="checkbox" data-val="true" data-val-required="The IsPublish field is required." id="IsPublish" name="IsPublish" <% if (item.IsPublish === true)  { %>checked<% } %> value="<%= item.IsPublish %>"/>
+                                    Publicar
+                                </label>
+                            </div>
+                            <div class="form-group p-2">
+                                <label class="control-label" for="Title">Título</label>
+                                <input class="form-control" required type="text" data-val="true" data-val-required="The Title field is required." id="Title" name="Title" value="<%= item.Title %>" />
+                                <input type="hidden" id="Slug" name="Slug" />
+                                <span class="text-danger field-validation-valid" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+                            </div>
+                            <script>
+                                function updateSlug() {
+                                    const titleInput = document.getElementById('Title');
+                                    const slugInput = document.getElementById('Slug');
+
+                                    const title = titleInput.value.trim();
+                                    const slug = title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+                                    slugInput.value = slug;
+                                }
+                            </script>
+                            <div class="form-group p-2">
+                                <label class="control-label" for="Tags">Tags</label>
+                                <input class="form-control" required type="text" data-val="true" data-val-required="The Tags field is required." id="Tags" name="Tags" value="<%= item.Tags %>" />
+                                <span class="text-danger field-validation-valid" data-valmsg-for="Tags" data-valmsg-replace="true"></span>
+                            </div>    
+    
+                            <div class="form-group p-2">
+                                <label class="control-label" for="Summary">Resumen</label>
+                                <textarea class="form-control" rows="4" data-val="true" data-val-required="The Summary field is required." id="Summary" name="Summary"><%= item.Summary %></textarea>
+                                <span class="text-danger field-validation-valid" data-valmsg-for="Summary" data-valmsg-replace="true"></span>
+                            </div>
+    
+                        </div>
+                        <div class="col-md-4">                        
+                            <div class="form-group">
+                                <label class="control-label" for="CardPhoto">Foto del Card</label>
+                                <input type="file" class="form-control" id="CardPhoto" name="CardPhoto" accept="image/jpeg, image/png, image/jpg" />
+                            </div>
+                            <div class="form-group mt-1">
+                                <img id="preview" src="" class="img-fluid img-thumbnail" alt="Image preview...">
+                            </div>
+    
+                            <div class="form-group pt-6">
+                                <label class="control-label" for="Photo">Foto de portada</label>
+                                <input type="file" class="form-control" id="Photo" name="Photo" accept="image/jpeg, image/png, image/jpg" />
+                            </div>
+                            <div class="form-group mt-1">
+                                <img id="preview2" src="" class="img-fluid img-thumbnail" alt="Image preview...">
+                            </div>
+    
+                            <div class="form-group pt-6">
+                                <label class="control-label" for="PDFile">Archivo PDF</label>
+                                <input type="file" class="form-control" id="filepdf" name="PDFile" accept="application/pdf" />
+                            </div>
+                        </div>
+    
+                        <div class="col-md-12">
+                            <div class="form-group p-2">
+                                <label class="control-label" for="Body">Cuerpo de la norma</label>
+                                <textarea class="form-control ckeditor" required data-val="true" data-val-required="The Body field is required." id="ckeditor" name="Body"><%= item.Body %></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <a class="btn btn-sm btn-info" href="/admin/normativity"><i class="fa-solid fa-arrow-left"></i> Regresar</a>
+                        <button class="btn btn-sm btn-primary" type="submit" id="btnSave"><i class="fa-solid fa-floppy-disk"></i>  Agregar </button>
+                    </div>
+                </div>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PPKqOEsVUVMsJ9zXdsFLpHTyJQOzWfHWwAofn8FeRb9aJiSDA7IYuYgz9PZYNDT_7_J02goBaFeSz1pFnpQKnOurEGoOIgJm61LPYPPFk0Zp683rGtDHgZ3rpm1RIEyM-b-OpHLuBWpwMEksX8GyII" />
+        
+    </form>
+    <% }) %>
+    </div>
+</div>

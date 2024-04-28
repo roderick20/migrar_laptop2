@@ -1,0 +1,3 @@
+status
+1 =  creador y falta validar cuenta
+2 =  cuenta validada 

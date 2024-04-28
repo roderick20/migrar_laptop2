@@ -1,0 +1,93 @@
+<div class="col-12">
+  <form id="formCreate" action="/mascotas/create" method="post">
+    <div class="card border rounded-3">
+      <div class="card-header  border-bottom p-3">
+        <div class="d-sm-flex justify-content-between align-items-center">
+          <h5 class="mb-2 mb-sm-0">Agregar mascota</h5>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="Nombre" class="control-label">Nombre</label>
+              <input name="Nombre" id="Nombre" class="form-control" type="text" required/>
+              <span for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+              <label for="Raza" class="control-label">Raza</label>
+              <input name="Raza" id="Raza" class="form-control" type="text" required/>
+              <span for="Raza" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+              <label for="Sexo" class="control-label">Sexo</label>
+              <select name="Sexo" id="Sexo" class="form-select">
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+              </select>             
+              <span for="Sexo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+              <label for="Color" class="control-label">Color</label>
+              <input name="Color" id="Color" class="form-control" type="text" required/>
+              <span for="Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+              <label for="Tamano" class="control-label">Tamaño</label>
+              <select name="Tamano" id="Tamano" class="form-select">
+                <option value="Pequeño (3 a 10kg)">Pequeño (3 a 10kg)</option>
+                <option value="Mediano (10 a 25kg)">Mediano (10 a 25kg)</option>
+                <option value="Grande (25 a 50kg)">Grande (25 a 50kg)</option>
+              </select>             
+              <span for="Tamano" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+              <label for="Caracteristicas" class="control-label">Caracteristicas</label>
+              <textarea name="Caracteristicas" id="Caracteristicas" class="form-control" ></textarea>
+              <span for="Caracteristicas" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="Peligroso" class="control-label">Potencialmente peligrosa </label>
+              <select name="Peligroso" id="Peligroso" class="form-select">
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>             
+              <span for="Peligroso" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="Caracteristicas" class="control-label">Fotos</label>
+              <input name="Fotos" id="Fotos" class="form-control" type="file" multiple />
+              <span for="Caracteristicas" class="text-danger"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer  border-bottom p-3">
+        <div class="d-sm-flex justify-content-between align-items-center">
+          <button class="btn btn-sm btn-info" type="button" onclick="window.location.href='/mascotas'"><i
+              class="fa-solid fa-arrow-left"></i>
+            Regresar</button>
+          <button class="btn btn-sm btn-primary" type="submit" id="btnSave"><i class="fa-solid fa-floppy-disk"></i>
+            Agregar </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<script>
+  
+  const form = document.getElementById('formCreate');
+  form.addEventListener('submit', function (event) {
+
+
+      const btn = document.getElementById('btnSave');
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin-pulse"></i> Procesando';
+      btn.disabled = true;
+
+  });
+</script>

@@ -1,0 +1,28 @@
+<div class="col-12">
+    <form action="/programs/delete" method="post">
+        <div class="card border rounded-3">
+            <div class="card-header  border-bottom p-3">
+                <div class="d-sm-flex justify-content-between align-items-center">
+                    <h5 class="mb-2 mb-sm-0">Eliminar Programa</h5>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <% if (error != '') { %>
+                    <div class="text-danger"><%= error %></div>
+                    <% } else { %>
+                    <h6>¿Estás seguro de que quieres eliminar?</h6>                   
+                    <input type="hidden" name="UniqueId" id="UniqueId" value="<%= UniqueId %>"  />
+                    <% } %>
+                </div>
+            </div>
+            <div class="card-footer  border-bottom p-3">
+                <div class="d-sm-flex justify-content-between align-items-center">
+                    <button class="btn btn-sm btn-info" type="button" onclick="window.location.href='/companies'"><i class="fa-solid fa-arrow-left"></i>
+                        Regresar</button>
+                    <button class="btn btn-sm btn-danger" type="submit" id="btnSave"><i class="fa-solid fa-trash"></i>  Eliminar </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

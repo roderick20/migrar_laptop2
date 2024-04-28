@@ -1,0 +1,24 @@
+Create
+
+<form action="/projects/create" method="post">
+  <div class="form-group">
+    <label for="name">Titúlo</label>
+    <input type="text" class="form-control" id="name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="date_begin">Fecha Inicio</label>
+    <input type="text" class="form-control" id="date_begin" name="date_begin" placeholder="dd/mm/aaaa">
+  </div>
+  <div class="form-group">
+    <label for="date_end">Fecha Fin</label>
+    <input type="text" class="form-control" id="date_end" name="date_end" placeholder="dd/mm/aaaa">
+  </div>
+  <button type="submit" class="btn btn-primary">Grabar</button>
+</form>
+
+<script>
+  $(function() {
+    $("#date_begin").datepicker({dateFormat : "yy-mm-dd"});
+    $("#date_end").datepicker({dateFormat : "yy-mm-dd"});
+  });
+</script>

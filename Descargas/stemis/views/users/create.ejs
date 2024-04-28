@@ -1,0 +1,71 @@
+<div class="col-12">
+    <form action="/admin/users/save" method="post">
+        <div class="card border rounded-3">
+            <div class="card-header  border-bottom p-3">
+                <div class="d-sm-flex justify-content-between align-items-center">
+                    <h5 class="mb-2 mb-sm-0">Crear Usuario</h5>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label" for="Name">Nombre</label>
+                            <input class="form-control" type="text" data-val="true" data-val-required="The Name field is required."  name="Name" value="" />
+                            <span class="text-danger field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="Email">Email</label>
+                            <input class="form-control" type="text" data-val="true" data-val-required="The Email field is required." name="Email" value="" />
+                            <span class="text-danger field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="Password">Password</label>
+                            <input class="form-control" type="text" data-val="true" data-val-required="The Password field is required."  name="Password" value="" />
+                            <span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" data-val="true" data-val-required="The Enabled field is required." name="Enabled" value="true">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Habilitado
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <table class="table align-middle mb-0 table-hover table-shrink">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col" class="border-0 rounded-start">
+                                        Rol
+                                    </th>
+                                    <th scope="col" class="border-0 rounded-end"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td>
+                                            admin
+                                        </td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="1" name="Roles[]">
+                                            </div>
+                                        </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer  border-bottom p-3">
+                <div class="d-sm-flex justify-content-between align-items-center">
+                    <a class="btn btn-sm btn-info" href="/admin/users"><i class="fa-solid fa-arrow-left"></i> Regresar</a>
+                    <button class="btn btn-sm btn-primary" type="submit"> <i class="fa-solid fa-floppy-disk"></i> Agregar </button>
+                </div>
+            </div>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PPKqOEsVUVMsJ9zXdsFLpEkeW7O5twJIF3y-WxCQqS4sAyeJ4V0_PpT7WFiCjB6a-dbmy2VDOg5vsKjEllDxGvkBrIB4ZbhzVW2tUCPqLiEepOPFn1V407SmeYIGV30h7LGrGbcTIUieZBE2rutGy4" /><input name="Enabled" type="hidden" value="false">
+</form>
+</div>

@@ -1,0 +1,50 @@
+Fecha: 9/11/2023, 00:25:28, Archivo: persons/findAllDT   , Error: RequestError: Invalid usage of the option NEXT in the FETCH statement.  
+Fecha: 10/11/2023, 14:59:30, Archivo: dbo.Person/update   , Error: RequestError: Must declare the scalar variable "@Title".  
+Fecha: 10/11/2023, 15:01:08, Archivo: dbo.Person/update   , Error: RequestError: Invalid column name 'SitioWeb'.  
+Fecha: 10/11/2023, 15:25:22, Archivo: dbo.Person/update   , Error: ReferenceError: getType is not defined  
+Fecha: 10/11/2023, 15:30:42, Archivo: dbo.Person/update   , Error: RequestError: Invalid column name 'SnapchatStatus'.  
+Fecha: 14/11/2023, 21:15:30, Archivo: persons/findAllDT   , Error: Error: aborted  
+Fecha: 15/11/2023, 22:51:47, Archivo: user.js/login       , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 15/11/2023, 22:52:30, Archivo: persons/findAllDT   , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 15/11/2023, 22:55:07, Archivo: persons/findAllDT   , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 17/11/2023, 09:52:06, Archivo: user.js/login       , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 17/11/2023, 09:52:23, Archivo: user.js/login       , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 17/11/2023, 10:57:26, Archivo: user.js/login       , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 17/11/2023, 10:57:43, Archivo: user.js/login       , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 17/11/2023, 10:58:31, Archivo: user.js/login       , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 17/11/2023, 10:59:10, Archivo: user.js/login       , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 17/11/2023, 11:19:40, Archivo: user.js/login       , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 17/11/2023, 17:15:23, Archivo: user.js/login       , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 17/11/2023, 17:15:40, Archivo: user.js/login       , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 17/11/2023, 17:16:21, Archivo: user.js/login       , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 17/11/2023, 17:17:03, Archivo: user.js/login       , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 17/11/2023, 17:17:57, Archivo: user.js/login       , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 17/11/2023, 17:17:57, Archivo: user.js/login       , Error: ConnectionError: Failed to connect to 3.131.217.111:1433 in 15000ms  
+Fecha: 22/11/2023, 01:30:14, Archivo: user.js/login       , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 22/11/2023, 01:30:17, Archivo: user.js/login       , Error: RequestError: Incorrect syntax near ','.  
+Fecha: 23/11/2023, 02:54:44, Archivo: dbo.Settings/create , Error: TypeError: Cannot read properties of undefined (reading '0')  
+Fecha: 23/11/2023, 02:59:08, Archivo: dbo.Settings/create , Error: TypeError: Cannot read properties of undefined (reading '0')  
+Fecha: 23/11/2023, 16:59:21, Archivo: dbo.Person/update   , Error: RequestError: Must declare the scalar variable "@PersonId".  
+Fecha: 23/11/2023, 17:01:11, Archivo: dbo.Person/update   , Error: RequestError: Must declare the scalar variable "@PersonId".  
+Fecha: 23/11/2023, 17:03:01, Archivo: dbo.Person/update   , Error: RequestError: Must declare the scalar variable "@PersonId".  
+Fecha: 23/11/2023, 17:31:31, Archivo: user.js/login       , Error: RequestError: Argument data type int is invalid for argument 2 of hashbytes function.  
+Fecha: 23/11/2023, 17:31:36, Archivo: user.js/login       , Error: RequestError: Argument data type int is invalid for argument 2 of hashbytes function.  
+Fecha: 23/11/2023, 17:36:47, Archivo: user.js/login       , Error: RequestError: Argument data type int is invalid for argument 2 of hashbytes function.  
+Fecha: 23/11/2023, 17:36:59, Archivo: user.js/login       , Error: RequestError: Argument data type int is invalid for argument 2 of hashbytes function.  
+Fecha: 23/11/2023, 18:54:50, Archivo: user.js/login       , Error: RequestError: Argument data type int is invalid for argument 2 of hashbytes function.  
+Fecha: 23/11/2023, 19:42:48, Archivo: dbo.Person/updatepassword, Error: RequestError: Cannot insert the value NULL into column 'Password', table 'popl.dbo.Person'; column does not allow nulls. UPDATE fails.  
+Fecha: 23/11/2023, 19:49:49, Archivo: dbo.Person/updatepassword, Error: RequestError: Invalid column name 'undefined'.  
+Fecha: 23/11/2023, 20:09:40, Archivo: dbo.Person/updatepassword, Error: RequestError: The hashbytes function requires 2 argument(s).  
+Fecha: 12/12/2023, 01:29:58, Archivo: dbo.Teacher/create  , Error: RequestError: Cannot insert the value NULL into column 'Id', table 'ucsm_postgrado.dbo.Teacher'; column does not allow nulls. INSERT fails.  
+Fecha: 14/12/2023, 18:16:44, Archivo: user.js/login       , Error: TypeError: The "config.server" property is required and must be of type string.  
+Fecha: 14/12/2023, 18:16:51, Archivo: user.js/login       , Error: TypeError: The "config.server" property is required and must be of type string.  
+Fecha: 14/12/2023, 18:16:57, Archivo: user.js/login       , Error: TypeError: The "config.server" property is required and must be of type string.  
+Fecha: 14/12/2023, 18:18:42, Archivo: user.js/login       , Error: TypeError: The "config.server" property is required and must be of type string.  
+Fecha: 14/12/2023, 18:25:00, Archivo: user.js/login       , Error: TypeError: The "config.server" property is required and must be of type string.  
+Fecha: 14/12/2023, 18:30:33, Archivo: user.js/login       , Error: TypeError: The "config.server" property is required and must be of type string.  
+Fecha: 14/12/2023, 18:30:50, Archivo: user.js/login       , Error: TypeError: The "config.server" property is required and must be of type string.  
+Fecha: 20/12/2023, 16:28:21, Archivo: user.js/login       , Error: RequestError: Invalid object name 'dbo.Teacher'.  
+Fecha: 20/12/2023, 16:28:37, Archivo: user.js/login       , Error: RequestError: Invalid object name 'dbo.Teacher'.  
+Fecha: 20/12/2023, 16:28:43, Archivo: user.js/login       , Error: RequestError: Invalid object name 'dbo.Teacher'.  
+Fecha: 20/12/2023, 16:30:05, Archivo: user.js/login       , Error: RequestError: Invalid object name 'dbo.Teacher'.  
+Fecha: 20/12/2023, 16:31:25, Archivo: user.js/login       , Error: RequestError: The multi-part identifier " * FROM [dbo.User" could not be bound.  

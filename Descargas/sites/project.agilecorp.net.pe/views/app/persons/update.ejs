@@ -1,0 +1,31 @@
+Create
+
+<form action="/persons/update" method="post">
+  <input type="hidden" id="id" name="id" value="<%= person._id.toString() %>">
+
+
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text" class="form-control" id="name" name="name" value="<%= person.name %>">
+    </div>
+    <div class="form-group">
+      <label for="dateinput">Fecha de Ingreso</label>
+      <input type="text" class="form-control" id="dateinput" name="dateinput" value="<%= person.dateinput %>">
+    </div>
+    <div class="form-group">
+      <label for="cci">CCI</label>
+      <input type="text" class="form-control" id="cci" name="cci" value="<%= person.cci %>">
+    </div>
+    <div class="form-group">
+      <label for="emailgithub">Email GitHub</label>
+      <input type="text" class="form-control" id="emailgithub" name="emailgithub" value="<%= person.emailgithub %>">
+    </div>
+    <button type="submit" class="btn btn-primary">Grabar</button>
+  </form>
+  
+  
+  <script>
+    $(function() {
+      $("#dateinput").datepicker({dateFormat : "yy-mm-dd"});    
+    });
+  </script>

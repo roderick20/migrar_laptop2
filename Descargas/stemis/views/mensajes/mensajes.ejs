@@ -1,0 +1,72 @@
+<div class="container">
+    <% messlist.forEach(item => { %>
+     
+    <div class="col-12">
+        <div class="card border rounded-3">
+            <div class="card-header  border-bottom p-3">
+                <div class="d-sm-flex justify-content-between align-items-center">
+                    <h5 class="mb-2 mb-sm-0">Mensajes</h5>
+                </div>
+            </div>
+            <div class="card-body" style="min-height:500px">
+        <dl class="row">
+            <dt class = "col-sm-2">
+                UniqueId
+            </dt>
+            <dd class = "col-sm-10">
+                <%= item.UniqueId %>
+            </dd>
+            <dt class = "col-sm-2">
+                Name
+            </dt>
+            <dd class = "col-sm-10">
+                <%= item.Name %>
+            </dd>
+            <dt class = "col-sm-2">
+                Email
+            </dt>
+            <dd class = "col-sm-10">
+                <%= item.Email %>
+            </dd>
+            <dt class = "col-sm-2">
+                Subject
+            </dt>
+            <dd class = "col-sm-10">
+                <%= item.Subject %>
+            </dd>
+            <dt class = "col-sm-2">
+                Created
+            </dt>
+            <dd class = "col-sm-10">
+                <%= item.Created %>
+            </dd>
+            <dt class = "col-sm-2">
+                Body
+            </dt>
+            <dd class = "col-sm-10">
+                <%= item.Body %>
+            </dd>
+            <dt class = "col-sm-2">
+                IsRead
+            </dt>
+            <dd class = "col-sm-10">
+                <input checked="checked" class="check-box" disabled="disabled" type="checkbox" />
+            </dd>
+            <dt class = "col-sm-2">
+                ReadDate
+            </dt>
+            <dd class = "col-sm-10">
+                <%= item.ReadDate %>
+            </dd>
+        </dl>
+            </div>
+            <div class="card-footer  border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <a class="btn btn-sm btn-info" href="/admin/messages"><i class="fa-solid fa-arrow-left"></i> Regresar</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <% }) %>
+    
+</div>

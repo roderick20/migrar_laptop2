@@ -1,0 +1,129 @@
+<div class="main d-flex justify-content-center w-100" >
+  <main class="content d-flex p-0">
+    <div class="container d-flex flex-column">
+      <div class="row h-100">
+        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
+          <div class="d-table-cell align-middle">
+
+
+            <div class="row justify-content-center mb-4">
+              <div class="col-12 text-center">
+                <img src="/img/logo.png" class="img-fluid" >
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <% if (successMessage) { %>
+                  <div class="alert alert-success" role="alert">
+                    <%= successMessage %>
+                  </div>
+                  <% } %>
+
+                    <% if (errorMessage) { %>
+                      <div class="alert alert-danger" role="alert">
+                        <%= errorMessage %>
+                      </div>
+                      <% } %>
+                        <div class="m-sm-4">
+
+                          <form id="formLogin" action="/login" method="post">
+                            <label class="text-danger">
+                              <%= error %>
+                            </label>
+                            <!-- Dentro de um arquivo EJS -->
+                            <% if (messages.error) { %>
+                              <p class="error">
+                                <%= messages.error %>
+                              </p>
+                              <% } else if (messages.success) { %>
+                                <p class="success">
+                                  <%= messages.success %>
+                                </p>
+                                <% } %>
+                                  <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input class="form-control form-control" type="email" id="username" name="username"
+                                      placeholder="Email">
+                                  </div>
+                                  <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <div class="input-group">
+                                      <input class="form-control fakepassword" type="password" placeholder="Contraseña"
+                                        name="password" id="password" />
+                                      <span class="input-group-text p-0" id="togglePassword">
+                                        <i class="fakepasswordicon fa-solid fa-eye-slash cursor-pointer p-2 w-40px"></i>
+                                      </span>
+                                    </div>
+                                    <small>
+                                      <a href="/recoverypassword" style="color:#0707bd">Recuperar contraseña</a>
+                                    </small>
+                                  </div>
+                                  <div class="d-grid gap-2 mt-3">
+                                    <button type="submit" id="btnSubmit" class="btn btn-lg btn-primary"
+                                      style="background-color: #0707bd;border-color: #0707bd;">Ingresar
+                                      <i class="fa-solid fa-right-to-bracket"></i>
+                                    </button>
+                                  </div>
+                          </form>
+                        </div>
+              </div>
+            </div>
+            <div class="text-center mb-3" >
+              ¿No tienes una cuenta? <a href="/register" style="color: #0707bd;">Registrate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+  const form = document.getElementById('formLogin');
+  const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#password');
+
+  togglePassword.addEventListener('click', function (e) {
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    if (type === 'password') {
+      togglePassword.innerHTML = '<i class="fakepasswordicon fa-solid fa-eye-slash cursor-pointer p-2 w-40px"></i>';
+    }
+    else {
+      togglePassword.innerHTML = '<i class=" fakepasswordicon fa-solid fa-eye cursor-pointer p-2 w-40px"></i>';
+    }
+  });
+
+  //form.addEventListener('submit', function (event) {
+  //const btn = document.getElementById('btnSubmit');
+  //btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin-pulse"></i> Procesando';
+  //btn.disabled = true;
+  //});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('#formLogin');
+    const btnAgregar = form.querySelector('#btnSubmit');
+
+    // Función para restablecer el botón
+    function resetButton() {
+      btnAgregar.innerHTML = 'Entrar';
+      btnAgregar.disabled = false;
+    }
+
+    // Escucha el evento submit del formulario
+    form.addEventListener('submit', function (event) {
+      btnAgregar.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Cargando...';
+      btnAgregar.disabled = true;
+
+      // Restablece el botón cuando se carga la página nuevamente
+      window.addEventListener('pageshow', function () {
+        resetButton();
+      });
+    });
+
+    // Llama a la función de restablecimiento al cargar la página
+    resetButton();
+  });
+</script>

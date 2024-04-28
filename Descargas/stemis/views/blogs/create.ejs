@@ -1,0 +1,139 @@
+<div class="container">
+            
+
+    <div class="col-12">
+        <form enctype="multipart/form-data" action="/admin/blogs/save" method="post" onsubmit="updateSlug()" >
+            <div class="card border rounded-3">
+                <div class="card-header  border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <h5 class="mb-2 mb-sm-0">Agregar Post</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group form-check p-2">
+                                <label class="form-check-label" for="IsPublish">
+                                    <input class="form-check-input" type="checkbox" data-val="true" data-val-required="The IsPublish field is required." id="IsPublish" name="IsPublish" value="true"/>Publicar
+                                </label>
+                            </div>
+                            <div class="form-group p-2">
+                                <label class="control-label" for="Title">Título</label>
+                                <input class="form-control" required type="text" data-val="true" data-val-required="The Title field is required." id="Title" name="Title" value="" />
+                                <input type="hidden" id="Slug" name="Slug" />
+                                <span class="text-danger field-validation-valid" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+                                <script>
+                                    function updateSlug() {
+                                        const titleInput = document.getElementById('Title');
+                                        const slugInput = document.getElementById('Slug');
+                                        
+                                        const title = titleInput.value.trim();
+                                        const slug = title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+                                        
+                                        slugInput.value = slug;
+                                    }
+                                </script>
+                            </div>
+                            <div class="form-group p-2">
+                                <label class="control-label" for="Tags">Tags</label>
+                                <input class="form-control" required type="text" id="Tags" name="Tags" value="" />
+                                <span class="text-danger field-validation-valid" data-valmsg-for="Tags" data-valmsg-replace="true"></span>
+                            </div>    
+                            <div class="form-group p-2">
+                                <label class="control-label" for="PhotoAuthor">Derechos de la foto</label>
+                                <input class="form-control" required type="text" id="PhotoAuthor" name="PhotoAuthor" value="" />
+                                <span class="text-danger field-validation-valid" data-valmsg-for="PhotoAuthor" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group p-2">
+                                <label class="control-label" for="SubjectId">Materia del Post:</label>
+                                <select name="SubjectId" class="form-select">
+                                    <% listsubject.forEach(item => { %>
+                                    <option value="<%= item.Id %>"><%= item.Name %></option>
+                                    <% }) %>
+                                </select>
+                            </div>
+                            <div class="form-group p-2">
+                                <label class="control-label" for="PostAuthor">Autor del Post</label>
+                                <select name="PostAuthor" class="form-select">
+                                    <% colabslist.forEach(item => { %>
+                                    <option value="<%= item.Id %>|<%= item.Name %>"><%= item.Name %></option>
+                                    <% }) %>
+                                </select>
+                                <span class="text-danger field-validation-valid" data-valmsg-for="PostAuthor" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group p-2">
+                                <label class="control-label" for="PostDate">Fecha del post</label>
+                                <input type="text" class="form-control" required id="PostDate" name="PostDate" value="" required/>
+                                <span class="text-danger field-validation-valid" data-valmsg-for="PostDate" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group p-2">
+                                <label class="control-label" for="Judgement">Sentencia</label>
+                                <input class="form-control" type="text" id="Judgement" name="Judgement" value="" />
+                                <span class="text-danger field-validation-valid" data-valmsg-for="Judgement" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group p-2">
+                                <label class="control-label" for="Pleno">Expediente</label>
+                                <input class="form-control" type="text" id="Pleno" name="Pleno" value="" />
+                                <span class="text-danger field-validation-valid" data-valmsg-for="Pleno" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group p-2">
+                                <label class="control-label" for="Expedient">Lugar</label>
+                                <input class="form-control" type="text" id="Expedient" name="Expedient" value="" />
+                                <span class="text-danger field-validation-valid" data-valmsg-for="Expedient" data-valmsg-replace="true"></span>
+                            </div>
+    
+                            <div class="form-group p-2">
+                                <label class="control-label" for="CardSummary">Resumen para el card</label>
+                                <textarea class="form-control" id="CardSummary" name="CardSummary"></textarea>
+                                <span class="text-danger field-validation-valid" data-valmsg-for="CardSummary" data-valmsg-replace="true"></span>
+                            </div>
+                            
+    
+    
+    
+                        </div>
+                        <div class="col-md-4">                        
+                            <div class="form-group">
+                                <label class="control-label" for="Imagen">Imagen</label>
+                                <input type="file" class="form-control" id="Imagen" name="Imagen" accept="image/jpeg, image/png, image/jpg" required />
+                            </div>
+                            <div class="form-group mt-1">
+                                <img id="preview" src="" class="img-fluid img-thumbnail" alt="Image preview...">
+                            </div>
+    
+                            <div class="form-group pt-6">
+                                <label class="control-label" for="Background">Foto de portada</label>
+                                <input type="file" class="form-control" id="Background" name="Background" accept="image/jpeg, image/png, image/jpg" required />
+                            </div>
+                            <div class="form-group mt-1">
+                                <img id="preview2" src="" class="img-fluid img-thumbnail" alt="Image preview...">
+                            </div>
+    
+                            <div class="form-group pt-6">
+                                <label class="control-label" for="PDFile">Archivo PDF</label>
+                                <input type="file" class="form-control" id="PDFile" name="PDFile" accept="application/pdf" required />
+                            </div>
+                        </div>
+    
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <div class="form-group p-2">
+                                    <label class="control-label" for="Body">Cuerpo del artículo</label>
+                                    <textarea class="form-control ckeditor" required data-val="true" data-val-required="The Body field is required." id="ckeditor" name="Body"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <a class="btn btn-sm btn-info" href="/admin/blogs"><i class="fa-solid fa-arrow-left"></i> Regresar</a>
+                        <button class="btn btn-sm btn-primary" type="submit" id="btnSave"><i class="fa-solid fa-floppy-disk"></i>  Agregar </button>
+                    </div>
+                </div>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PPKqOEsVUVMsJ9zXdsFLpE9N-QKM8SAiefdZY0Av5OggUrbZVU7484_sG3k1VsXtJG6cp4sydd6ISFY79CRJxkCGshSAZK0r1dxKyWX1rZ16YdFNSEanEMJeG9UzpkeMMiuiRwPJJPNpkHhp3I_UP8" />
+    </form>
+    </div>
+</div>
+

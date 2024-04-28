@@ -1,0 +1,1509 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 ">
+      <form id="formUpdate" action="/teacher/update/" method="post">
+        <!-- Sección 1: Personal -->
+        <div class="card border rounded-3 form-section" id="section1">
+          <div class="card-header border-bottom p-3">
+            <div class="d-sm-flex justify-content-between align-items-center">
+              <h5 class="mb-2 mb-sm-0">DATOS PERSONALES</h5>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group mb-2">
+                  <label for="Name" class="control-label">Nombres</label>
+                  <input name="Name" id="Name" class="form-control" type="text" value="<%= list[0].Name %>" />
+                  <span for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2">
+                  <label for="LastName" class="control-label">Apellidos</label>
+                  <input name="LastName" id="LastName" class="form-control" type="text"
+                    value="<%= list[0].LastName %>" />
+                  <span for="LastName" class="text-danger"></span>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group mb-2">
+                      <label for="Country" class="control-label">País de nacimiento</label>
+                      <select name="Country" id="Country" class="form-select">
+                        <% paises.forEach(item=>{ %>
+                          <option value="<%= item.nombre %>" <%=item.nombre==list[0].Country ? 'selected' : '' %> ><%=
+                              item.nombre %>
+                          </option>
+                          <% }) %>
+                      </select>
+                      <span for="Country" class="text-danger"></span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group mb-2">
+                      <label for="CountryResidence" class="control-label">País de residencia</label>
+
+                      <select name="CountryResidence" id="CountryResidence" class="form-select">
+                        <% paises.forEach(item=>{ %>
+                          <option value="<%= item.nombre %>" <%=item.nombre==list[0].CountryResidence ? 'selected' : ''
+                            %> ><%= item.nombre %>
+                          </option>
+                          <% }) %>
+                      </select>
+                      <span for="CountryResidence" class="text-danger"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group mb-2">
+                      <label for="TypeDoc" class="control-label">Tipo de Documento</label>
+                      <select name="TypeDoc" id="TypeDoc" class="form-control">
+                        <option value="DNI" <%=list[0].TypeDoc==='DNI' ? 'selected' : '' %>>DNI</option>
+                        <option value="Carne de Extranjeria" <%=list[0].TypeDoc==='Carne de Extranjeria' ? 'selected'
+                          : '' %>>Carne de Extranjeria</option>
+                        <option value="Cedula de Identidad" <%=list[0].TypeDoc==='Cedula de Identidad' ? 'selected' : ''
+                          %>>Cedula de Identidad</option>
+                      </select>
+                      <span for="TypeDoc" class="text-danger"></span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group mb-2">
+                      <label for="NumDoc" class="control-label">Número de Documento</label>
+                      <input name="NumDoc" id="NumDoc" class="form-control" type="text" value="<%= list[0].NumDoc %>" />
+                      <span for="NumDoc" class="text-danger"></span>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="row">
+                  <div class="col-4">
+                    <div class="form-group mb-2">
+                      <label for="Birthdate" class="control-label">Fecha de nacimiento</label>
+                      <input name="Birthdate" id="Birthdate" class="form-control" type="text"
+                        value="<%=  moment(list[0].Birthdate).format('DD/MM/YYYY') %>" />
+                      <span for="Birthdate" class="text-danger"></span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group mb-2">
+                      <label for="Phone" class="control-label">Celular</label>
+                      <input name="Phone" id="Phone" class="form-control" type="text" value="<%= list[0].Phone %>" />
+                      <span for="Phone" class="text-danger"></span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group mb-2">
+                      <label for="Email" class="control-label">Correo electrónico</label>
+                      <input name="Email" id="Email" class="form-control" type="text" value="<%= list[0].Email %>" />
+                      <span for="Email" class="text-danger"></span>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+                <div class="form-group mb-2">
+                  <label for="LinkedIn" class="control-label">LinkedIn(Url)</label>
+                  <input name="LinkedIn" id="LinkedIn" class="form-control" type="text"
+                    value="<%= list[0].LinkedIn %>" />
+                  <span for="LinkedIn" class="text-danger"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer border-bottom p-3">
+            <div class="row">
+              <div class="col-6 text-left">
+              </div>
+              <div class="col-6 text-end">
+                <button type="button" class="btn btn-primary" onclick="showSection('section2')">Siguiente <i
+                    class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sección 2: Preguntas adicionales -->
+        <div class="card border rounded-3 form-section" id="section2" style="display: none;">
+          <div class="card-header border-bottom p-3">
+            <div class="d-sm-flex justify-content-between align-items-center">
+              <h5 class="mb-2 mb-sm-0">DATOS DOCENTE</h5>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <!-- Pregunta 9 opcional datepicker-->
+                <div class="form-group mb-2 mb-3">
+                  <label for="fechaIngreso" class="control-label">Fecha de ingreso como docente de la UCSM (Si
+                    corresponde)</label>
+                  <input name="FechaIngreso" id="FechaIngreso" class="form-control" type="text"
+                    value="<%= list[0].FechaIngreso %>" />
+                  <span for="fechaIngreso" class="text-danger"></span>
+                </div>
+                <!-- Pregunta 10 -->
+                <div class="form-group mb-2 mb-3">
+                  <label class="control-label">¿Era docente universitario a la entrada en vigencia de la Ley 30220 Ley
+                    Universitaria?</label>
+                  <select class="form-select" name="DocenteLey30220">
+                    <option value="No" <%=list[0].DocenteLey30220==='Si' ? 'selected' : '' %>>No</option>
+                    <option value="Si" <%=list[0].DocenteLey30220==='No' ? 'selected' : '' %>>Si</option>
+                  </select>
+                </div>
+                <!-- Pregunta 11 -->
+                <div class="form-group mb-2 mb-3">
+                  <label class="control-label">¿Fue incorporado después de la obtención de la licencia de funcionamiento
+                    institucional?</label>
+                  <select class="form-select" name="IncorpDespLicencia">
+                    <option value="No" <%=list[0].IncorpDespLicencia==='Si' ? 'selected' : '' %>>No</option>
+                    <option value="Si" <%=list[0].IncorpDespLicencia==='No' ? 'selected' : '' %>>Si</option>
+                  </select>
+                </div>
+                <!-- Pregunta 13 -->
+                <div class="form-group mb-2 mb-3">
+                  <label for="GradoAcademico" class="control-label">Indique su mayor grado académico</label>
+                  <div class="input-group">
+                    <select class="form-select" id="GradoAcademico" name="GradoAcademico">
+                      <option value="Maestro" <%=list[0].GradoAcademico==='Maestro' ? 'selected' : '' %>>Maestro(a)
+                      </option>
+                      <option value="Doctor" <%=list[0].GradoAcademico==='Doctor' ? 'selected' : '' %>>Doctor(a)
+                      </option>
+                    </select>
+                    <input type="hidden" name="MencionGrado" class="form-control" value="<%= list[0].MencionGrado %>">
+                  </div>
+                </div>
+                <div class="form-group mb-2 mb-3">
+                  <label for="PaisUniGrado" class="control-label">Indique el país de la universidad que otorgó el mayor
+                    grado académico</label>
+                  <select name="PaisUniGrado" id="PaisUniGrado" class="form-select">
+                    <% paises.forEach(item=>{ %>
+                      <option value="<%= item.nombre %>" <%=item.nombre==list[0].PaisUniGrado ? 'selected' : '' %> ><%=
+                          item.nombre %>
+                      </option>
+                      <% }) %>
+                  </select>
+                  <span for="PaisUniGrado" class="text-danger"></span>
+                </div>
+                <!-- Pregunta 14 -->
+                <div class="form-group mb-2 mb-3">
+                  <label for="uniGrado" class="control-label">Indique la universidad que otorgó el mayor grado
+                    académico</label>
+                  <select name="UniGrado" id="UniGrado" class="form-select">
+                    <% if(list[0].UniGrado !="" ){ %>
+                      <option value="<%= list[0].UniGrado %>">
+                        <%=list[0].UniGrado %>
+                      </option>
+                      <% } %>
+                  </select>
+                  <span for="uniGrado" class="text-danger"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer border-bottom p-3">
+            <div class="row">
+              <div class="col-6 text-left">
+                <button type="button" class="btn btn-primary" onclick="showSection('section1')"><i
+                    class="fa-solid fa-arrow-left"></i> Atrás</button>
+              </div>
+              <div class="col-6 text-end">
+                <button type="button" class="btn btn-primary" onclick="showSection('section3')">Siguiente <i
+                    class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+        <!-- Sección 3: Otras preguntas tabla -->
+        <div class="card border rounded-3 form-section" id="section3" style="display: none;">
+          <div class="card-header border-bottom p-3">
+            <div class="d-sm-flex justify-content-between align-items-center">
+              <h5 class="mb-2 mb-sm-0">DATOS DE BACHILLER</h5>
+            </div>
+          </div>
+          <div class="card-body">
+            <span onclick="opengradosModal('Bachiller')" class="btn btn-sm btn-info mb-3"><i
+                class="fa-solid fa-plus"></i>
+              Agregar</span>
+            <table id="tblBachiller" class="table table-sm table-bordered">
+              <thead>
+                <tr>
+                  <th>Mención</th>
+                  <th>País</th>
+                  <th>Universidad</th>
+                  <th>Año</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% grados.filter(m=> m.Grado == 'Bachiller').forEach(obj=>{ %>
+                  <tr>
+                    <td style="width: 40%;">
+                      <%= obj.Titulo %>
+                    </td>
+                    <td style="width: 20%;">
+                      <%= obj.Pais %>
+                    </td>
+                    <td style="width: 30%;">
+                      <%= obj.Universidad %>
+                    </td>
+                    <td style="width: 9%;">
+                      <%= obj.Anyo %>
+                    </td>
+                    <td style="width: 1%;text-align: center;">
+                      <span onclick="gradosEliminar('Bachiller', <%= obj.Id %>, this)" class="text-danger" style="cursor: pointer;" title="Eliminar" ><i class="fa-solid fa-trash"></i> </span> 
+                    </td>
+                  </tr>
+                  <% }) %>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer border-bottom p-3">
+            <div class="row">
+              <div class="col-6 text-left">
+                <button type="button" class="btn btn-primary" onclick="showSection('section2')"><i
+                    class="fa-solid fa-arrow-left"></i> Atrás</button>
+              </div>
+              <div class="col-6 text-end">
+                <button type="button" class="btn btn-primary" onclick="showSection('section4')">Siguiente <i
+                    class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sección 4: Más preguntas -->
+        <div class="card border rounded-3 form-section" id="section4" style="display: none;">
+          <div class="card-header border-bottom p-3">
+            <div class="d-sm-flex justify-content-between align-items-center">
+              <h5 class="mb-2 mb-sm-0">FORMACION ACADÉMICA</h5>
+            </div>
+          </div>
+          <div class="card-body">
+            <span onclick="opengradosModal('Profesional')" class="btn btn-sm btn-info mb-3"><i
+                class="fa-solid fa-plus"></i>
+              Agregar</span>
+            <table id="tblProfesional" class="table table-sm table-bordered">
+              <thead>
+                <tr>
+                  <th>Título Profesional</th>
+                  <th>País</th>
+                  <th>Universidad</th>
+                  <th>Año</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% grados.filter(m=> m.Grado == 'Profesional').forEach(obj=>{ %>
+                  <tr>
+                    <td style="width: 40%;">
+                      <%= obj.Titulo %>
+                    </td>
+                    <td style="width: 20%;">
+                      <%= obj.Pais %>
+                    </td>
+                    <td style="width: 30%;">
+                      <%= obj.Universidad %>
+                    </td>
+                    <td style="width: 9%;">
+                      <%= obj.Anyo %>
+                    </td>
+                    <td style="width: 1%;text-align: center;">
+                      <span onclick="gradosEliminar('Profesional', <%= obj.Id %>, this)" class="text-danger" style="cursor: pointer;" title="Eliminar" ><i class="fa-solid fa-trash"></i> </span> 
+                    </td>
+                  </tr>
+                  <% }) %>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer border-bottom p-3">
+            <div class="row">
+              <div class="col-6 text-left">
+                <button type="button" class="btn btn-primary" onclick="showSection('section3')"><i
+                    class="fa-solid fa-arrow-left"></i> Atrás</button>
+              </div>
+              <div class="col-6 text-end">
+                <button type="button" class="btn btn-primary" onclick="showSection('section5')">Siguiente <i
+                    class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- Sección 5: Continuación de preguntas -->
+        <div class="card border rounded-3 form-section" id="section5" style="display: none;">
+          <div class="card-header border-bottom p-3">
+            <div class="d-sm-flex justify-content-between align-items-center">
+              <h5 class="mb-2 mb-sm-0">DATOS DOCENTE MAESTRÍA</h5>
+            </div>
+          </div>
+          <div class="card-body">
+            <span onclick="opengradosModal('Maestria')" class="btn btn-sm btn-info mb-3"><i
+                class="fa-solid fa-plus"></i>
+              Agregar</span>
+            <table id="tblMaestria" class="table table-sm table-bordered">
+              <thead>
+                <tr>
+                  <th>Maestria</th>
+                  <th>País</th>
+                  <th>Universidad</th>
+                  <th>Año</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% grados.filter(m=> m.Grado == 'Maestria').forEach(obj=>{ %>
+                  <tr>
+                    <td style="width: 40%;">
+                      <%= obj.Titulo %>
+                    </td>
+                    <td style="width: 20%;">
+                      <%= obj.Pais %>
+                    </td>
+                    <td style="width: 30%;">
+                      <%= obj.Universidad %>
+                    </td>
+                    <td style="width: 9%;">
+                      <%= obj.Anyo %>
+                    </td>
+                    <td style="width: 1%;text-align: center;">
+                      <span onclick="gradosEliminar('Maestria', <%= obj.Id %>, this)" class="text-danger" style="cursor: pointer;" title="Eliminar" ><i class="fa-solid fa-trash"></i> </span> 
+                    </td>                    
+                  </tr>
+                  <% }) %>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer border-bottom p-3">
+            <div class="row">
+              <div class="col-6 text-left">
+                <button type="button" class="btn btn-primary" onclick="showSection('section4')"><i
+                    class="fa-solid fa-arrow-left"></i> Atrás</button>
+              </div>
+              <div class="col-6 text-end">
+                <button type="button" class="btn btn-primary" onclick="showSection('section6')">Siguiente <i
+                    class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sección 6: Más preguntas -->
+        <div class="card border rounded-3 form-section" id="section6" style="display: none;">
+          <div class="card-header border-bottom p-3">
+            <div class="d-sm-flex justify-content-between align-items-center">
+              <h5 class="mb-2 mb-sm-0">DATOS DOCENTE DOCTORADO</h5>
+            </div>
+          </div>
+          <div class="card-body">
+            <span onclick="opengradosModal('Doctorado')" class="btn btn-sm btn-info mb-3"><i
+                class="fa-solid fa-plus"></i>
+              Agregar</span>
+            <table id="tblDoctorado" class="table table-sm table-bordered">
+              <thead>
+                <tr>
+                  <th>Maestria</th>
+                  <th>País</th>
+                  <th>Universidad</th>
+                  <th>Año</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% grados.filter(m=> m.Grado == 'Doctorado').forEach(obj=>{ %>
+                  <tr>
+                    <td style="width: 40%;">
+                      <%= obj.Titulo %>
+                    </td>
+                    <td style="width: 20%;">
+                      <%= obj.Pais %>
+                    </td>
+                    <td style="width: 30%;">
+                      <%= obj.Universidad %>
+                    </td>
+                    <td style="width: 9%;">
+                      <%= obj.Anyo %>
+                    </td>
+                    <td style="width: 1%;text-align: center;">
+                      <span onclick="gradosEliminar('Doctorado', <%= obj.Id %>, this)" class="text-danger" style="cursor: pointer;" title="Eliminar" ><i class="fa-solid fa-trash"></i> </span> 
+                    </td>                   
+                  </tr>
+                  <% }) %>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer border-bottom p-3">
+            <div class="row">
+              <div class="col-6 text-left">
+                <button type="button" class="btn btn-primary" onclick="showSection('section5')"><i
+                    class="fa-solid fa-arrow-left"></i> Atrás</button>
+              </div>
+              <div class="col-6 text-end">
+                <button type="button" class="btn btn-primary" onclick="showSection('section7')">Siguiente <i
+                    class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- Sección 7:  -->
+        <div class="card border rounded-3 form-section" id="section7" style="display: none;">
+          <div class="card-header border-bottom p-3">
+            <div class="d-sm-flex justify-content-between align-items-center">
+              <h5 class="mb-2 mb-sm-0">DATOS DOCENTE SEGUNDA ESPECIALIDAD</h5>
+            </div>
+          </div>
+          <div class="card-body">
+            <span onclick="opengradosModal('SegundaEspecialidad')" class="btn btn-sm btn-info mb-3"><i
+                class="fa-solid fa-plus"></i>
+              Agregar</span>
+            <table id="tblSegundaEspecialidad" class="table table-sm table-bordered">
+              <thead>
+                <tr>
+                  <th>Segunda Especialidad</th>
+                  <th>País</th>
+                  <th>Universidad</th>
+                  <th>Año</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% grados.filter(m=> m.Grado == 'SegundaEspecialidad').forEach(obj=>{ %>
+                  <tr>
+                    <td style="width: 40%;">
+                      <%= obj.Titulo %>
+                    </td>
+                    <td style="width: 20%;">
+                      <%= obj.Pais %>
+                    </td>
+                    <td style="width: 30%;">
+                      <%= obj.Universidad %>
+                    </td>
+                    <td style="width: 9%;">
+                      <%= obj.Anyo %>
+                    </td>
+                    <td style="width: 1%;text-align: center;">
+                      <span onclick="gradosEliminar('DocSegundaEspecialidadtorado', <%= obj.Id %>, this)" class="text-danger" style="cursor: pointer;" title="Eliminar" ><i class="fa-solid fa-trash"></i> </span> 
+                    </td>
+
+                    
+                  </tr>
+                  <% }) %>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer border-bottom p-3">
+            <div class="row">
+              <div class="col-6 text-left">
+                <button type="button" class="btn btn-primary" onclick="showSection('section6')"><i
+                    class="fa-solid fa-arrow-left"></i> Atrás</button>
+              </div>
+              <div class="col-6 text-end">
+                <button type="button" class="btn btn-primary" onclick="showSection('section8')">Siguiente <i
+                    class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+          <!-- Botones de navegación -->
+
+        </div>
+        <!-- Sección 8: -->
+        <div class="card border rounded-3 form-section" id="section8" style="display: none;">
+          <div class="card-header border-bottom p-3">
+            <div class="d-sm-flex justify-content-between align-items-center">
+              <h5 class="mb-2 mb-sm-0">DATOS DE DEDICACIÓN O LABOR DOCENTE</h5>
+            </div>
+          </div>
+          <div class="card-body">
+            <!-- Pregunta 40 -->
+            <div class="mb-3">
+              <label class="control-label">Niveles de programa de estudio en los que da clases</label>
+              <div class="form-group mb-2">
+                <div>
+
+                  <div>
+                    <label for="nivelMaestria">Maestría</label>
+                    <input type="radio" name="NivelMaestria" value="Si" <%=(list[0].NivelMaestria==='Si' ) ? 'checked'
+                      : '' %>> Si
+                    <input type="radio" name="NivelMaestria" value="No" <%=(list[0].NivelMaestria==='No' ) ? 'checked'
+                      : '' %>> No
+                  </div>
+                  <div>
+                    <label for="nivelDoctorado">Doctorado</label>
+                    <input type="radio" name="NivelDoctorado" value="Si" <%=(list[0].NivelDoctorado==='Si' ) ? 'checked'
+                      : '' %>> Si
+                    <input type="radio" name="NivelDoctorado" value="No" <%=(list[0].NivelDoctorado==='No' ) ? 'checked'
+                      : '' %>> No
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 41 -->
+              <div class="mb-3">
+                <label class="control-label">Indicar los cursos y programas en los que dicta clases (nombre de
+                  curso/semestre/programa)</label>
+                <div class="form-group mb-2">
+                  <span onclick="openAsignaturaModal()" class="btn btn-sm btn-info">
+                    <i class="fa-solid fa-plus"></i> Agregar asignatura
+                  </span>                
+                    <table id="tblAsignaturas" class="table table-sm table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Plan Estudio</th>
+                          <th>Grado</th>
+                          <th>Modalidad</th>
+                          <th>Programa</th>
+                          <th>Asignatura</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% teacherplan.forEach(obj=>{ %>
+                          <tr>
+                            <td>
+                              <%= obj.PlanEstudio %>
+                            </td>
+                            <td>
+                              <%= obj.Grado %>
+                            </td>
+                            <td>
+                              <%= obj.Modalidad %>
+                            </td>
+                            <td>
+                              <%= obj.Programa %>
+                            </td>
+                            <td>
+                              <%= obj.Asignatura %>
+                            </td>
+                            <td style="width: 1%;text-align: center;">
+                              <span onclick="AsignaturaEliminar( <%= obj.PlanEstudioId %>, this)" class="text-danger" style="cursor: pointer;"><i class="fa-solid fa-trash"></i></span> </td>
+                            </td>
+                          </tr>
+                          <% }) %>                        
+                      </tbody>
+                    </table>
+                </div>
+              </div>
+
+              <!-- Pregunta 42 -->
+              <div class="mb-3">
+                <label class="control-label">Rol que desempeña el docente en los programas presenciales (según
+                  corresponda)</label>
+                <div class="form-group mb-2">
+                  <div>
+                    <label for="rolPresencial">Dictado</label>
+                    <input type="radio" name="RolPresencial" value="Si" <%=(list[0].RolPresencial==='Si' ) ? 'checked'
+                      : '' %>> Si
+                    <input type="radio" name="RolPresencial" value="No" <%=(list[0].RolPresencial==='No' ) ? 'checked'
+                      : '' %>> No
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 43 Preguntas en negrita-->
+              <div class="mb-3">
+                <label class="control-label">Rol que desempeña el docente en los programas semipresenciales y a
+                  distancia
+                  (según corresponda)</label>
+                <div class="form-group mb-2">
+                  <div>
+                    <label for="semiDeterminar">Determinar y/o crear contenido</label>
+                    <input type="radio" name="SemiDeterminar" value="Si" <%=(list[0].SemiDeterminar==='Si' ) ? 'checked'
+                      : '' %>> Si
+                    <input type="radio" name="SemiDeterminar" value="No" <%=(list[0].SemiDeterminar==='No' ) ? 'checked'
+                      : '' %>> No
+                  </div>
+                  <div>
+                    <label for="semiAdaptar">Adaptar Contenidos</label>
+                    <input type="radio" name="SemiAdaptar" value="Si" <%=(list[0].SemiAdaptar==='Si' ) ? 'checked' : ''
+                      %>> Si
+                    <input type="radio" name="SemiAdaptar" value="No" <%=(list[0].SemiAdaptar==='No' ) ? 'checked' : ''
+                      %>> No
+                  </div>
+                  <div>
+                    <label for="semiImpartir">Impartir Contenidos</label>
+                    <input type="radio" name="SemiImpartir" value="Si" <%=(list[0].SemiImpartir==='Si' ) ? 'checked'
+                      : '' %>> Si
+                    <input type="radio" name="SemiImpartir" value="No" <%=(list[0].SemiImpartir==='No' ) ? 'checked'
+                      : '' %>> No
+                  </div>
+                  <div>
+                    <label for="tutoria">Tutoría</label>
+                    <input type="radio" name="Tutoria" value="Si" <%=(list[0].Tutoria==='Si' ) ? 'checked' : '' %>> Si
+                    <input type="radio" name="Tutoria" value="No" <%=(list[0].Tutoria==='No' ) ? 'checked' : '' %>> No
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 44 -->
+              <div class="mb-3">
+                <label class="control-label">Categoría docente</label>
+                <div class="form-group mb-2">
+                  <select name="CategoriaDocente" class="form-select">
+                    <option value="Principal" <%=(list[0].CategoriaDocente==='Principal' ) ? 'selected' : '' %>
+                      >Principal
+                    </option>
+                    <option value="Asociado" <%=(list[0].CategoriaDocente==='Asociado' ) ? 'selected' : '' %>>Asociado
+                    </option>
+                    <option value="Auxiliar" <%=(list[0].CategoriaDocente==='Auxiliar' ) ? 'selected' : '' %>>Auxiliar
+                    </option>
+                    <option value="Contratado" <%=(list[0].CategoriaDocente==='Contratado' ) ? 'selected' : '' %>
+                      >Contratado</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Pregunta 45 -->
+              <div class="mb-3">
+                <label class="control-label">Años en la categoría</label>
+                <div class="form-group mb-2">
+                  <input type="text" name="AniosCategoria" class="form-control" value="<%= list[0].AniosCategoria %>">
+                </div>
+              </div>
+
+              <!-- Pregunta 46 -->
+              <div class="mb-3">
+                <label class="control-label">Régimen de dedicación</label>
+                <div class="form-group mb-2">
+                  <select name="RegimenDedicacion" class="form-select">
+                    <option value="Exclusiva" <%=(list[0].RegimenDedicacion==='Exclusiva' ) ? 'selected' : '' %>
+                      >Exclusiva
+                    </option>
+                    <option value="Tiempo completo" <%=(list[0].RegimenDedicacion==='Tiempo completo' ) ? 'selected'
+                      : '' %>>Tiempo completo</option>
+                    <option value="Tiempo Parcial" <%=(list[0].RegimenDedicacion==='Tiempo Parcial' ) ? 'selected' : ''
+                      %>
+                      >Tiempo Parcial</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Pregunta 47 -->
+              <div class="mb-3">
+                <label class="control-label">Número de horas semanales en la EPG-UCSM para clases</label>
+                <div class="form-group mb-2">
+                  <input type="text" name="HorasSemanalesClases" class="form-control"
+                    value="<%= list[0].HorasSemanalesClases %>">
+                </div>
+              </div>
+
+              <!-- Pregunta 48 -->
+              <div class="mb-3">
+                <label class="control-label">Número de horas semanales en la EPG-UCSM para otras actividades</label>
+                <div class="form-group mb-2">
+                  <input type="text" name="HorasSemanalesOtrasActividades" class="form-control"
+                    value="<%= list[0].HorasSemanalesOtrasActividades %>">
+                </div>
+              </div>
+
+              <!-- Pregunta 49  suma de 47 y 48-->
+              <div class="mb-3">
+                <label class="control-label">Total de horas semanales en la EPG-UCSM </label>
+                <div class="form-group mb-2">
+                  <input type="text" name="TotalHorasSemanales" class="form-control"
+                    value="<%= list[0].TotalHorasSemanales %>">
+                </div>
+              </div>
+
+              <!-- Pregunta 50 -->
+              <div class="mb-3">
+                <label class="control-label">Años de experiencia de enseñanza</label>
+                <div class="form-group mb-2">
+                  <input type="text" name="AniosExperienciaSemipresencial" class="form-control"
+                    value="<%= list[0].AniosExperienciaSemipresencial %>">
+                </div>
+              </div>
+
+              <!-- Pregunta 51 -->
+              <div class="mb-3">
+                <label class="control-label">Horas de formación / capacitación en entornos virtuales para el
+                  aprendizaje</label>
+                <div class="form-group mb-2">
+                  <input type="text" name="HorasFormacionVirtual" class="form-control"
+                    value="<%= list[0].HorasFormacionVirtual %>">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Botones de navegación -->
+          <div class="card-footer border-bottom p-3">
+            <div class="row">
+              <div class="col-6 text-left">
+                <button type="button" class="btn btn-primary" onclick="showSection('section7')"><i
+                    class="fa-solid fa-arrow-left"></i> Atrás</button>
+              </div>
+              <div class="col-6 text-end">
+                <button type="button" class="btn btn-primary" onclick="showSection('section9')">Siguiente <i
+                    class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Sección 9: Última sección -->
+        <div class="card border rounded-3 form-section" id="section9" style="display: none;">
+          <div class="card-header border-bottom p-3">
+            <div class="d-sm-flex justify-content-between align-items-center">
+              <h5 class="mb-2 mb-sm-0">DATOS DE INVESTIGACIÓN</h5>
+            </div>
+          </div>
+          <div class="card-body">
+            <!-- Pregunta 52 mejor lista -->
+            <div class="mb-3">
+              <label class="control-label">Realiza investigación</label>
+              <div class="form-group mb-2">
+                <select name="RealizaInvestigacion" class="form-select">
+                  <option value="Si" <%=(list[0].RealizaInvestigacion==='Si' ) ? 'selected' : '' %>>Si</option>
+                  <option value="No" <%=(list[0].RealizaInvestigacion==='No' ) ? 'selected' : '' %>>No</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Pregunta 53 no existe -->
+            <div class="mb-3">
+              <label class="control-label">Se encuentra registrado en CTI Vitae</label>
+              <div class="form-group mb-2">
+                <select name="RegistradoDINA" class="form-select">
+                  <option value="Si" <%=(list[0].RegistradoDINA==='Si' ) ? 'selected' : '' %>>Si</option>
+                  <option value="No" <%=(list[0].RegistradoDINA==='No' ) ? 'selected' : '' %>>No</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="control-label">Link de CTI Vitae</label>
+              <div class="form-group mb-2">
+                <input type="text" name="LinkDINA" class="form-control" value="<%= list[0].LinkDINA %>">
+              </div>
+            </div>
+
+            <!-- Pregunta 54 -->
+            <div class="mb-3">
+              <label class="control-label">Se encuentra registrado en RENACYT</label>
+              <div class="form-group mb-2">
+                <select name="RegistradoRENACYT" class="form-select">
+                  <option value="Si" <%=(list[0].RegistradoRENACYT==='Si' ) ? 'selected' : '' %>>Si</option>
+                  <option value="No" <%=(list[0].RegistradoRENACYT==='No' ) ? 'selected' : '' %>>No</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="control-label">Fecha de registro en RENACYT </label>
+              <div class="form-group mb-2">
+                <input type="text" id="FechaRegistroRENACYT" name="FechaRegistroRENACYT" class="form-control"
+                  value="<%= list[0].FechaRegistroRENACYT %>">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="control-label">Link de RENACYT </label>
+              <div class="form-group mb-2">
+                <input type="text" name="LinkRENACYT" class="form-control"
+                  value="<%= list[0].LinkRENACYT %>">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="control-label">Código de registro de RENACYT </label>
+              <div class="form-group mb-2">
+                <input type="text" name="CodigoRENACYT" class="form-control"
+                  value="<%= list[0].CodigoRENACYT %>">
+              </div>
+            </div>
+
+            <!-- Pregunta 55 -->
+            <div class="mb-3">
+              <label class="control-label">Fecha de inicio de contrato del presente semestre </label>
+              <div class="form-group mb-2">
+                <input type="text" id="FechaInicioContrato" name="FechaInicioContrato" class="form-control"
+                  value="<%= list[0].FechaInicioContrato %>">
+              </div>
+            </div>
+
+            <!-- Pregunta 56 -->
+            <div class="mb-3">
+              <label class="control-label">Fecha de fin de contrato del presente semestre </label>
+              <div class="form-group mb-2">
+                <input type="text" id="FechaFinContrato" name="FechaFinContrato" class="form-control" value="<%= list[0].FechaFinContrato %>">
+              </div>
+            </div>
+
+            <!-- Pregunta 57 -->
+            <div class="mb-3">
+              <label class="control-label">Información actualizada al ciclo académico</label>
+              <div class="form-group mb-2">
+                <select name="InformacionActualizada" class="form-select">
+                  
+                  <option value="2023-1" <%=(list[0].InformacionActualizada==='2023-1' ) ? 'selected' : '' %>>2023-I
+                  </option>
+                  <option value="2023-2" <%=(list[0].InformacionActualizada==='2023-2' ) ? 'selected' : '' %>>2023-II
+                  </option>
+                  <option value="2024-1" <%=(list[0].InformacionActualizada==='2024-1' ) ? 'selected' : '' %>>2024-I
+                  </option>
+                  <option value="2024-2" <%=(list[0].InformacionActualizada==='2024-2' ) ? 'selected' : '' %>>2024-II
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="control-label">Subir CV (Solo formato PDF)</label>
+              <div class="form-group mb-2">
+                <input type="file" id="filecv" name="filecv" class="form-control" onchange="subircv()" accept=".pdf">
+                <span class="form-control" id="reloadfilecv" style="display: none;"><i class="fas fa-spinner fa-spin"></i>Cargando...</span>
+                <% if(list[0].RutaCV != null){  %>
+                  <a href="/uploads/cv/<%= list[0].RutaCV %>" id="dwlcv" class="btn btn-sm btn-primary mt-2" target="_blank" ><i class="fa-solid fa-file-arrow-down"></i> Descargar CV</a>
+                <% } else { %>
+                  <a href="/uploads/cv/<%= list[0].RutaCV %>" id="dwlcv" class="btn btn-sm btn-primary mt-2" target="_blank" style="display: none;" ><i class="fa-solid fa-file-arrow-down"></i> Descargar CV</a>
+                <% }  %>
+              </div>
+            </div>
+
+
+
+          </div>
+          <!--Adjuntar CV documentado-->
+          <!--Enviar correo que sus datos han sido actualizados-->
+          <!-- Botones de navegación -->
+          <div class="card-footer border-bottom p-3">
+            <div class="row">
+              <div class="col-6 text-left">
+                <button type="button" class="btn btn-primary" onclick="showSection('section8')"><i
+                    class="fa-solid fa-arrow-left"></i> Atrás</button>
+              </div>
+              <div class="col-6 text-end">
+                <button class="btn btn-success" type="submit" id="btnSubmit"><i class="fa-solid fa-cloud-arrow-up"></i>
+                  Actualizar Datos</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="gradosModal" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar grado</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group mb-2">
+          <label id="modalMencionName" class="control-label"> </label>
+          <input name="modalMencion" id="modalMencion" class="form-control" type="text" />
+          <span for="modalMencion" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="modalPais" class="control-label"> País</label>
+
+          <select name="modalPais" id="modalPais" class="form-select">
+            <% paises.forEach(item=>{ %>
+              <option value="<%= item.nombre %>">
+                <%=item.nombre %>
+              </option>
+              <% }) %>
+          </select>
+          <span for="modalPais" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="modalUniversidad" class="control-label"> Universidad</label>
+          <span class="form-select" id="reloadUniversidad" style="display: none;"><i class="fas fa-spinner fa-spin"></i>
+            Cargando...</span>
+          <select name="modalUniversidad" id="modalUniversidad" class="form-select"></select>
+          <span for="modalUniversidad" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="modalAnio" class="control-label">Año </label>
+          <input name="modalAnio" id="modalAnio" class="form-control" type="text" />
+          <span for="modalAnio" class="text-danger"></span>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" onclick="gradosAgregar()" id="btnGradosAgregar">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="asignaturaModal" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar asignatura</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label class="control-label">PlanEstudio</label>
+          <div class="form-group mb-2">
+            <select id="PlanEstudio" name="PlanEstudio" class="form-select">
+              <option value=""></option>
+              <% plan.forEach(item=>{ %>
+                <option value="<%= item.PlanEstudio %>">
+                  <%=item.PlanEstudio %>
+                </option>
+                <% }) %>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="control-label">Grado</label>
+          <div class="form-group mb-2">
+            <span class="form-select" id="reloadGrado" style="display: none;"><i class="fas fa-spinner fa-spin"></i>
+              Cargando...</span>
+            <select id="Grado" name="Grado" class="form-select"></select>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="control-label">Modalidad</label>
+          <div class="form-group mb-2">
+            <span class="form-select" id="reloadModalidad" style="display: none;"><i class="fas fa-spinner fa-spin"></i>
+              Cargando...</span>
+            <select id="Modalidad" name="Modalidad" class="form-select"></select>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="control-label">Programa</label>
+          <div class="form-group mb-2">
+            <span class="form-select" id="reloadPrograma" style="display: none;"><i class="fas fa-spinner fa-spin"></i>
+              Cargando...</span>
+            <select id="Programa" name="Programa" class="form-select"></select>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="control-label">Asignatura</label>
+          <div class="form-group mb-2">
+            <span class="form-select" id="reloadAsignatura" style="display: none;"><i
+                class="fas fa-spinner fa-spin"></i> Cargando...'</span>
+            <select id="Asignatura" name="Asignatura" class="form-select"></select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="btnAsignaturaAgregar"  onclick="AsignaturaAgregar()">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+
+
+
+<script src="/assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+<link href="/assets/vendor/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+
+<style>
+  th {
+    background-color: #000 !important;
+    color: #02B967;
+  }
+
+  .card-header {
+    background-color: #000 !important;
+  }
+
+  .card-header div h5 {
+    color: #02B967
+  }
+
+  .modal-header {
+    background-color: #000 !important;
+  }
+
+  .modal-header h1 {
+    color: #02B967
+  }
+
+  .modal-header button {
+    color: #02B967
+  }
+</style>
+
+<script>
+  const gradosModal = new bootstrap.Modal(document.getElementById('gradosModal'));
+  const asignaturaModal = new bootstrap.Modal(document.getElementById('asignaturaModal'));
+  //-----------------------------------------------------------------------------------------
+
+  function openAsignaturaModal(option) {
+    $("#btnAsignaturaAgregar").html("Agregar");
+
+    $("#PlanEstudio").val('');
+    $("#Grado").html('');
+    $("#Modalidad").html('');
+    $("#Programa").html('');
+    $("#Asignatura").html('');
+    asignaturaModal.show();
+  }
+
+  $("#PlanEstudio").change(function () {
+    if ($(this).val() == '') {
+      return;
+    }
+    const postData = {
+      PlanEstudio: $(this).val()
+    };
+
+    $("#Grado").hide();
+    $("#reloadGrado").show();
+    $("#Grado").html("");
+
+    fetch('/teacher/plangrado', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(postData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        $("#Grado").append(`<option value=""></option>`);
+        data.forEach(function (obj) {
+          $("#Grado").append(`<option value="${obj.Grado}">${obj.Grado}</option>`);
+        });
+        $("#Grado").show();
+        $("#reloadGrado").hide();
+      })
+      .catch(error => {
+        console.error('Error al realizar el POST:', error);
+      });
+  });
+
+  $("#Grado").change(function () {
+    const postData = {
+      PlanEstudio: $("#PlanEstudio option:selected").val(),
+      Grado: $(this).val()
+    };
+
+    $("#Modalidad").hide();
+    $("#reloadModalidad").show();
+    $("#Modalidad").html("");
+
+    fetch('/teacher/planmodalidad', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(postData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        $("#Modalidad").append(`<option value=""></option>`);
+        data.forEach(function (obj) {
+          $("#Modalidad").append(`<option value="${obj.Modalidad}">${obj.Modalidad}</option>`);
+        });
+        $("#reloadModalidad").hide();
+        $("#Modalidad").show();
+      })
+      .catch(error => {
+        console.error('Error al realizar el POST:', error);
+      });
+  });
+
+  $("#Modalidad").change(function () {
+    const postData = {
+      PlanEstudio: $("#PlanEstudio option:selected").val(),
+      Grado: $("#Grado option:selected").val(),
+      Modalidad: $(this).val()
+    };
+
+    $("#Programa").hide();
+    $("#reloadPrograma").show();
+    $("#Programa").html("");
+
+    fetch('/teacher/planprograma', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(postData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        $("#Programa").append(`<option value=""></option>`);
+        data.forEach(function (obj) {
+          $("#Programa").append(`<option value="${obj.Programa}">${obj.Programa}</option>`);
+        });
+        $("#reloadPrograma").hide();
+        $("#Programa").show();
+      })
+      .catch(error => {
+        console.error('Error al realizar el POST:', error);
+      });
+  });
+
+  $("#Programa").change(function () {
+    const postData = {
+      PlanEstudio: $("#PlanEstudio option:selected").val(),
+      Grado: $("#Grado option:selected").val(),
+      Modalidad: $("#Modalidad option:selected").val(),
+      Programa: $(this).val()
+    };
+
+    $("#Asignatura").hide();
+    $("#reloadAsignatura").show();
+    $("#Asignatura").html("");
+
+    fetch('/teacher/planasignatura', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(postData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        $("#Asignatura").append(`<option value=""></option>`);
+        data.forEach(function (obj) {
+          $("#Asignatura").append(`<option value="${obj.Id}">${obj.Asignatura}</option>`);
+        });
+        $("#reloadAsignatura").hide();
+        $("#Asignatura").show();
+      })
+      .catch(error => {
+        console.error('Error al realizar el POST:', error);
+      });
+  });
+
+  function AsignaturaAgregar() {
+    $("#btnAsignaturaAgregar").html('<i class="fas fa-spinner fa-spin"></i> Grabando...');
+    const postData = {
+      PlanEstudioId: $("#Asignatura option:selected").val(),
+    };
+
+    fetch('/teacher/agregarplan', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(postData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        $("#tblAsignaturas > tbody").html('');
+        data.forEach(function (obj) {
+          $("#tblAsignaturas > tbody").append(`<tr>
+            <td>${obj.PlanEstudio}</td>
+            <td>${obj.Grado}</td>
+            <td>${obj.Modalidad}</td>
+            <td>${obj.Programa}</td>
+            <td>${obj.Asignatura}</td>
+            <td><span onclick="AsignaturaEliminar( ${obj.PlanEstudioId}, this)" class="text-danger" style="cursor: pointer;" ><i class="fa-solid fa-trash"></i></span> </td>
+            </tr>`)
+        });
+        asignaturaModal.hide();
+
+
+      })
+      .catch(error => {
+        console.error('Error al realizar el POST:', error);
+      });    
+  }
+
+  function AsignaturaEliminar(id, el) {
+    $(el).html('<i class="fas fa-spinner fa-spin"></i>');
+    const postData = {
+      PlanEstudioId: id,
+    };
+
+    fetch('/teacher/eliminarplan', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(postData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        $("#tblAsignaturas > tbody").html('');
+        data.forEach(function (obj) {
+          $("#tblAsignaturas > tbody").append(`<tr>
+            <td>${obj.PlanEstudio}</td>
+            <td>${obj.Grado}</td>
+            <td>${obj.Modalidad}</td>
+            <td>${obj.Programa}</td>
+            <td>${obj.Asignatura}</td>
+            <td><span onclick="AsignaturaEliminar( ${obj.PlanEstudioId}, this)" class="text-danger" style="cursor: pointer;" ><i class="fa-solid fa-trash"></i></span> </td>
+            </tr>`)
+        });
+      })
+      .catch(error => {
+        console.error('Error al realizar el POST:', error);
+      });  
+  }
+  //-----------------------------------------------------------------------------------------
+  var grado = "";
+
+  function gradosEliminar(option, id, el) {
+
+    $(el).html('<i class="fas fa-spinner fa-spin"></i>');
+    console.log(el);
+
+    grado = option;
+    const postData = {
+      Id: id
+
+    };
+
+    fetch('/teacher/eliminargrado', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(postData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        $("#tbl" + grado + " > tbody").html('');
+        data.filter(m => m.Grado == grado).forEach(function (obj) {
+          $("#tbl" + grado + " > tbody").append(`<tr>
+            <td style="width: 40%;">${obj.Titulo}</td>
+            <td style="width: 20%;">${obj.Pais}</td>
+            <td style="width: 30%;">${obj.Universidad}</td>
+            <td style="width: 9%;">${obj.Anyo}</td>
+            <td style="width: 1%;text-align: center;"><span onclick="gradosEliminar('${grado}', ${obj.Id}, this)" class="text-danger" style="cursor: pointer;" ><i class="fa-solid fa-trash"></i></span></td>
+            </tr>`)
+        });
+        gradosModal.hide();
+
+      
+
+      })
+      .catch(error => {
+        console.error('Error al realizar el POST:', error);
+      });
+
+  }
+
+
+  function opengradosModal(option) {
+    $("#btnGradosAgregar").html("Agregar");
+    grado = option;
+    $("#modalMencionName").html(option);
+    $("#modalMencion").val('');
+    $("#modalPais").val('');
+    $("#modalUniversidad").html('');
+    $("#modalAnio").val('');
+    gradosModal.show();
+  }
+
+  function gradosAgregar() {
+    $("#btnGradosAgregar").html('<i class="fas fa-spinner fa-spin"></i> Grabando...');
+    const postData = {
+      Grado: grado,
+      Titulo: $("#modalMencion").val(),
+      Pais: $("#modalPais option:selected").val(),
+      Universidad: $("#modalUniversidad option:selected").val(),
+      Anyo: $("#modalAnio").val(),
+      ResolucionSunedu: $("#modalResolucionSunedu").val()
+
+    };
+
+    fetch('/teacher/agregargrado', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(postData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        $("#tbl" + grado + " > tbody").html('');
+        data.filter(m => m.Grado == grado).forEach(function (obj) {
+          $("#tbl" + grado + " > tbody").append(`<tr>
+            <td style="width: 40%;">${obj.Titulo}</td>
+            <td style="width: 20%;">${obj.Pais}</td>
+            <td style="width: 30%;">${obj.Universidad}</td>
+            <td style="width: 9%;">${obj.Anyo}</td>
+            <td style="width: 1%;text-align: center;"><span onclick="gradosEliminar('${grado}', ${obj.Id}, this)" class="text-danger" style="cursor: pointer;" ><i class="fa-solid fa-trash"></i></span></td>
+            </tr>`)
+        });
+        gradosModal.hide();
+
+
+      })
+      .catch(error => {
+        console.error('Error al realizar el POST:', error);
+      });
+
+
+
+
+
+    gradosModal.show();
+  }
+
+  //-----------------------------------------------------
+  $.datepicker.regional['es'] = {
+    closeText: 'Cerrar',
+    prevText: '< Ant',
+    nextText: 'Sig >',
+    currentText: 'Hoy',
+    monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+    monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+    dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+    dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+    dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+    weekHeader: 'Sm',
+    dateFormat: 'dd/mm/yy',
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: ''
+  };
+
+  $.datepicker.setDefaults($.datepicker.regional['es']);
+
+  $("#Birthdate").datepicker({ dateFormat: "dd/mm/yy" });
+  $("#FechaIngreso").datepicker({ dateFormat: "dd/mm/yy" });
+
+  $("#FechaRegistroRENACYT").datepicker({ dateFormat: "dd/mm/yy" });
+  $("#FechaInicioContrato").datepicker({ dateFormat: "dd/mm/yy" });
+  $("#FechaFinContrato").datepicker({ dateFormat: "dd/mm/yy" });
+  $("#FechaFinContrato").datepicker({ dateFormat: "dd/mm/yy" });
+
+
+  //-----------------------------------------------------
+
+  $("#modalPais").change(function () {
+    const postData = {
+      pais: $(this).val()
+    };
+
+    $("#modalUniversidad").hide();
+    $("#reloadUniversidad").show();
+
+    $("#modalUniversidad").html("");
+
+    fetch('/teacher/universidad', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(postData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(function (obj) {
+          $("#modalUniversidad").append(`<option value="${obj.name}">${obj.name}</option>`);
+        });
+        $("#reloadUniversidad").hide();
+        $("#modalUniversidad").show();
+
+      })
+      .catch(error => {
+        console.error('Error al realizar el POST:', error);
+      });
+  });
+  //-----------------------------------------------------
+  $("#PaisUniGrado").change(function () {
+    const postData = {
+      pais: $(this).val()
+    };
+
+    $("#UniGrado").html("");
+
+    fetch('/teacher/universidad', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(postData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(function (obj) {
+          $("#UniGrado").append(`<option value="${obj.name}">${obj.name}</option>`);
+        });
+      })
+      .catch(error => {
+        console.error('Error al realizar el POST:', error);
+      });
+  });
+
+  function subircv() {
+    $("#filecv").hide();
+    $("#reloadfilecv").show()
+    
+
+    var input = document.getElementById('filecv');
+    if (input.files && input.files[0]) {
+      var formData = new FormData();
+      formData.append('filecv', input.files[0]);
+
+      fetch('/teacher/subircv', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => {
+          $("#filecv").show();
+          $("#reloadfilecv").hide();
+
+          $("#dwlcv").show();
+          $("#dwlcv"). prop('href', '/uploads/cv/'+data.archivo.filename);
+          
+          console.log( data.archivo.filename);
+        })
+        .catch(error => {
+          console.error('Error al realizar el POST:', error);
+        });
+    }
+  }
+  //-----------------------------------------------------
+  const form = document.getElementById('formCreate');
+  const sections = ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8', 'section9'];
+
+  function showSection(sectionToShow) {
+    sections.forEach(section => {
+      const sectionElement = document.getElementById(section);
+      sectionElement.style.display = section === sectionToShow ? 'block' : 'none';
+    });
+  }
+  showSection('section1');
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('#formUpdate');
+    const btnAgregar = form.querySelector('#btnSubmit');
+
+    // Función para restablecer el botón
+    function resetButton() {
+      btnAgregar.innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i> Actualizar Datos';
+      btnAgregar.disabled = false;
+    }
+
+    // Escucha el evento submit del formulario
+    form.addEventListener('submit', function (event) {
+      btnAgregar.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Grabando...';
+      btnAgregar.disabled = true;
+
+      // Restablece el botón cuando se carga la página nuevamente
+      window.addEventListener('pageshow', function () {
+        resetButton();
+      });
+    });
+
+    // Llama a la función de restablecimiento al cargar la página
+    resetButton();
+  });
+</script>

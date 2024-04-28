@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="col-12">
+        <% colabslist.forEach(item => { %>
+        <form enctype="multipart/form-data" action="/admin/colabs/update/<%= item.UniqueId %>" method="post">
+            <div class="card border rounded-3">
+                <div class="card-header  border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <h5 class="mb-2 mb-sm-0">Agregar Colaborador</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group p-2">
+                                <label class="control-label" for="Name">Nombre</label>
+                                <input class="form-control" required type="text" data-val="true" data-val-required="The Name field is required." id="Name" name="Name" value="<%= item.Name %>" />
+                                <span class="text-danger field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group p-2">
+                                <label class="control-label">Tipo</label>
+                                <select name="ColabTypeId" class="form-select">
+                                    <% typeColablist.forEach(item => { %>
+                                        <% if (item.Id === colabslist[0].ColabTypeId) { %> 
+                                            <option value="<%= item.Id %>" selected><%= item.Name %></option>
+                                        <% } else { %>
+                                            <option value="<%= item.Id %>"><%= item.Name %></option>
+                                        <% } %>
+                                    <% }) %>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label" for="Photo">Photo</label>
+                                <input type="file" class="form-control" id="Photo" name="Photo" accept="image/jpeg, image/png, image/jpg" />
+                            </div>
+                            <div class="form-group mt-1">
+                                <img id="preview" src="" class="img-fluid img-thumbnail" alt="Image preview...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer border-bottom p-3">
+                    <div class="d-sm-flex justify-content-between align-items-center">
+                        <a class="btn btn-sm btn-info" href="/admin/colabs"><i class="fa-solid fa-arrow-left"></i> Regresar</a>
+                        <button class="btn btn-sm btn-primary" type="submit" id="btnSave"><i class="fa-solid fa-floppy-disk"></i>  Agregar </button>
+                    </div>
+                </div>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PPKqOEsVUVMsJ9zXdsFLpFD__s9eEHOHiwfwwROfiET2-FJJbAoLxX5q-GgsAsk0GLVwX6bAAFbm5J7j9UNe6YOewclcioJXCQuyEDbS8MOPPZblDGJMg8Tqmwn1vsmh7QIJ7dm6A64Sln0fo_T4es" />
+    </form>
+    <% }) %>
+    </div>
+</div>

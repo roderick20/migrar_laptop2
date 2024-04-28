@@ -1,0 +1,7 @@
+npm install
+
+node server.js
+
+npm install nodemon --save-dev
+
+npx nodemon server.js   

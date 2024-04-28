@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Bootstrap 5 Admin &amp; Dashboard Template">
+    <meta name="author" content="Bootlab">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Seal - Operaciones</title>
+
+    <link rel="canonical" href="forms-basic-inputs-2.html" />
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+
+    <style>
+        @font-face {
+            font-family: Poppins;
+            src: url(/css/Poppins-Regular.ttf);
+        }
+
+        .sidebar-item.active .sidebar-link:hover, .sidebar-item.active > .sidebar-link {
+            color: #568fed;
+        }
+
+            .sidebar-item.active .sidebar-link:hover i, .sidebar-item.active .sidebar-link:hover svg, .sidebar-item.active > .sidebar-link i, .sidebar-item.active > .sidebar-link svg {
+                color: #568fed;
+            }
+
+        .card-title {
+            font-size: 1.5rem !important;
+        }
+
+        .sidebar-nav {
+            font-size: 1rem !important;
+        }
+
+        /* th {
+                    color: #f2f2f2 !important;
+                    font-weight: bold;
+                }
+
+                thead {
+                    background-color: #005DA4;
+                } */
+
+    </style>
+
+    <link class="js-stylesheet" href="/lib/fontawesome-free-6.5.1-web/css/all.min.css" rel="stylesheet">
+    <link class="js-stylesheet" href="/theme/css/light.css" rel="stylesheet">
+
+    <script src="js/app.js"></script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-behavior="sticky">
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class='sidebar-brand' href='/'>
+                    <img src="/img/logo.png" class="img-fluid" />
+
+                </a>
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-item">
+                            <a data-bs-target="#menu1" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="fa-solid fa-user-shield"></i> <span class="align-middle">Autenticación</span>
+                            </a>
+                            <ul id="menu1" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                                <li class="sidebar-item"><a class='sidebar-link' href='/personas'><i class="fa-solid fa-user"></i> Personas</a></li>
+                                <li class="sidebar-item"><a class='sidebar-link' href='/grupos'><i class="fa-solid fa-users"></i> Grupos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-item">
+                            <a data-bs-target="#menu4" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="fa-solid fa-clipboard-list"></i> <span class="align-middle">Repartos</span>
+                            </a>
+                            <ul id="menu4" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+
+                                <li class="sidebar-item"><a class='sidebar-link' href="/Repartos/ControlPadron"><i class="fa-regular fa-circle"></i>Control padrón repartos</a></li>
+
+
+
+                                <li class="sidebar-item"><a class='sidebar-link' href="/Repartos/Monitoreo"><i class="fa-regular fa-circle"></i> Monitoreo repartos - supervisor</a></li>
+                                <li class="sidebar-item"><a class='sidebar-link' href="/Repartos/Estadisticas"><i class="fa-regular fa-circle"></i>Estadisticas de repartos</a></li>
+                              
+
+                                                               <li class="sidebar-item"><a class='sidebar-link' href="/Repartos/Reclamos">Reclamos</a></li>
+                                <li class="sidebar-item"><a class='sidebar-link' href="/Repartos/Fise">Fise</a></li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+            </div>
+        </nav>
+        <div class="main">
+            <nav class="navbar navbar-expand navbar-light navbar-bg">
+                <a class="sidebar-toggle">
+                    <i class="hamburger align-self-center"></i>
+                </a>
+                <div class="navbar-collapse collapse">
+
+
+                    <ul class="navbar-nav navbar-align">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                                <span class="text-dark">Administrador11</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item" href="/Home/Logout">Salir</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="content" style="padding:1rem !important;">
+                <div class="container-fluid p-0">
+                    
+<div class="spinner-container">
+    <div class="spinner"></div>
+</div>
+
+<style>
+    .spinner-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        justify-content: center;
+        align-items: center;
+        display: none;
+        z-index: 999;
+    }
+
+    .spinner {
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    th {
+        background-color: #4373c4 !important;
+        color: white !important;
+        text-align: center;
+    }
+
+</style>
+
+
+<div class="card">
+    <div class="card-header" style="background-color: #005da4 !important;color:white;">
+        <i class="fa-solid fa-laptop"></i> Reporte control reparto por técnico
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2">
+                <div class="form-floating">
+                    <input type="text" id="Periodo" placeholder="aaaamm" class="form-control" />
+                    <label for="Fecha">Periodo</label>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-lg mt-1" id="btnBuscar" onclick="Buscar()">   Generar</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-success btn-lg mt-1" id="btnBuscar" onclick="Excel()">   Excel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12">
+                <table id="tblLibro" class="table table-sm table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Celular</th>
+                            <th>DNI</th>
+
+                            <th>Zona Trabajo</th>
+                            <th>Libro(s) Asignados</th>
+                            <th>Fise</th>
+                            <th>Reclamo</th>
+                            <th>Muestreo</th>
+                            <th>Carga</th>
+                            <th>Observados</th>
+                            <th>Cantidad Asignados</th>
+                            <th>Cantidad Repartidos</th>
+                            <th>Avance %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row text-muted">
+                        <div class="col-6 text-start">
+                        </div>
+                        <div class="col-6 text-end">
+                            <p class="mb-0">
+                                &copy; 2024 - <a class='text-muted' href='#'>SEAL</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=FBxygQ2e3cFYrQnEfl5MVp7nUDAojIJapYV0RVNucGk"></script>
+    <script src="/lib/sweetalert2/sweetalert2.all.min.js"></script>
+    
+
+    <link href="/lib/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <script src="/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+    <script>
+
+        var sumaRecibidos = 0;
+        var sumaEjecutado = 0;
+        var fiseSuma = 0;
+        var reclamoSuma = 0;
+        var muestreoSuma = 0;
+        var cargaSuma = 0;
+        var observadoSuma = 0;
+
+        function Buscar() {
+
+            $("#tblLibro tbody").html('');
+
+            var formData = new FormData();
+            formData.append('periodo', $("#Periodo").val());
+
+            $.ajax({
+                url: "/Repartos/Reportes/ReporteZona",
+                type: "POST",
+                //contentType: "application/json; charset=utf-8",
+                contentType: false,
+                processData: false,
+                data: formData,
+                success: function (data) {
+                    for (let i = 0; i < data.length; i++) {
+                        if (data[i].trabajador != "") {
+
+                            //let avance = 100 - (data[i].noEjecutados * 100 / (data[i].ejecutados + data[i].noEjecutados));
+
+                            let cantidad = data[i].libro.split(',').reduce((sum, item) => {
+                                const [id, value] = item.split(':').map(Number);
+                                return sum + value;
+                            }, 0);
+
+                            sumaRecibidos = sumaRecibidos + cantidad;
+                            sumaEjecutado = sumaEjecutado + data[i].ejecutados;
+
+                            let avance = data[i].ejecutados * 100 / cantidad;
+                            let css = "";
+                            if (avance >= 0 && avance <= 25) {
+                                css = "bg-danger";
+                            } else if (avance > 26 && avance <= 60) {
+                                css = "bg-warning";
+                            } else if (avance > 61 && avance <= 90) {
+                                css = "bg-info";
+                            } else if (avance > 91 && avance <= 100) {
+                                css = "bg-primary";
+                            }
+
+
+                            let fise = data[i].fise === "" ? 0 : data[i].fise.split(',').reduce((sum, item) => {
+                                const [id, value] = item.split(':').map(Number);
+                                return sum + value;
+                            }, 0);
+
+
+                            let reclamo = data[i].reclamo === "" ? 0 : data[i].reclamo.split(',').reduce((sum, item) => {
+                                const [id, value] = item.split(':').map(Number);
+                                return sum + value;
+                            }, 0);
+
+
+                            let muestreo = data[i].muestreo === "" ? 0 : data[i].muestreo.split(',').reduce((sum, item) => {
+                                const [id, value] = item.split(':').map(Number);
+                                return sum + value;
+                            }, 0);
+
+
+                            let carga = data[i].carga === "" ? 0 : data[i].carga.split(',').reduce((sum, item) => {
+                                const [id, value] = item.split(':').map(Number);
+                                return sum + value;
+                            }, 0);
+
+                            let observado = data[i].observado === "" ? 0 : data[i].observado.split(',').reduce((sum, item) => {
+                                const [id, value] = item.split(':').map(Number);
+                                return sum + value;
+                            }, 0);
+
+                            fiseSuma = fiseSuma + fise;
+                            reclamoSuma = reclamoSuma + reclamo;
+                            muestreoSuma = muestreoSuma + muestreo;
+                            cargaSuma = cargaSuma + carga;
+                            observadoSuma = observadoSuma + observado;
+
+
+                            $("#tblLibro tbody").append(`<tr>
+                                        <td>${data[i].trabajador.toUpperCase()}</td>
+                                                     <td>${data[i].telefono}</td>
+                                                                <td>${data[i].codigo}</td>
+                                    
+                                        <td>Zona ${data[i].zona.split(',').map(val => val.split(':')[0].trim()).join(', Zona ')}</td>
+                                                <td>${data[i].libro.split(',').map(val => val.split(':')[0].trim().substr(5, 2)).join(', ')}</td>
+
+                                                <td style="text-align: right;">${fise}</td>
+                                                <td style="text-align: right;">${reclamo}</td>
+                                                <td style="text-align: right;">${muestreo}</td>
+                                                <td style="text-align: right;">${carga}</td>
+                                                <td style="text-align: right;">${observado}</td>
+
+
+                                        <td style="text-align: right;">${cantidad}</td>
+                                        <td style="text-align: right;">${data[i].ejecutados}</td>
+                                        <td class="${css}" style="text-align: right;color: white;">${(avance).toFixed(2)}</td>
+                                        </tr>`);
+                        }
+                    }
+
+                    let avance = (sumaEjecutado * 100 / sumaRecibidos).toFixed(2);
+                    let css = "";
+                    if (avance >= 0 && avance <= 25) {
+                        css = "bg-danger";
+                    } else if (avance > 26 && avance <= 60) {
+                        css = "bg-warning";
+                    } else if (avance > 61 && avance <= 90) {
+                        css = "bg-info";
+                    } else if (avance > 91 && avance <= 100) {
+                        css = "bg-primary";
+                    }
+                    $("#tblLibro tbody").append(`<tr>
+                                       <th colspan="5">Total</th>
+                                                                                                       <th style="text-align: right;">${fiseSuma}</th>
+                                                       <th style="text-align: right;">${reclamoSuma}</th>
+                                                       <th style="text-align: right;">${muestreoSuma}</th>
+                                                       <th style="text-align: right;">${cargaSuma}</th>
+                                                       <th style="text-align: right;">${observadoSuma}</th>
+
+                                                       <th style="text-align: right;">${sumaRecibidos}</th>
+                                               <th style="text-align: right;">${sumaEjecutado}</th>
+                                                       <th class="${css}" style="text-align: right;color: white;">${avance}</th>
+                                       </tr>`);
+                },
+                error: function (error) {
+                    console.error("Error:", error);
+                }
+            });
+        }
+
+
+        function Excel() {
+            var urlDescarga = "/Repartos/Reportes/ReporteXControlTecnico?periodo=" + $("#Periodo").val();
+            var a = document.createElement("a");
+            a.href = urlDescarga;
+            a.download = "Reporte_control_reparto_por_técnico.xlsx";
+            a.click();
+        };
+
+    </script>
+
+
+<!-- Visual Studio Browser Link -->
+<script type="text/javascript" src="/_vs/browserLink" async="async" id="__browserLink_initializationData" data-requestId="ee2a7760bb1b4b22a5479126c30f00bc" data-requestMappingFromServer="false" data-connectUrl="http://localhost:51186/55174a5314194643be4f91108b1575a3/browserLink"></script>
+<!-- End Browser Link -->
+<script src="/_framework/aspnetcore-browser-refresh.js"></script></body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

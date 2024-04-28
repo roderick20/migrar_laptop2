@@ -1,0 +1,71 @@
+<div class="col-12">
+  <form id="formCreate" action="/area/create" method="post">
+    <div class="card border rounded-3">
+      <div class="card-header  border-bottom p-3">
+        <div class="d-sm-flex justify-content-between align-items-center">
+          <h5 class="mb-2 mb-sm-0">Agregar Area</h5>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+
+          <% if (error !='' ) { %>
+            <div class="text-danger">
+              <%= error %>"
+            </div>
+            <% } else { %>
+              <div class="col-md-4">
+                <!-- <div class="form-group">
+                  <label for="Id_area" class="control-label">ID Area</label>
+                  <input name="Id_area" id="Id_area" class="form-control" type="number" />
+                  <span for="Id_area" class="text-danger"></span>
+                </div> -->
+                <div class="form-group">
+                  <label for="area" class="control-label">Area</label>
+                  <input name="area" id="area" class="form-control" type="text" />
+                  <span for="area" class="text-danger"></span>
+                </div>
+                <% } %>
+              </div>
+        </div>
+      </div>
+      <div class="card-footer  border-bottom p-3">
+        <div class="d-sm-flex justify-content-between align-items-center">
+          <button class="btn btn-sm btn-info" type="button" onclick="window.location.href='/area'"><i class="fa-solid fa-arrow-left"></i>
+            Regresar</button>
+          <button class="btn btn-sm btn-primary" type="submit" id="btnSave"><i class="fa-solid fa-floppy-disk"></i>
+            Agregar </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+<script>
+  const form = document.getElementById('formCreate');
+  form.addEventListener('submit', function (event) {
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    console.log(data);
+
+    const errors = validate(data, constraints);
+    console.log(errors);
+    if (errors) {
+
+      for (const field in errors) {
+        const errorMessage = errors[field][0];
+        const fieldElement = document.getElementById(field);
+        fieldElement.classList.add('error');
+        fieldElement.nextElementSibling.textContent = errorMessage;
+      }
+      event.preventDefault();
+    } else {
+      const btn = document.getElementById('btnSave');
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin-pulse"></i> Procesando';
+      btn.disabled = true;
+    }
+  });
+
+</script>

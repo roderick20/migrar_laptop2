@@ -1,0 +1,42 @@
+Login Indicar que no esta habilitado el usuario y error en usuario o contraseña (COMPLETADO)
+
+Revisar Producto(COMPLETO)
+
+Correccion nombre PDF.(COMPLETO)
+
+Pedidos Listar solo mostrar deacuerdo al id de usuario (COMPLETO)
+
+Busqued Tabla Pedidos, solo Cliente y numero (COMPLETO)
+
+Error Dashboard(COMPLETO)
+
+Productos no funciona cuando filtramos por grupo (COMPLETO)
+
+Falta select2.productos recetas (COMPLETO)
+
+Pedidos error cuando no tiene direccion (EN PROCESO)
+
+Al lado del nombre(TopBar) debe salir la tienda donde va vender con otro color(COMPLETADO)(CORREGIDO)
+
+Pedidos--Haciendose cargo create y update ING Roderick
+
+//YAIR <===========
+
+Lista de precios agregar, no tiene titulo, unidad de medida y productos en orden alfabetico, precio no debe permitir negativos, en el input poner valor minimo 0 (COMPLETADO)
+
+En todas las partes donde hay un buscar producto(Select2) agregar el codigo - nombre (INCOMPLETO)
+
+Login en segunda pantalla donde sale seleccionar tienda solo le debe cargar las tiendas asigandas (INCOMPLETO)
+
+//FIN YAIR.
+
+//Falta procedimiento<=======
+
+Nota de credito(PENDIENTE)
+
+Clonar productos(PENDIENTE)
+
+Pedidos verificar que solo se muestren los precios habilitados(PENDIENTE)
+
+Pedidos al agregar, pordefecto debe agregar cliente varios (se va crear)(EN PROCESO)(PENDIENTE)
+

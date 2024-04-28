@@ -1,0 +1,22 @@
+<div id='calendar'></div>
+
+<script src='/fullcalendar-6.1.9/dist/index.global.min.js'></script>
+<script>
+  var tasks = <%- JSON.stringify(tasks) %>;
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      events: tasks.map(objeto => {
+        return {
+          title: objeto.description,
+          start: objeto.date_begin,
+          end: objeto.date_end
+        };
+      })
+    });
+    calendar.render();
+  });
+</script>

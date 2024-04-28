@@ -1,0 +1,11 @@
+
+SESSION_SECRET=thisismysecrctekeyfhrgfgrfrty84fwir767
+
+PORT=3000
+
+# Database
+SQL_DRIVER=SQL Server
+SQL_SERVER=3.131.217.111
+SQL_DATABASE=StemisPage
+SQL_UID=ustemispage
+SQL_PWD=ustemispage
