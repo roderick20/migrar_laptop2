@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario Agregar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container mt-3">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h4 class="card-title">Inventario Agregar</h4>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <asp:Label ID="lblError" runat="server" Text="" class="text-danger"></asp:Label>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="ddlMacroproceso">Macroproceso</label>
+              <asp:DropDownList ID="ddlMacroproceso" runat="server" class="form-control"></asp:DropDownList>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="slProceso">Proceso</label>
+              <select id="slProceso" class="form-control"></select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="slsubProceso">Subproceso</label>
+              <select id="slsubProceso" class="form-control"></select>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="ddlTipoDoc">Tipo Documento</label>
+              <asp:DropDownList ID="ddlTipoDoc" runat="server" class="form-control"></asp:DropDownList>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="Codigo">Código</label>
+              <asp:TextBox ID="Codigo" runat="server" CssClass="form-control"></asp:TextBox>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="form-group">
+              <label for="Documento">Título</label>
+              <asp:TextBox ID="Documento" runat="server" CssClass="form-control"></asp:TextBox>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="ddlGerenciaCentral">Gerencia Central/Gerencia Línea/SubGerencia/Área</label>
+              <asp:DropDownList ID="ddlGerenciaCentral" runat="server" class="form-control"></asp:DropDownList>
+            </div>
+          </div>
+        </div>
+
+         </div>
+		  </div>
+		  </div>
+		   </body>
+		    </html>

@@ -1,0 +1,360 @@
+[{
+  "_id": {
+    "$oid": "65cd36dfda60c508f6e80f89"
+  },
+  "fecha": {
+    "$date": "2024-01-03T21:52:41.000Z"
+  },
+  "monto": 200,
+  "descripcion": "Colegio de abogados",
+  "tipo": "Ingreso",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T21:55:43.231Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd3805da60c508f6e80f8a"
+  },
+  "fecha": {
+    "$date": "2024-02-14T21:59:37.229Z"
+  },
+  "monto": 220,
+  "descripcion": "Colegio de abogados",
+  "tipo": "Ingreso",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:00:37.307Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd3819da60c508f6e80f8b"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:00:43.177Z"
+  },
+  "monto": 1056,
+  "descripcion": "Colegio de abogados",
+  "tipo": "Ingreso",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:00:57.775Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd385fda60c508f6e80f8c"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:01:49.896Z"
+  },
+  "monto": 292,
+  "descripcion": "Colegio de abogados",
+  "tipo": "Ingreso",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:02:07.847Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd3870da60c508f6e80f8d"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:02:12.614Z"
+  },
+  "monto": 800,
+  "descripcion": "Colegio de abogados",
+  "tipo": "Ingreso",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:02:24.067Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd393ada60c508f6e80f8e"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:04:14.994Z"
+  },
+  "monto": 10782,
+  "descripcion": "Factura de marketing de 11980 - 10%",
+  "tipo": "Ingreso",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:05:46.797Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd39edda60c508f6e80f8f"
+  },
+  "fecha": {
+    "$date": "2024-01-01T22:06:14.000Z"
+  },
+  "monto": 950,
+  "descripcion": "Paola Diciembre 2023",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:08:45.132Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd3aa8da60c508f6e80f90"
+  },
+  "fecha": {
+    "$date": "2024-01-01T22:11:31.000Z"
+  },
+  "monto": 500,
+  "descripcion": "Albert Diciembre 2023",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:15:50.483Z"
+  },
+  "modified": {
+    "$date": "2024-02-14T22:15:50.483Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65cd3bf2da60c508f6e80f91"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:16:06.127Z"
+  },
+  "monto": 620,
+  "descripcion": "Comision Airton",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:17:22.894Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd3c94da60c508f6e80f92"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:17:44.795Z"
+  },
+  "monto": 350,
+  "descripcion": "Celular",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:20:04.160Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd3da4da60c508f6e80f93"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:24:04.752Z"
+  },
+  "monto": 3597.8,
+  "descripcion": "Laptop",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:24:36.106Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd3dcbda60c508f6e80f94"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:24:55.981Z"
+  },
+  "monto": 960.5,
+  "descripcion": "Paola Enero 2024 + comision de caja 10.5",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T23:15:33.002Z"
+  },
+  "modified": {
+    "$date": "2024-02-14T23:15:33.002Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65cd3deada60c508f6e80f95"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:25:19.361Z"
+  },
+  "monto": 704.8,
+  "descripcion": "Michell Enero 2024 + comision caja 4.8",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T23:16:18.718Z"
+  },
+  "modified": {
+    "$date": "2024-02-14T23:16:18.718Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65cd3e22da60c508f6e80f96"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:25:51.567Z"
+  },
+  "monto": 600,
+  "descripcion": "Alberth Enero 2024",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:26:42.592Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd3e7dda60c508f6e80f97"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:27:31.147Z"
+  },
+  "monto": 46.2,
+  "descripcion": "Gmail Enero 2024",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:28:13.104Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd3f5dda60c508f6e80f98"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:31:35.050Z"
+  },
+  "monto": 78,
+  "descripcion": "Impuesto Diciembre 2023",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:31:57.820Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd3fb2da60c508f6e80f99"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:32:48.755Z"
+  },
+  "monto": 200,
+  "descripcion": "Hosting Dicimebre 2023",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:33:22.813Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd3fe6da60c508f6e80f9a"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:33:26.379Z"
+  },
+  "monto": 144,
+  "descripcion": "14 febrero 120 + 24(gaseosa)",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T22:34:14.813Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd465eda60c508f6e80f9b"
+  },
+  "fecha": {
+    "$date": "2024-02-14T22:35:39.237Z"
+  },
+  "monto": 76,
+  "descripcion": "Hosting Febrero 2024 (20$)",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T23:14:04.277Z"
+  },
+  "modified": {
+    "$date": "2024-02-14T23:14:04.277Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65cd468dda60c508f6e80f9c"
+  },
+  "fecha": {
+    "$date": "2024-02-14T23:02:01.314Z"
+  },
+  "monto": 630,
+  "descripcion": "Curso Febrero",
+  "tipo": "Ingreso",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T23:02:37.696Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd483bda60c508f6e80f9d"
+  },
+  "fecha": {
+    "$date": "2024-02-14T23:09:11.395Z"
+  },
+  "monto": 20,
+  "descripcion": "Propaganda facebook curso febrero 2024",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T23:09:47.839Z"
+  },
+  "modified": null
+},
+{
+  "_id": {
+    "$oid": "65cd4a8eda60c508f6e80f9f"
+  },
+  "fecha": {
+    "$date": "2024-02-14T23:19:04.872Z"
+  },
+  "monto": 99,
+  "descripcion": "Paola Enero 2024 Essalud",
+  "tipo": "Salida",
+  "estado": false,
+  "created": {
+    "$date": "2024-02-14T23:19:42.806Z"
+  },
+  "modified": null
+}]
